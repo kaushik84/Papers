@@ -1,0 +1,96 @@
+
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[12pt, draftclsnofoot, onecolumn]{IEEEtran}
+%\documentclass[journal, twocolumn]{IEEEtran}
+
+%\usepackage[latin1]{inputenc} % Latin1
+\usepackage[utf8]{inputenc} 	% UTF-8
+
+%\usepackage{amsmath,amsthm}
+\usepackage{amssymb}
+%\usepackage{amsfonts}
+\usepackage{bbm} % For indicator function
+%\usepackage{breeq}
+\usepackage{graphicx}
+\usepackage{color,psfrag}
+
+
+% Dashed arrow and control the size of the braces due to underbrace
+\usepackage{MnSymbol}
+%\graphicspath{{./figures/}}
+
+%Strike out the sentence
+\usepackage[normalem]{ulem}
+
+% Draw something blocks or ovelap
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{cite} % Combining multiple citations
+
+\usepackage{longtable}
+
+\usepackage{xcolor}
+\newcommand{\tc}[1]{#1}
+%\newcommand{\tc}[1]{\textcolor[rgb]{0.0,0.0,1.0}{#1}}
+% Flush all figures and tables at the end of the document
+%\usepackage[nolists, nomarkers]{endfloat}
+
+
+
+\input{SourceFiles/macro.tex}
+
+
+% Subfigures
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+\usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+% Metadata
+\usepackage[final=true]{hyperref}
+%\hypersetup{
+%	pdfauthor = {Ankit Kaushik et al.},
+%	pdftitle = {CrownCom 2015},
+%	pdfsubject = {CrownCom 2015},
+%	pdfcreator = {PDFLaTeX with hyperref package},
+%	pdfproducer = {PDFLaTeX}
+%	hidelinks = {true}
+%}
+
+
+% Used to break the theorems, proof between the columns
+%\allowdisplaybreaks
+
+%used to equalize the last pages
+\usepackage{flushend}
+
+\begin{document}
+%
+\title{Sensing-Throughput Tradeoff for Interweave Cognitive Radio System: A Deployment-Centric Viewpoint}
+\author{Ankit Kaushik\IEEEauthorrefmark{1}, \IEEEmembership{Student Member, IEEE}, Shree Krishna Sharma\IEEEauthorrefmark{2},  \IEEEmembership{Member, IEEE},\\  Symeon Chatzinotas\IEEEauthorrefmark{2}, \IEEEmembership{Senior Member, IEEE}, Bj\"orn Ottersten\IEEEauthorrefmark{2}, \IEEEmembership{Fellow, IEEE}, \\ Friedrich K. Jondral\IEEEauthorrefmark{1} \IEEEmembership{Senior Member, IEEE} 
+\thanks{\IEEEauthorrefmark{1}A. Kaushik and F. K. Jondral are with Communications Engineering Lab, Karlsruhe Institute of Technology (KIT), Germany. Email:{\{ankit.kaushik,friedrich.jondral\}@kit.edu.}} 
+\thanks{\IEEEauthorrefmark{2}S.K. Sharma, S. Chatzinotas and B. Ottersten are with SnT - securityandtrust.lu, University of Luxembourg, Luxembourg. Email:{\{shree.sharma, symeon.chatzinotas, bjorn.ottersten\}@uni.lu}.} 
+\thanks{The preliminary analysis of this paper has been presented at CROWNCOM 2015 in Doha, Qatar \cite{Kaushik15_CC}.}
+\thanks{This work was partially supported by the National Research Fund, Luxembourg under the CORE projects ``SeMIGod'' and ``SATSENT''.} 
+}
+
+% make the title area
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+\input{SourceFiles/content_1C.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,refs}
+
+% that's all from my side
+\end{document}

@@ -1,0 +1,85 @@
+
+\vspace{-1.7cm}
+
+Over the last decade, wireless communication is witnessing a tremendous growth in the data traffic due to ever-increasing number of connected devices. According to the recent surveys on mobile traffic by prominent market leaders (Cisco \cite{CISCO14} and Ericsson\cite{Eric15}), the existing mobile traffic is expected to increase $11$-fold  by 2021. Certainly, in future, the state-of-the-art standards (fourth-Generation (4G) -- LTE, WiMAX) are incapable of sustaining the substantial amount of data traffic, originating from these devices. It is being visualized that a major portion of this requirement can be satisfied through an additional spectrum. Due to exclusive usage, the spectrum below $\SI{6}{GHz}$ is not able to meet this demand of additional spectrum, leading to its scarcity. To this end, Cognitive Radio (CR), along with millimeter-wave technology \cite{Rapp13} and visible-light communication \cite{Wu14}, is envisaged as an alternative source of spectrum. The latter techniques are limited to a point-to-point communication, by which mobility is compromised. In contrast, a CR system aims at an efficient utilization of the spectrum below $\SI{6}{GHz}$ -- suitable for mobile communications -- by enabling a secondary access to the licensed spectrum while ensuring a sufficient protection to the licensed users (also referred as a primary system).
+
+Despite the fact that an extensive amount of literature -- including \cite{Liang08, Kang209, Kang09} -- has been dedicated to the field of CR, its performance analysis has been dealt inadequately from a deployment perspective. Therefore, making it difficult to understand the extent of vulnerability caused to the primary system. In this context, it is essential to establish a deployment-centric viewpoint for analyzing the performance of a CR system. Following this viewpoint, it has been identified that the involved channels' knowledge at the secondary transmitter is pivotal for the realization of cognitive techniques. However, the aspect of channel knowledge in context to CR systems, particularly its impact on the performance, has not been clearly understood. With the purpose of curtailing this gap, the research carried out at Communications Engineering Lab (CEL), Karlsruhe Institute of Technology (KIT) proposes a successful integration of this knowledge -- by carrying out channel estimation -- in reference to different CR systems, namely interweave, underlay and hybrid systems. More specifically, our work outlines the following aspects corresponding to the aforementioned CR systems, employing different cognitive techniques such as spectrum sensing, power control and their combination.
+
+\subsection*{Analytical Framework}
+First, an analytical framework is established to characterize the effects such as time allocation and variation, arising due to the incorporation of imperfect channel knowledge, that are detrimental to the performance of the CR systems \cite{Kaushik16_TWC, Kaushik16_TCCN}. 
+
+In order to satisfy the low complexity and the versatility towards unknown primary user signal requirements, which are necessary for the deployment of the CR systems, a received power-based channel estimation is included in the proposed framework. In this regard, an effort has been made to facilitate a direct incorporation of the estimated parameter (received power) to the performance characterization of the CR systems.
+%In order to facilitate hardware deployment of a CR system, received power-based estimation, a novel channel estimation technique is employed for the channels existing between the primary and the secondary systems, thus fulfilling low-complexity and versatility requirements.
+
+Besides, a stochastic approach is followed for characterizing the variations in the system. In particular, these variations cause uncertainty in the interference power received at the primary system, which may completely disrupt the operation of the CR systems. In order to maintain this uncertainty below a desired level, new interference constraints are proposed. %Moreover, the theoretical expressions, derived for the performance evaluation, are verified by means of simulations.
+
+
+%specially for the channels between the primary and secondary systems. 
+%In this context, the proposed framework captures the performance degradation, due to time allocated for performing channel estimation and the imperfect knowledge, the performance with the baseline models, constituting perfect channel knowledge. 
+
+\captionsetup[subfigure]{position=top}
+\begin{figure}[!ht]
+\centering
+\subfloat[]{
+%% Add psfrag entries
+\input{figures/fig_opt_thr_vs_est_time_sen_time_oc_AWGN.tex}
+\centering
+\begin{tikzpicture}[scale=1]
+\node[anchor=south west,inner sep=0] (image) at (0,0)
+{
+\includegraphics[width= \figscale]{figures/fig_opt_thr_vs_est_time_sen_time_oc_AWGN}
+};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+%\draw[black,->] (0.6,0.44) node[above=0.0,  font=\scriptsize] {$\mpd \in \{0.05,0.10,0.15\}$} -- (0.56,0.33);
+\draw[black,->] (0.353,0.83) -- (0.353,0.699);
+\node[draw=none, font=\scriptsize] at (0.353, 0.86) {$\rs(\ttest, \ttsen)$};
+
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+\end{scope}
+\end{tikzpicture}
+\label{fig_IS:PT}
+}
+\vspace{4mm}
+\hfil
+\subfloat[]{
+\input{figures/fig_thr_est_time_tradeoff_AWGN.tex}
+\centering
+\begin{tikzpicture}[scale=1]
+\node[anchor=south west,inner sep=0] (image) at (0,0)
+{
+\includegraphics[width= \figscale]{figures/fig_thr_est_time_tradeoff_AWGN}
+};
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+
+%\draw (0.38,0.78) arc(-130:130:0.005 and 0.015);
+%\node[draw, fill=gray!10,font=\scriptsize] at (0.39,0.735) {$\opc = 0.01$};
+
+\node[draw=none, font=\scriptsize] at (0.32, 0.87) {$\rs(\ttest)$};
+%\draw (0.65,0.77) arc(-130:130:0.005 and 0.015);
+%\node[draw,fill=gray!10,font=\scriptsize] at (0.66,0.838) {$\opc = 0.1$};
+
+%%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+\end{scope}
+\end{tikzpicture}
+\label{fig_US:PT}
+}
+\vspace{4mm}
+\caption{\tc{An illustration of a) estimation-sensing-throughput and b) estimation-throughput tradeoff for interweave system and underlay systems, respectively. The performance tradeoff depicts the achievable throughput at secondary receiver.}}
+\label{fig:PT}
+\vspace{-0.7cm}
+\end{figure}
+
+
+\subsection*{Performance Tradeoffs}
+Second, as a major observation, it has been identified that the estimation time is closely associated with the performance of the CR systems. On one side, it is related to the variations incurred in the system, through which the level of uncertainty in the interference can be effectively controlled, ultimately affecting the performance in terms of throughput at secondary receiver, defined as secondary throughput. While on the other side, the time resource allocated for channel estimation directly influences the secondary throughput. In our work, this kind of dual dependency of the secondary throughput on the estimation time has been investigated in the form of performance tradeoffs, namely \textit{estimation-sensing-throughput} tradeoff for the interweave system and the hybrid system, and \textit{estimation-throughput} tradeoff for the underlay system, cf. \figurename~\ref{fig:PT}. 
+
+These tradeoffs present a useful tool for visualizing the response of a CR system to different choices of the estimation time so that the performance degradation introduced due to the channel estimation can be precisely regulated. In other words, a system designer can utilize these tradeoffs to preclude situations under which the performance degradation becomes intolerable. Conversely, from a theoretical perspective, these tradeoffs can be used to determine a suitable estimation time that yields the maximum achievable secondary throughput while obeying the interference constraints. 
+
+\subsection*{Hardware Deployment}
+%In contrast to the theoretical analysis, this thesis lays emphasis on the portability of the analytical framework on a hardware platform. To a great extent, this not only validates the accuracy of the assumptions made while deriving the theoretical expressions but also justifies the applicability of the proposed framework in realistic scenarios. With the implementation of the received power-based estimation technique, a further justification is added to the claims such as the low complexity and the versatility to unknown PU signals, presented while developing the analytical framework. Considering these facts, a software defined radio platform is deployed for obtaining the measurements, required for the validation process. In order to complement the validation, the theoretical expressions, which include the probability density functions (characterizing the variations in the estimated parameters) and the performance tradeoff, are compared with their empirical counterparts. Besides validation, a demonstrator is presented that certifies the necessity of channels' knowledge for the performance characterization as-well-as for the operation of a CR system over the hardware. In this regard, following the guidelines of an US a demonstrator is deployed.
+
+Third, using a software defined radio platform, hardware implementations are carried out to validate the feasibility of the analysis proposed \cite{Kaushik13, Kaushik15_D, Kaushik16_CC}. In addition to this, hardware demonstrators are deployed, which in a way present the operation of CR systems in more practical conditions.

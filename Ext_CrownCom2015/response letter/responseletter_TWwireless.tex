@@ -1,0 +1,367 @@
+\documentclass[12pt,a4wide,peerreview]{IEEEtran}
+% Load packages
+%\usepackage{cite} % Make references as [1-4], not [1,2,3,4]
+%\usepackage{url}  % Formatting web addresses
+%\usepackage{ifthen}  % Conditional
+%\usepackage{multicol}   %Columns
+%\usepackage[utf8]{inputenc} %unicode support
+%%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+%\urlstyle{rm}s
+%\usepackage{psfig}
+%\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{amsopn,amsmath,amssymb,amsfonts}
+%\usepackage{verbatim}
+%\usepackage{Latex_styles/citesort}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage{psbox}
+\usepackage{cite}
+%\usepackage{citesort}
+%\usepackage{Latex_styles/setspace}
+\usepackage{epstopdf}
+\usepackage[center]{caption}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+\usepackage{balance}
+\usepackage{float}
+%\floatstyle{plain}
+\newfloat{longequation}{t}{ext}
+
+\newcounter{mytempeqncnt}
+%\usepackage{stfloats}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{rmk}{Remark}[section]
+\newtheorem{pro}{Property}[section]
+
+\newcommand{\e}[2]{{\mathbb E}_{#1}\left[ #2 \right]}
+\newcommand{\s}[2]{{\frac{1}{{#1}}\sum_{n=1}^{#1}} {#2}}
+\newcommand{\q}[2]{{\mathcal Q}_{#1}\left( #2 \right)}
+\newcommand{\p}{\mathbb P}
+\newcommand{\sub}[1]{_{\text{#1}}}
+\newcommand{\supe}[1]{^{\text{#1}}}
+\newcommand{\pd}{\text{P}\sub{d}}
+\newcommand{\pdac}{{\text{P}}\sub{d}\supe{}}
+\newcommand{\pdoc}{{\text{P}}\sub{d}\supe{}}
+\newcommand{\pfa}{\text{P}\sub{fa}}
+\newcommand{\pfaac}{{\text{P}}\sub{fa}\supe{}}
+\newcommand{\pfaoc}{{\text{P}}\sub{fa}\supe{}}
+\newcommand{\phz}{\p(\mathcal{H}_0)}
+\newcommand{\pho}{\p(\mathcal{H}_1)}
+\newcommand{\pc}{\text{P}\sub{c}}
+\newcommand{\pcd}{\bar{\text{P}}\sub{c}}
+\newcommand{\pdd}{\bar{\text{P}}\sub{d}}
+
+\newcommand{\prcvd}{P\sub{Rx,ST}}
+\newcommand{\prcvdsr}{P\sub{Rx,SR}}
+\newcommand{\eprcvd}{\hat{P}\sub{Rx,ST}}
+\newcommand{\eprcvdsr}{\hat{P}\sub{Rx,SR}}
+\newcommand{\bprcvd}{{P}\sub{Rx,ST}}
+\newcommand{\ptranst}{P\sub{Tx,ST}}
+\newcommand{\ptranpt}{P\sub{Tx,PT}}
+
+\newcommand{\yrcvd}{y\sub{ST}}
+\newcommand{\pp}{P\sub{p}}
+\newcommand{\bpp}{\bar{P}\sub{p}}
+\newcommand{\xp}{x\sub{PT}}
+\newcommand{\xs}{x\sub{ST}}
+\newcommand{\ps}{P\sub{s}}
+\newcommand{\ys}{y\sub{SR}}
+\newcommand{\ls}{\lambda\sub{}}
+\newcommand{\Ks}{N\sub{s}}
+\newcommand{\lp}{\lambda\sub{p}}
+\newcommand{\Kp}{N\sub{p,2}}
+
+\newcommand{\ap}{a\sub{2}}
+\newcommand{\bp}{b\sub{2}}
+\newcommand{\as}{a\sub{1}}
+\newcommand{\bs}{b\sub{1}}
+
+
+\newcommand{\rs}{R\sub{s}}
+\newcommand{\rsac}{R\sub{s}\supe{AC}}
+\newcommand{\rsoc}{R\sub{s}\supe{OC}}
+\newcommand{\trs}{{R}\sub{s}}
+\newcommand{\trsac}{{R}\sub{s}\supe{}}
+\newcommand{\trsoc}{{R}\sub{s}\supe{}}
+\newcommand{\ers}{\e{}{\rs}}
+
+\newcommand{\gp}{g\sub{p}}
+\newcommand{\gpo}{g\sub{p,1}}
+\newcommand{\gpt}{g\sub{p,2}}
+\newcommand{\gs}{g\sub{s}}
+\newcommand{\hp}{h\sub{p}}
+\newcommand{\hpo}{h\sub{p,1}}
+\newcommand{\hpt}{h\sub{p,2}}
+\newcommand{\hs}{h\sub{s}}
+\newcommand{\ehs}{\hat{h}\sub{s}}
+\newcommand{\npo}{\sigma^2_{w}}
+\newcommand{\spo}{\sigma^2_{x}}
+\newcommand{\evar}{\frac{\npo}{2 \Ks}}
+\newcommand{\fsam}{f\sub{s}}
+
+\newcommand{\ttau}{\tilde{\tau}}
+\newcommand{\test}{\tau\sub{est}}
+\newcommand{\ttest}{\tilde{\tau}\sub{est}}
+\newcommand{\tsen}{\tau\sub{sen}}
+\newcommand{\ttsen}{\tilde{\tau}\sub{sen}}
+\newcommand{\ttsenac}{\tilde{\tau}\sub{sen}\supe{}}
+\newcommand{\ttsenoc}{\tilde{\tau}\sub{sen}\supe{}}
+
+\newcommand{\cz}{\text{C}_0}
+\newcommand{\co}{\text{C}_1}
+
+%\newcommand{\mpd}{\mu\sub{$\pd$}}
+\newcommand{\mpd}{\kappa}
+
+\newcommand{\snrp}{\frac{\ptranpt}{\npo}}
+\newcommand{\snrs}{\frac{\ptranst}{\npo}}
+\newcommand{\snrsi}{\frac{\npo}{\ptranst}}
+\newcommand{\snrst}{\frac{\ps}{\sigma^2}}
+\newcommand{\snrrcvd}{{\gamma}\sub{p,1}}
+\newcommand{\snrso}{{\gamma}\sub{s}}
+\newcommand{\snrpt}{{\gamma}\sub{p,2}}
+
+\newcommand{\snrsp}{\frac{|\ehs|^2 \ptranst}{\npo}\Big /\frac{\eprcvdsr}{\npo}}
+\newcommand{\lambdas}{\frac{\sigma_w^4}{ 2 \Ks \ptranst}}
+\newcommand{\lambdasinv}{\frac{2 \Ks \ptranst}{\sigma_w^4}}
+
+
+% distribution functions
+\newcommand{\fpd}{F_{\pd}}
+\newcommand{\feprcvd}{F_{\eprcvd}}
+\newcommand{\fcz}{F_{\cz}}
+\newcommand{\fco}{F_{\co}}
+
+% density functions
+\newcommand{\dpd}{f_{\pd}}
+\newcommand{\dsnrs}{f_{\frac{ |\ehs|^2 \ptranst}{\npo}}}
+\newcommand{\dsnrp}{f_{\frac{\eprcvdsr}{\npo}}}
+\newcommand{\dsnrsp}{f_{\frac{|\ehs|^2 \ptranst}{\npo}\Big /\frac{\eprcvdsr}{\npo}}}
+\newcommand{\dcz}{f_{\cz}}
+\newcommand{\dco}{f_{\co}}
+\newcommand{\deprcvd}{f_{\eprcvd}}
+
+% threshold 
+\newcommand{\thric}{\mu\sub{IC}}
+\newcommand{\thrac}{\mu\supe{}}
+\newcommand{\throc}{\mu\supe{}}
+
+\newcommand{\imp}{\uline}
+\newcommand{\ur}{\uuline}
+\newcommand{\ns}{\uwave}
+\newcommand{\ws}{\sout}
+\newcommand{\fl}{\dashuline}
+\newcommand{\un}{\dotuline}
+\newcommand{\tc}[1]{#1}
+ 
+
+\DeclareMathOperator*{\Pro}{Pr}
+\DeclareMathOperator*{\argmaxi}{argmax}
+\DeclareMathOperator*{\maxi}{max}
+\DeclareMathOperator*{\expec}{\mathbb{E}}
+\DeclareMathOperator*{\gthan}{\ge}
+\DeclareMathOperator*{\eqto}{=}
+\DeclareMathOperator*{\cosi}{ci}
+\DeclareMathOperator*{\sini}{si}
+\DeclareMathOperator*{\iGamma}{\text{inv}-\Gamma}
+\DeclareMathOperator*{\cchi2}{\mathcal{X}^2}
+\DeclareMathOperator*{\ncchi2}{\mathcal{X}_1^2}
+\DeclareMathOperator*{\ts}{\text{T}(\textbf{y})}
+
+
+
+
+
+\begin{document}
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{ \hsize=6.5in
+Response to the Reviewers' comments on
+``Sensing-Throughput Tradeoff for Interweave Cognitive Radio System: A Deployment-Centric Viewpoint (TW-Aug-15-1167)''}
+\author{\baselineskip10pt
+Ankit Kaushik, Shree Krishna Sharma, Symeon Chatzinotas, \\ Bj\"orn Ottersten, Friedich K. Jondral
+}
+%SnT - securityandtrust.lu, University of Luxembourg \\
+%Email:\{shree.sharma, symeon.chatzinotas, bjorn.ottersten\}@uni.lu}
+\maketitle
+\baselineskip24pt
+\textbf{Dear Editor},\\
+ We wish to thank you for your assistance in the review process which has helped us improve our manuscript significantly. We have revised our manuscript addressing all the valuable comments provided by the reviewers. We have highlighted (with blue color) the major changes in the revised paper. The main revisions are described below.
+
+\begin{enumerate}
+  \item We have revised the ``introduction'' section in order to enhance its brevity and clarity, and to emphasize the main contributions of the paper.
+  \item To further enhance the novelty of the proposed approach in Section III, we have relaxed assumptions 2, 5 and 6 of the previous manuscript in the revised manuscript. To highlight the main aspects covered by the proposed approach, we have structured Section III into subsections, namely problem description (Section III-A), proposed approach (Section III-B), validation (Section III-C), and assumptions and approximations (Section III-D). 
+  \item In Section III-C in the revised manuscript, we have addressed a major concern regarding the knowledge of the presence of a primary user ($\mathcal H_1$) that ensures the validity of the estimated parameters (refer to assumptions 5 and 6 of the previous manuscript), particularly for the sensing and the interference channels. To this end, we have proposed a novel methodology that utilizes the time resources within the frame duration efficiently without compromising the complexity of the channel estimation. %In this context, we have relaxed Assumptions $5$ and $6$ of the previous manuscript in our proposed approach.
+  \item Previously, we considered the estimation and sensing as two disjoint events, refer to assumption $2$ in the previous manuscript. However, in the revised manuscript, we have relaxed this assumption by combining the samples obtained from the estimation and sensing phases, in this way, we further enhance the performance of our proposed approach in terms of sensing-throughput tradeoff. To complement this change in the analysis, we have modified Figures 2, 5, 6, 7, 8, 9 and 10 of the revised manuscript.      
+  \item In the revised manuscript, we have introduced an alternative approach that translates the variation introduced due to channel estimation to the sensing time, refer to Corollary $1$ in Section IV. Moreover, the performance analysis of this alternative approach and subsequently its comparision to our original approach (depicted in Theorems $1$ and $2$) have been included in Figures 9 and 10, refer to Section IV of the revised manuscript.
+  \item In order to provide more insights into the estimation-sensing-throughput tradeoff depicted by the proposed approach, we have included Figure $8$ in correspondence to the average constraint and the outage constraint in Section V of the revised manuscript. 
+ \item We have moved the proofs of Lemma 3, Theorem 1 and Theorem 2 to the Appendix in the revised manuscript.   
+ \item In order to improve the presentation style, we have revised the whole manuscript carefully to avoid any typos and confusing statements.   
+\end{enumerate}
+
+In the following paragraphs, we respond to the reviewers' comments point by point. \\
+\line(1,0){500} \\
+\textbf{Dear Reviewer 1},\\
+\baselineskip24pt
+Thank you very much for appreciating our work, and providing your valuable suggestions and insightful comments on our manuscript. The detailed revisions are listed in the following points. \\
+%\section{Response to Major Questions}
+\textbf{Comment 1}: \textit{In the current work in Section III, the channel estimation is performed for hp1 and hp2 using a conventional method. However, channel estimation for spectrum sensing is actually more complicated than this. The problem with channel estimation in this case is that SU does not know whether PU is present or not.  So there is a chance that SU is actually using samples without any channel gains for estimation. In the literature, the problem was first dealt with by using an iteration between estimation and sensing, that is sensing is performed and if the decision is that PU is present then estimation is performed etc. See [R1]. This problem can also be dealt with by using a kind of noncoherent estimation. See [R2]. I suggest that the authors replace their estimators with these in the paper.\\
+R1. V. Gautham Chavali and Claudio R.C.M. da Silva, ``Collaborative spectrum sensing based on a New SNR estimation and energy combining method,'' IEEE Trans. on Vehicular Technology, vol. 60, no. 8, Oct. 2011.\\
+R2. N. Cao, M. Mao, Y. Chen, ``Analysis of collaborative spectrum sensing with BPSK signal power estimation errors,'' IET-Science, Measurement \& Technology, vol. 8, pp. 350 -358, Nov. 2014.
+} \\
+\textbf{Authors' Response}:
+Thank you very much for pointing out this. We agree with the reviewer's concern regarding the fact the channel estimates will be valid only when the primary user signal $(\mathcal H_1)$ is present, particularly for the sensing and the interference channels. We have addressed this concern in Section III-C of the revised manuscript, where we have proposed a different methodology to the one proposed in the references R1. and R2., kindly provided by the reviewer. For the proposed method, we include the following description in Section III-C of the revised manuscript, ``In this direction, Chavali \textit{et al.} [21] proposed a detection followed by estimation of the signal to noise ratio, whereas [35] implemented a blind technique for estimating the signal power of non-coherent PU signals. We apply a coarse detection\footnote{\tc{For the coarse detection, an energy detection is employed whose threshold can be determined by means of a constant false alarm rate.}} on the estimates $\eprcvd$, $\eprcvdsr$ at the end of the estimation phase $\test$. Through an appropriate selection of the time interval interval $\test$ during the system design, the reliability of the coarse detection can be ensured. Considering the existence of a separate control channel such as cognitive pilot channel, the reliability of the coarse detection can be further enhanced by exchanging the detection results between the ST and the SR.
+ 
+
+Since the estimation and the coarse detection processes in our proposed method are equivalent in terms of their mathematical operations (which include magnitude squared and summation), we consider the validity of the channel estimates with certain reliability and without comprising the complexity of the estimators employed by the secondary system. Moreover, by performing a joint estimation and (coarse) detection, we propose an efficient way of utilizing the time resources within the frame duration. The ST considers these estimates to determine a suitable sensing time based on the sensing-throughput tradeoff in such a way that the desired detector's performance is ensured.
+At the end of the detection phase, we carry out fine detection\footnote{\tc{In accordance with the proposed frame structure in Fig. 2, fine detection also includes the samples acquired during the estimation phase.}} of the PU signals, thereby improving the performance of the detector.'' 
+
+Concerning the second part of the reviewer's comment about replacing the existing estimators with the one proposed in references R1. and R2., we have emphasized in the ``Contribution'' (concerning the ``Analytical framework'') in Section I-B and the ``Proposed Approach'' in Section III-B of the revised manuscript that the estimation methods are selected in such a way that they respect the low complexity and versatility (to a larger range of primary systems) requirements of the interweave system. In this regard, we have proposed to employ a received power estimation for the sensing and the interference channels.
+
+
+\textbf{Comment 2}: \textit{
+Another major concern is the optimization problem. At the moment, the authors found the average Pd, C0, C1 etc. and then perform optimization to remove estimation error variations. What about find the optimal tau from the original optimization problem and then average the optimal tau over channel estimation error distributions? This may give some simple expression or an alternative to the authors' scheme.
+} \\
+\textbf{Authors' Response}: Thank you for suggesting this optimization approach alternative to the one considered in our paper. We have considered this approach in Corollary $1$ in Section IV of the revised manuscript. According to which, we capture the variations due to imperfect channel knowledge in terms of the suitable sensing time subject to average and outage constraints. Subsequently, we determine the average throughput that captures variations in the parameters $\cz, \co, \pd$ and $\ttsen$ (suitable sensing time). In order to address the analytical tractability of the mentioned approach, in Remark 2 of the revised manuscript, where we mention, ``Complementing the analysis in [13], it is complicated to obtain a closed-form expression of $\ttsen$, thereby rendering the analytical tractability of its distribution function difficult. In the view of this, we capture the performance of the alternative approach by means of simulations.'' In addition to that, the performance of the mentioned approach has been compared to the previous approach (illustrated in Theorems $1$ and $2$) in Figures 9 and 10 of the revised manuscript. Furthermore, we included the discussions related to Figures 9 and $10$ in Section IV of the revised manuscript.
+
+
+
+\textbf{Comment 3}: \textit{
+It will also be nice if some of the proofs are moved to an appendix to improve presentation.
+} \\
+\textbf{Authors' Response}: 
+To address this concern, we have moved the proofs of Lemma 3, Theorem 1 and Theorem 2 to the Appendix in the revised manuscript.  
+
+
+\textbf{Comment 4}: \textit{
+subsections could be numbered.
+}\\
+\textbf{Authors' Response}: We have addressed this concern in the revised manuscript. 
+
+\textbf{Comment 5}: \textit{
+It is not clear in (1) whether the channel is Gaussian or the transmitted signal is Gaussian.
+}\\
+\textbf{Authors' Response}: 
+We have rephrased this statement in the Section II-B of the revised manuscript, where we mention, ``The signal $\xp[n]$ transmitted by the PUs can be modelled as: (i) phase shift keying modulated signal, or (ii) Gaussian signal'', refer to Section II-B. Moreover, the knowledge concerning the channel(s) has been considerd in assumption 1, Section III-D.
+
+\line(1,0){500} \\
+\textbf{Dear Reviewer 2},\\
+Thank you very much for providing valuable suggestions. We have carried out a major revision on the manuscript guided by these valuable comments. The detailed corrections are listed in the following points. \\
+\textbf{Major Comment 1}: \textit{
+In many parts, the presentation of this paper is not formal. Thus, the language needs to substantially revised.  
+}. \\
+\textbf{Authors' Response}: 
+We have addressed this concern in the revised manuscript. In this regard, we have replaced several informal sentences with their formal versions, for instance: 
+\begin{enumerate} 
+\item ``Due to its static allocation, this spectrum is on the verge of depletion.'' in paragraph 2 of the ``introduction'' section is replaced with ``The use of the spectrum in this (below 6 GHz) regime is fragmented and statically allocated, leading to inefficiencies and the shortage in the availability of spectrum for new services.'' in the revised manuscript.
+\item ``Over the past one and a half decade, this notion has evolved at a tremendous pace right from its origin by Mitola \textit{et al.} in 1999 [4] and consequently, it has acquired certain maturity.'' in paragraph 3 of the ``introduction'' section is replaced with ``Since its origin by Mitola \textit{et al.} in 1999, this notion has evolved at a significant pace, and consequently has acquired certain maturity.'' in the revised manuscript.
+\item ``As a result, sustaining a target detection probability is of paramount importance to the ISs [13].'' in paragraph 2 of the Section I-A is replaced with ``As a result, the ISs have to ensure that they operate above a target detection probability [12].'' in the revised manuscript.
+\end{enumerate}
+Furthermore, we have revised the whole manuscript carefully to: (i) improve the presentation style, (ii) avoid typos and confusing statements. 
+
+\textbf{Major Comment 2}: \textit{
+The sections ``System Model'' and ``Proposed Model'' are also confusing. What is the difference between the two sections?
+}. \\
+\textbf{Authors' Response}: 
+Thank you for raising this concern. In the revised manuscript, we have restructured Section III to highlight the main aspects covered by the proposed approach, namely ``Problem Description'' (Section III-A), ``Proposed Approach'' (Section III-B), ``Validation'' (Section III-C), and ``Assumptions and Approximations'' (Section III-D). In Section III-A, we have stated the  major issues encountered in the existing models supported by their mathematical formulations, and subsequently the methodology proposed for resolving these issues in Section III-B. In order to further enhance the novelty of the proposed approach, we have relaxed assumptions 2, 5 and 6 of the previous manuscript in the revised manuscript. 
+
+
+\textbf{Major Comment 3}: \textit{
+The problem formulation should not be inside the ``introduction'' section. Usually, problem formulation contains detailed mathematical derivation.
+}. \\
+\textbf{Authors' Response}: Thank you again for raising this concern. As mentioned in the previous comment (Major Comment 2), we have moved the problem formulation, which was previously inside the ``introduction'' section to Section III-A (Problem Description) that discusses the major issues supported by their mathematical representations in the revised manuscript. 
+
+\textbf{Major Comment 4}: \textit{
+In the introduction part, the contribution is not clear.
+}. \\
+\textbf{Authors' Response}: To address this concern, we have highlighted the main contributions in terms of ``Analytical framework'', ``Imperfect channel estimation'' and ``Estimation-sensing-throughput tradeoff'' in Section I-B of the revised manuscript followed by brief discussions. Moreover, in Section I-B of the revised manuscript, we have included the discussions related to new contributions (in addition to one illustrated in the previous manuscript) such as, taking into account samples used for estimation for sensing (covered under ``Analytical framework'') and alternative optimization problem (covered under ``Estimation-sensing-throughput tradeoff'') of the revised manuscript. 
+Furthermore, we have rephrased several sentences and avoided the use of confusing statements/words in the ``introduction'' section (including Section III-C) to enhance the brevity and clarity of the paper, for instance, ``To capture the variations induced in the system, we characterize the distribution functions...'' in contribution 2 of Section I-B is replaced with ``To capture the variations induced due to imperfect channel knowledge, we characterize the distribution functions...'' in the revised manuscript. %Finally, we have also included our new contributions in the revised manuscript. 
+ 
+
+\textbf{Minor Comment 1}: \textit{
+Line 31 of Page 1, ``Interweave Systems (ISs)'' should be ``interweave systems (ISs)''. The same error also happens in Cognitive Radio (CR), Secondary User (SU) ...
+} \\
+\textbf{Authors' Response}: 
+We have addressed this comment in the revised manuscript.
+
+\textbf{Minor Comment 2}: \textit{
+Line 35 of Page 2, ``In contrast, the spectrum below 6 GHz...'' should be ``In contrast, the spectrum beyond 6 GHz...''
+} \\
+\textbf{Authors' Response}: 
+We have rephrased this statement in the ``introduction'' section of the revised manuscript, where we mention, ``Besides the spectrum beyond 6 GHz, an efficient utilization of the spectrum below 6 GHz presents an alternative solution.''.
+
+\textbf{Minor Comment 3}: \textit{
+What is the meaning of cf. ? For example, the ``cf.'' in Line 45 of Page 6, ``we extend this concept to the IS, hence, employ¿.channels, cf. Fig.1.''. 
+} \\
+\textbf{Authors' Response}: We have replaced the abbreviation cf.\footnote{cf. corresponds to conferre in Latin. In English it can be replaced with compare, refer to, etc.} with their comparable counterparts such as see, compare, refer to, consider, etc. 
+
+\line(1,0){500} \\
+\textbf{Dear Reviewer 3},\\
+Thank you very much for appreciating our work and providing insightful comments on our manuscript. The detailed revisions are listed in the following points. \\
+\textbf{Comment 1}: \textit{
+The paper is kind of verbose, especially the Introduction section which spans over 6 pages (from page 2 to page 8). 
+} \\
+\textbf{Authors' Response}: Thank you for raising this concern. In order to address this issue, we have moved the problem formulation, which was previously inside the ``introduction'' section, to Section III-A (Problem Description) that highlights the major issues supported by their mathematical formulations in the revised manuscript. 
+Besides that, we have revised the ``introduction'' section by rephrasing several sentences such as ``In contrast, the spectrum below 6 GHz, which is appropriate especially for mobile communications, presents an alternative solution.'' in the second paragraph of ``introduction'' section is replaced with ``Besides the spectrum beyond 6 GHz, an efficient utilization of the spectrum below 6 GHz presents an alternative solution.'' in the revised manuscript. This is done to enhance the brevity and to provide more emphasis on the main contributions of the paper. 
+In this way, we were able to squeeze the ``introduction'' section to four and a half pages. 
+%We would be very happy to address if you have any future comments in our manuscript. \\
+
+\textbf{Comment 2}: \textit{
+The novelty of Section III is unclear. It appears that the only new element is the introduction of a short estimation time divided from the frame time T. The presented models are simply derived from existing references.
+} \\
+\textbf{Authors' Response}: 
+The main focus of the paper is to derive an analytical framework that incorporates channel estimation, thereby giving insights to practical implementations of the cognitive interweave systems. To this end, we have addressed different aspects in the paper, for instance, an integration of the channel estimation of secondary system's frame structure and the selection of channel estimation techniques in such a way that hardware complexity and the versatility to unknown primary systems requirements (as considered while employing an energy based detection) are not compromised. 
+
+To further address this concern, we have emphasized the novelty of this Section III by considering different aspects in the revised manuscript, for instance, in the previous manuscript, we considered the estimation and the sensing as two disjoint events, refer to assumption $2$ in the previous manuscript. However, in the revised manuscript, we combine the samples obtained from the estimation and the sensing phases, in this way, we further enhance the performance of our proposed approach in terms of the sensing-throughput tradeoff. Furthermore, in Section III-C of the revised manuscript, we have addressed a major concern regarding the validity of the estimated parameters. To this end, we have proposed a novel methodology that considers a joint estimation and (coarse) detection at the end of the estimation phase. Taking into account these aspects in the revised manuscript, we have relaxed assumptions $2$, $5$ and $6$ of the previous manuscript in our proposed approach. 
+
+
+Concerning the second part of the reviewer's comment about the presented estimation models, we have emphasized in the ``Contribution'' (concerning the ``Analytical framework'') in Section I-B and ``Proposed Approach'' Section III-B of the revised manuscript that the estimation methods are selected in such a way that they respect the low complexity and versatility (to a larger range of primary systems) requirements of the interweave system. In this regard, we have proposed to employ a received power estimation for the sensing and the interference channels.
+
+\textbf{Comment 3}: \textit{
+In the objective functions (average throughput) in Theorem 1 and 2, C and $\pd$ should be independent in order to get those expressions in (30) and (32). The authors should explain this point.
+} \\
+\textbf{Authors' Response}: 
+We have addressed this concern in revised manuscript, refer to Appendix-A, where we mention, ``Clearly, the random variables $\pd(\eprcvd)$, and $\cz(|\ehs|^2)$ and $\co(|\ehs|^2, \eprcvdsr)$ are functions of the independent random variables $\eprcvd$, and $|\ehs|^2$ and $\eprcvdsr$, respectively. In this context, we apply the independence property on $\pd$, $\cz$ and $\co$ to obtain
+\begin{equation*}
+\e{\pd, \cz, \co}{\cz (1- \pfa) + \co (1 - \pd)} = \e{\cz}{\cz} (1 - \pfa) + \e{\co}{\co} \e{\pd}{(1 - \pd)}\end{equation*}
+in (28) and (30).'' 
+
+\textbf{Comment 4}: \textit{
+Theorem 1 and 2 only consider that the estimation time is fixed and given. Since both $\tsen$ and $\test$ are parameters involved in the distributions, the maximization in (30) and (32) may take both of them into account.
+} \\
+\textbf{Authors' Response}: 
+Thank you for pointing out this. We have addressed this concern in the revised manuscript, where we have considered the estimation time $\test$ in the optimization, refer to (28) and (30). In addition to that, to provide further insights into the objective functions that depict the estimation-sensing-throughput tradeoff stated in (28) and (30), we have included Figure $8$ in the revised manuscript that considers the variations of the average secondary throughput with the estimation time and the sensing time. 
+
+
+\line(1,0){500} \\
+Many thanks again for your assistance in this review process, which leads to significant improvement of this work. If further revision is required, we would be very happy to address future comments in this manuscript. \\
+Sincerely yours,\\
+\hspace{5 pt} Ankit Kaushik\\
+\hspace{5 pt} Shree Krishna Sharma\\
+\hspace{5 pt} Symeon Chatzinotas\\
+\hspace{5 pt} Bj\"orn Ottersten\\
+\hspace{5 pt} Friedrich K. Jondral \\
+%\begin{thebibliography}{}
+%\bibitem{Wnh:12} W. Ejaz, N. U. hasan, and H. S. KIM, ``SNR-Based Adaptive Spectrum Sensing for Cognitive Radio Networks'', International J. Innovative Computing, Information and Control, vol. 8, No. 9, Sept. 2012.
+%\bibitem{Tir:12} O. Tirkkonen and L. Wei, Foundation of Cognitive Radio Systems: Exact and asymptotic analysis of largest eigenvalue based spectrum sensing. InTech, 2012, no. 978-953-51-0268-7, ch. 1.
+%\bibitem{Cda:11} Chavali, V.G.; da Silva, C.R.C.M., ``Collaborative Spectrum Sensing Based on a New SNR Estimation and Energy Combining Method,'' Vehicular Technology, IEEE Transactions on , vol.60, no.8, pp.4024,4029, Oct. 2011.
+%
+
+%\bibitem{Cdb:08} L.S. Cardoso, and et al, ''Cooperative spectrum sensing using random matrix theory,'' \textit{3rd Int. Symp. on Wireless Pervasive Computing}, pp.334-338, 7-9 May 2008.
+%\bibitem{Mfp:03} X. Mestre, J. R. Fonollosa, A. Pages-Zamora, ``Capacity of MIMO channels: asymptotic evaluation under correlated fading,'' \textit{IEEE Journal on Selected Areas in Comm.}, vol.21, no.5, pp. 829- 838, June 2003.
+%\bibitem{Ant:04} A. M. Tulino, and S. Verdu, `'Random Matrix Theory and Wireless Communications'', \textit{Comm. Inform. Theory}, vol.1, no. 1, pp 1-182, 2004.
+
+%\end{thebibliography}
+\end{document}
+
+

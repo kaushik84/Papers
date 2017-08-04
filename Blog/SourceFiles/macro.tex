@@ -1,0 +1,156 @@
+%% User dedined marcro 
+
+
+
+\newcommand{\e}[2]{{\mathbb E}_{#1}\left[ #2 \right]}
+\newcommand{\s}[2]{{\frac{1}{{#1}}\sum_{n=1}^{#1}} {#2}}
+\newcommand{\q}[2]{{\mathcal Q}_{#1}\left( #2 \right)}
+\newcommand{\p}{\mathbb P}
+\newcommand{\sub}[1]{_{\text{#1}}}
+\newcommand{\supe}[1]{^{\text{#1}}}
+\newcommand{\pd}{\text{P}\sub{d}}
+\newcommand{\pdac}{{\text{P}}\sub{d}\supe{}}
+\newcommand{\pdoc}{{\text{P}}\sub{d}\supe{}}
+\newcommand{\pfa}{\text{P}\sub{fa}}
+\newcommand{\pfaac}{{\text{P}}\sub{fa}\supe{}}
+\newcommand{\pfaoc}{{\text{P}}\sub{fa}\supe{}}
+\newcommand{\phz}{\p(\mathcal{H}_0)}
+\newcommand{\pho}{\p(\mathcal{H}_1)}
+\newcommand{\pc}{\text{P}\sub{c}}
+\newcommand{\pcd}{\bar{\text{P}}\sub{c}}
+\newcommand{\pdd}{\bar{\text{P}}\sub{d}}
+
+\newcommand{\prcvd}{P\sub{Rx,ST}}
+\newcommand{\prcvdsr}{P\sub{Rx,SR}}
+\newcommand{\eprcvd}{\hat{P}\sub{Rx,ST}}
+\newcommand{\eprcvdsr}{\hat{P}\sub{Rx,SR}}
+\newcommand{\bprcvd}{{P}\sub{Rx,ST}}
+\newcommand{\ptranst}{P\sub{Tx,ST}}
+\newcommand{\ptranpt}{P\sub{Tx,PT}}
+
+\newcommand{\yrcvd}{y\sub{ST}}
+\newcommand{\pp}{P\sub{p}}
+\newcommand{\bpp}{\bar{P}\sub{p}}
+\newcommand{\xp}{x\sub{PT}}
+\newcommand{\xs}{x\sub{ST}}
+\newcommand{\ps}{P\sub{s}}
+\newcommand{\ys}{y\sub{SR}}
+\newcommand{\ls}{\lambda\sub{}}
+\newcommand{\Ks}{N\sub{s}}
+\newcommand{\lp}{\lambda\sub{p}}
+\newcommand{\Kp}{N\sub{p,2}}
+
+\newcommand{\ap}{a\sub{2}}
+\newcommand{\bp}{b\sub{2}}
+\newcommand{\as}{a\sub{1}}
+\newcommand{\bs}{b\sub{1}}
+
+
+\newcommand{\rs}{R\sub{s}}
+\newcommand{\rsac}{R\sub{s}\supe{AC}}
+\newcommand{\rsoc}{R\sub{s}\supe{OC}}
+\newcommand{\trs}{{R}\sub{s}}
+\newcommand{\trsac}{{R}\sub{s}\supe{}}
+\newcommand{\trsoc}{{R}\sub{s}\supe{}}
+\newcommand{\ers}{\e{}{\rs}}
+
+\newcommand{\gp}{g\sub{p}}
+\newcommand{\gpo}{g\sub{p,1}}
+\newcommand{\gpt}{g\sub{p,2}}
+\newcommand{\gs}{g\sub{s}}
+\newcommand{\hp}{h\sub{p}}
+\newcommand{\hpo}{h\sub{p,1}}
+\newcommand{\hpt}{h\sub{p,2}}
+\newcommand{\hs}{h\sub{s}}
+\newcommand{\phpo}{|h\sub{p,1}|^2}
+\newcommand{\phpt}{|h\sub{p,2}|^2}
+\newcommand{\phs}{|h\sub{s}|^2}
+\newcommand{\ehs}{\hat{h}\sub{s}}
+\newcommand{\npo}{\sigma^2_{w}}
+\newcommand{\spo}{\sigma^2_{x}}
+\newcommand{\evar}{\frac{\npo}{2 \Ks}}
+\newcommand{\fsam}{f\sub{s}}
+
+\newcommand{\ttau}{\tilde{\tau}}
+\newcommand{\test}{\tau\sub{est}}
+\newcommand{\ttest}{\tilde{\tau}\sub{est}}
+\newcommand{\tsen}{\tau\sub{sen}}
+\newcommand{\ttsen}{\tilde{\tau}\sub{sen}}
+\newcommand{\ttsenac}{\tilde{\tau}\sub{sen}\supe{}}
+\newcommand{\ttsenoc}{\tilde{\tau}\sub{sen}\supe{}}
+
+\newcommand{\cz}{\text{C}_0}
+\newcommand{\co}{\text{C}_1}
+
+%\newcommand{\mpd}{\mu\sub{$\pd$}}
+\newcommand{\mpd}{\kappa}
+
+\newcommand{\snrp}{\frac{\ptranpt}{\npo}}
+\newcommand{\snrs}{\frac{\ptranst}{\npo}}
+\newcommand{\snrsi}{\frac{\npo}{\ptranst}}
+\newcommand{\snrst}{\frac{\ps}{\sigma^2}}
+\newcommand{\snrrcvd}{{\gamma}\sub{p,1}}
+\newcommand{\snrso}{{\gamma}\sub{s}}
+\newcommand{\snrpt}{{\gamma}\sub{p,2}}
+
+\newcommand{\snrsp}{\frac{|\ehs|^2 \ptranst}{\npo}\Big /\frac{\eprcvdsr}{\npo}}
+\newcommand{\lambdas}{\frac{\sigma_w^4}{ 2 \Ks \ptranst}}
+\newcommand{\lambdasinv}{\frac{2 \Ks \ptranst}{\sigma_w^4}}
+
+
+% distribution functions
+\newcommand{\fpd}{F_{\pd}}
+\newcommand{\feprcvd}{F_{\eprcvd}}
+\newcommand{\fcz}{F_{\cz}}
+\newcommand{\fco}{F_{\co}}
+
+% density functions
+\newcommand{\dpd}{f_{\pd}}
+\newcommand{\dsnrs}{f_{\frac{ |\ehs|^2 \ptranst}{\npo}}}
+\newcommand{\dsnrp}{f_{\frac{\eprcvdsr}{\npo}}}
+\newcommand{\dsnrsp}{f_{\frac{|\ehs|^2 \ptranst}{\npo}\Big /\frac{\eprcvdsr}{\npo}}}
+\newcommand{\dcz}{f_{\cz}}
+\newcommand{\dco}{f_{\co}}
+\newcommand{\deprcvd}{f_{\eprcvd}}
+
+% threshold 
+\newcommand{\thric}{\mu\sub{IC}}
+\newcommand{\thrac}{\mu\supe{}}
+\newcommand{\throc}{\mu\supe{}}
+
+\newcommand{\imp}{\uline}
+\newcommand{\ur}{\uuline}
+\newcommand{\ns}{\uwave}
+\newcommand{\ws}{\sout}
+\newcommand{\fl}{\dashuline}
+\newcommand{\un}{\dotuline}
+\DeclareMathOperator*{\Pro}{Pr}
+\DeclareMathOperator*{\argmaxi}{argmax}
+\DeclareMathOperator*{\maxi}{max}
+\DeclareMathOperator*{\expec}{\mathbb{E}}
+\DeclareMathOperator*{\gthan}{\ge}
+\DeclareMathOperator*{\eqto}{=}
+\DeclareMathOperator*{\cosi}{ci}
+\DeclareMathOperator*{\sini}{si}
+\DeclareMathOperator*{\iGamma}{\text{inv}-\Gamma}
+\DeclareMathOperator*{\cchi2}{\mathcal{X}^2}
+\DeclareMathOperator*{\ncchi2}{\mathcal{X}_1^2}
+\DeclareMathOperator*{\ts}{\text{T}(\textbf{y})}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{optimization}{Optimization}
+\newtheorem{case}{Case}
+\newtheorem{constraint}{Constraint}
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{coro}{Corollary}
+\newtheorem{defi}{Definition}
+ 
+\makeatletter
+\if@twocolumn
+	\newcommand{\figscale}{0.9 \columnwidth}
+\else
+	\newcommand{\figscale}{0.5 \columnwidth}
+\fi
+\makeatother

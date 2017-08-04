@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmult}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx} %SI notations looks nice
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{macro.tex}
+
+%% Use url and break them if they are too long for the page
+\usepackage[hyphens]{url}
+\usepackage[caption=false,font=footnotesize]{subfig} %% Plotting Subfigures
+\usepackage{color,psfrag}  % Because most of matlab figures are generated with laprint that generates a .tex(with psfrag commands) and .eps
+\usepackage{tikz}   % Drawing tool that overlaps on the plotted figures
+\usetikzlibrary{trees}
+
+
+\begin{document}
+
+\title*{Performance Analysis of Cognitive Radio Systems from a Deployment Perspective}
+
+%\titlerunning{Performance Analysis of Cognitive Radio Systems}
+
+\authorrunning{Ankit Kaushik et al.}
+
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{Ankit Kaushik, Shree Krishna Sharma, Symeon Chatzinotas, Bj\"orn Ottersten and Friedrich K. Jondral}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\institute{A. Kaushik, F. K. Jondral \at Communications Engineering Lab, Karlsruhe Institute of Technology, Karlsruhe, Germany, \email{{Ankit.Kaushik, Friedrich.Jondral}@kit.edu}
+\and S. K. Sharma, S. Chatzinotas, B. Ottersten \at SnT - securityandtrust, University of Luxembourg, Luxembourg \email{{Shree.Sharma, Symeon.Chatzinotas, Bjorn.Ottersten}@uni.lu}
+}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+\input{SourceFiles/content.tex}
+
+
+\bibliographystyle{spmpsci}
+\bibliography{IEEEfull,refs}
+
+\end{document}

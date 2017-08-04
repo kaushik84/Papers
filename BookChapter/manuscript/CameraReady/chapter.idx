@@ -1,0 +1,76 @@
+\indexentry{4G}{2}
+\indexentry{LTE}{2}
+\indexentry{WiMAX}{2}
+\indexentry{5G}{2}
+\indexentry{MIMO}{2}
+\indexentry{CR communication!in-band full duplex}{2}
+\indexentry{Small cell densification}{2}
+\indexentry{Additional Spectrum}{3}
+\indexentry{Millimeter-wave technology}{3}
+\indexentry{GSM}{4}
+\indexentry{Visible light communication}{5}
+\indexentry{Cognitive radio systems!classification}{5}
+\indexentry{Interweave system!definition}{5}
+\indexentry{Underlay system!definition}{5}
+\indexentry{Hybrid system!definition}{5}
+\indexentry{Overlay system!definition}{7}
+\indexentry{5G}{7}
+\indexentry{Stochastic geometry}{8}
+\indexentry{Cognitive small cell!network elements}{8}
+\indexentry{Cognitive small cell!spectrum access}{9}
+\indexentry{LSA}{9}
+\indexentry{CR techniques}{9}
+\indexentry{Cognitive small cell!hardware feasibility}{9}
+\indexentry{SDR}{9}
+\indexentry{Cognitive small cell!indoor deployment}{10}
+\indexentry{WiMAX}{10}
+\indexentry{Secondary throughput}{12}
+\indexentry{CSIT}{12}
+\indexentry{MIMO}{12}
+\indexentry{Uncertain interference}{13}
+\indexentry{Channel estimation!received power-based}{14}
+\indexentry{Channel estimation!pilot-based}{14}
+\indexentry{USRP}{15}
+\indexentry{Pre-processing}{15}
+\indexentry{Spectrum sensing!energy detection}{17}
+\indexentry{Spectrum sensing!detection techniques}{17}
+\indexentry{Channel!deterministic channel}{18}
+\indexentry{Channel!random channel}{18}
+\indexentry{Tradeoffs!sensing-throughput tradeoff}{18}
+\indexentry{Interweave system!involved channels}{19}
+\indexentry{Spectrum sensing!energy detection}{20}
+\indexentry{Phase Shift Keying}{20}
+\indexentry{OFDM}{20}
+\indexentry{Central limit theorem}{21}
+\indexentry{Spectrum sensing!detection probability}{21}
+\indexentry{Spectrum sensing!false alarm probability}{21}
+\indexentry{Gamma function}{21}
+\indexentry{Tradeoffs!sensing-throughput tradeoff}{21}
+\indexentry{Channel estimation!received signal to noise ratio-based}{23}
+\indexentry{Channel estimation!eigenvalue-based}{23}
+\indexentry{Channel estimation!received power-based}{23}
+\indexentry{Channel estimation!pilot-based}{23}
+\indexentry{Interweave system!frame structure}{23}
+\indexentry{Channel estimation|(}{24}
+\indexentry{Channel estimation!received power-based|textbf}{24}
+\indexentry{Distribution!central chi-squared}{24}
+\indexentry{Channel estimation!pilot-based|textbf}{24}
+\indexentry{Maximum likelihood estimate}{25}
+\indexentry{Cram\'er-Rao bound}{25}
+\indexentry{Distribution!non-central chi-squared}{25}
+\indexentry{Channel estimation!received power-based}{25}
+\indexentry{Channel estimation|)}{25}
+\indexentry{Approximation}{27}
+\indexentry{Channel!deterministic channel}{27}
+\indexentry{Tradeoffs!estimation-sensing-throughput tradeoff}{29}
+\indexentry{Secondary throughput}{29}
+\indexentry{Interference constraint!average constraint}{29}
+\indexentry{Interference constraint!outage constraint}{29}
+\indexentry{CR communication!half duplex}{36}
+\indexentry{CR techniques}{36}
+\indexentry{CR communication!in-band full duplex}{36}
+\indexentry{Combining techniques}{37}
+\indexentry{Asynchronous access}{37}
+\indexentry{Stochastic geometry}{37}
+\indexentry{Millimeter-wave technology}{38}
+\indexentry{Visible light communication}{38}

@@ -1,0 +1,95 @@
+
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[12pt, draftclsnofoot, onecolumn]{IEEEtran}
+%\documentclass[journal, twocolumn]{IEEEtran}
+
+%\usepackage[latin1]{inputenc} % Latin1
+\usepackage[utf8]{inputenc} 	% UTF-8
+
+%\usepackage{amsmath,amsthm}
+\usepackage{amssymb}
+%\usepackage{amsfonts}
+\usepackage{bbm} % For indicator function
+%\usepackage{breeq}
+\usepackage{graphicx}
+\usepackage{color,psfrag}
+
+
+% Dashed arrow and control the size of the braces due to underbrace
+\usepackage{MnSymbol}
+%\graphicspath{{./figures/}}
+
+%Strike out the sentence
+\usepackage[normalem]{ulem}
+
+% Draw something blocks or ovelap
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{cite} % Combining multiple citations
+
+\usepackage{longtable}
+
+\usepackage{xcolor}
+\newcommand{\tc}[1]{#1}
+%\newcommand{\tc}[1]{\textcolor[rgb]{0.0,0.0,1.0}{#1}}
+% Flush all figures and tables at the end of the document
+%\usepackage[nolists, nomarkers]{endfloat}
+
+
+
+\input{SourceFiles/macro.tex}
+
+
+% Subfigures
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+\usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+% Metadata
+\usepackage[final=true]{hyperref}
+%\hypersetup{
+%	pdfauthor = {Ankit Kaushik et al.},
+%	pdftitle = {CrownCom 2015},
+%	pdfsubject = {CrownCom 2015},
+%	pdfcreator = {PDFLaTeX with hyperref package},
+%	pdfproducer = {PDFLaTeX}
+%	hidelinks = {true}
+%}
+
+
+% Used to break the theorems, proof between the columns
+%\allowdisplaybreaks
+
+%used to equalize the last pages
+\usepackage{flushend}
+
+\begin{document}
+%
+\title{Performance Analysis of Cognitive Radio Systems with Imperfect Channel Knowledge}
+\author{Ankit Kaushik, Friedrich Jondral \\
+Communications Engineering Lab, Karlsruhe Institute of Technology, Germany \\
+Contact Information: Ankit.Kaushik@kit.edu
+}
+
+
+% make the title area
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+\input{SourceFiles/content.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{myIEEEtran}
+\bibliography{IEEEabrv,refs}
+
+% that's all from my side
+\end{document}

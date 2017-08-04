@@ -1,0 +1,181 @@
+
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+%\documentclass[12pt, draftclsnofoot, onecolumn]{IEEEtran}
+\documentclass[journal, twocolumn]{IEEEtran}
+
+%\usepackage[latin1]{inputenc} % Latin1
+\usepackage[utf8]{inputenc} 	% UTF-8
+
+%\usepackage{amsmath,amsthm}
+\usepackage{amssymb}
+%\usepackage{amsfonts}
+\usepackage{bbm} % For indicator function
+%\usepackage{breeq}
+\usepackage{graphicx}
+\usepackage{color,psfrag}
+
+
+% Dashed arrow and control the size of the braces due to underbrace
+\usepackage{MnSymbol}
+%\graphicspath{{./figures/}}
+
+%Strike out the sentence
+\usepackage[normalem]{ulem}
+
+% Draw something blocks or ovelap
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{cite} % Combining multiple citations
+
+\usepackage{longtable}
+
+\usepackage{xcolor}
+\newcommand{\tc}[1]{#1}
+%\newcommand{\tc}[1]{\textcolor[rgb]{0.0,0.0,1.0}{#1}}
+% Flush all figures and tables at the end of the document
+%\usepackage[nolists, nomarkers]{endfloat}
+
+%% Placing the footnote in figure caption
+%\usepackage{ftnxtra}
+%\usepackage{fnpos} % \makeFNbelow by default
+
+
+\input{SourceFiles/macro.tex}
+
+% Subfigures
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+\usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+% Metadata
+\usepackage[final=true]{hyperref}
+%\hypersetup{
+%	pdfauthor = {Ankit Kaushik et al.},
+%	pdftitle = {CrownCom 2015},
+%	pdfsubject = {CrownCom 2015},
+%	pdfcreator = {PDFLaTeX with hyperref package},
+%	pdfproducer = {PDFLaTeX}
+%	hidelinks = {true}
+%}
+
+
+% Used to break the theorems, proof between the columns
+%\allowdisplaybreaks
+
+%used to equalize the last pages
+%\usepackage{flushend}
+
+\begin{document}
+%
+\title{Sensing-Throughput Tradeoff for Interweave Cognitive Radio System: A Deployment-Centric Viewpoint}
+\author{Ankit Kaushik\IEEEauthorrefmark{1}, \IEEEmembership{Student Member, IEEE}, Shree Krishna Sharma\IEEEauthorrefmark{2},  \IEEEmembership{Member, IEEE},\\  Symeon Chatzinotas\IEEEauthorrefmark{2}, \IEEEmembership{Senior Member, IEEE}, Bj\"orn Ottersten\IEEEauthorrefmark{2}, \IEEEmembership{Fellow, IEEE}, \\ Friedrich K. Jondral\IEEEauthorrefmark{1} \IEEEmembership{Senior Member, IEEE} 
+\thanks{\IEEEauthorrefmark{1}A. Kaushik and F. K. Jondral are with Communications Engineering Lab, Karlsruhe Institute of Technology (KIT), Germany. Email:{\{ankit.kaushik,friedrich.jondral\}@kit.edu.}} 
+\thanks{\IEEEauthorrefmark{2}S.K. Sharma, S. Chatzinotas and B. Ottersten are with SnT - securityandtrust.lu, University of Luxembourg, Luxembourg. Email:{\{shree.sharma, symeon.chatzinotas, bjorn.ottersten\}@uni.lu}.} 
+\thanks{The preliminary analysis of this paper has been presented at CROWNCOM 2015 in Doha, Qatar \cite{Kaushik15_CC}.}
+\thanks{This work was partially supported by the National Research Fund, Luxembourg under the CORE projects ``SeMIGod'' and ``SATSENT''.} 
+}
+
+% make the title area
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\input{SourceFiles/content_2C.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,refs}
+
+\begin{IEEEbiography}
+[{\includegraphics[width=1.0in,height=1.25 in,clip,keepaspectratio]{ankit_kaushik.eps}}]{\textbf{Ankit Kaushik (S'12)}} received the B. Tech degree in electronics and communication engineering from Guru Gobind Singh Indraprastha University, Delhi, India in 2005. He further received the dual M. Sc. degree in information and communication technology from University of Karlsruhe (now Karlsruhe Institute of Technology), Karlsruhe, Germany and Politecnico di Torino, Turin, Italy in 2007. From 2007-2012, he was with Leica Camera AG, Germany, where he worked as a Design Engineer. Since 2012, he has been working toward the Doctoral degree with the Communications Engineering Lab, Karlsruhe Institute of Technology, as a Research Associate. During the winter semester 2015/2016, he was Visiting Researcher with the Security, Reliability and Trust (SnT), University of Luxembourg, Luxembourg. His research interests include software defined radio, cognitive radio communications and networks. He was a recipient of MERIT Scholarship for his Masters Studies within the Erasmus Mundus Scholarship Program and Subjective Winner of 5G Spectrum Challenge held at 2015 IEEE DySPAN conference. 
+\end{IEEEbiography}
+
+
+\begin{IEEEbiography}
+[{\includegraphics[width=1.0in,height=1.25 in,clip,keepaspectratio]{shree_sharma.eps}}]{\textbf{Shree Krishna Sharma (S'12-M'15)}} received the M.Sc. degree in information and communication engineering from the Institute of Engineering, Pulchowk, Nepal, in 2010; the M.A. degree in economics from Tribhuvan University, Nepal; the M.Res. degree in computing science from Staffordshire University, Staffordshire, U.K., in 2011; and the Ph.D. degree in Wireless Communications from University of Luxembourg, Luxembourg in 2014. Since November 2014, he has been working as a Research Associate in Interdisciplinary Centre for Security, Reliability and Trust (SnT), University of Luxembourg, Luxembourg.
+
+In the past, Dr. Sharma was also involved with Kathmandu University, Dhulikhel, Nepal, as a Teaching Assistant, and he worked as a Part-Time Lecturer for eight engineering colleges in Nepal. He was with Nepal Telecom for more than four years as a Telecom Engineer in the field of information technology and telecommunication. He is the author of more than 50 technical papers in refereed international journals, scientific books, and conferences. He received an Indian Embassy Scholarship for his B.E. study, an Erasmus Mundus Scholarship for his M. Res. study, and an AFR Ph.D. grant from the National Research Fund (FNR) of Luxembourg. He received Best Paper Award in CROWNCOM 2015 conference held in Doha, Qatar and for his Ph.D. thesis, he received \textit{FNR award for outstanding PhD Thesis 2015} from FNR, Luxembourg. He has been involved in EU FP7 CoRaSat project, EU H2020 project SANSA, ESA project ASPIM, and Luxembourgish national projects Co2Sat, and SeMIGod. He has been serving as a reviewer for several international journals and conferences, and also as a TPC member for a number of conferences. His research interests include cognitive wireless communications, satellite communications, and signal processing techniques for 5G and beyond wireless.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1.0in,height=1.25in,clip,keepaspectratio]{symeon_chatzinotas.eps}}]
+{\textbf{Symeon Chatzinotas (S'06-M'09-SM'13)}} received the M.Eng. in Telecommunications from
+Aristotle University of Thessaloniki, Greece and the
+M.Sc. and Ph.D. in Electronic Engineering from
+University of Surrey, UK in 2003, 2006 and 2009
+respectively. He is currently a Research Scientist with
+the research group SIGCOM in the Interdisciplinary
+Centre for Security, Reliability and Trust, University
+of Luxembourg, managing H2020, ESA and FNR
+projects.
+
+In the past, he has worked in numerous RD
+projects for the Institute of Informatics Telecommunications,
+National Center for Scientific Research Demokritos, the Institute of
+Telematics and Informatics, Center of Research and Technology Hellas and
+Mobile Communications Research Group, Center of Communication Systems
+Research, University of Surrey. He has authored more than 120 technical
+papers in refereed international journals, conferences and scientific books. His
+research interests are on multiuser information theory, cooperative/cognitive
+communications and wireless networks optimization. Dr Chatzinotas is the corecipient
+of the 2014 Distinguished Contributions to Satellite Communications
+Award, Satellite and Space Communications Technical Committee, IEEE
+Communications Society and CROWNCOM 2015 Best Paper Award. He is one of the editors of a book on ``Cooperative
+and Cognitive Satellite Systems'' published in 2015 by Elsevier and was involved in coorganizing
+the First International Workshop on Cognitive Radios and Networks
+for Spectrum Coexistence of Satellite and Terrestrial Systems (CogRaN-Sat)
+in conjunction with the IEEE ICC 2015, 8-12 June 2015, London, UK.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1.0in,height=1.25in,clip,keepaspectratio]{bjorn_ottersten.eps}}]
+{Bj\"{o}rn Ottesten (S'87-M'89-SM'99-F'04)} was born in Stockholm, Sweden, in 1961. He received
+the M.S. degree in electrical engineering and applied
+physics from Link$\ddot{\mathrm{o}}$ping University, Link$\ddot{\mathrm{o}}$ping,
+Sweden, in 1986 and the Ph.D. degree in electrical
+engineering from Stanford University, Stanford, CA,
+in 1989. \\
+Dr. Ottersten has held
+research positions at the Department of Electrical
+Engineering, Link$\ddot{\mathrm{o}}$ping University, the Information
+Systems Laboratory, Stanford University, the
+Katholieke Universiteit Leuven, Leuven, and the
+University of Luxembourg. During 96/97, he was Director of Research
+at ArrayComm Inc, a start-up in San Jose, California based on Ottersten'
+s patented technology. He has co-authored journal papers that received the
+IEEE Signal Processing Society Best Paper Award in 1993, 2001, 2006, and
+2013 and 3 IEEE conference papers receiving Best Paper Awards. In 1991, he
+was appointed Professor of Signal Processing at the Royal Institute of Technology
+(KTH), Stockholm. From 1992 to 2004, he was head of the department
+for Signals, Sensors, and Systems at KTH and from 2004 to 2008, he was dean
+of the School of Electrical Engineering at KTH. Currently, he is
+Director for the Interdisciplinary Centre for Security, Reliability and Trust at
+the University of Luxembourg. As Digital Champion of Luxembourg, he acts
+as an adviser to European Commissioner Neelie Kroes. \\
+Dr. Ottersten has served
+as Associate Editor for the IEEE TRANSACTIONS ON SIGNAL PROCESSING and
+on the editorial board of \textit{IEEE Signal Processing Magazine}. He is currently
+editor in chief of \textit{EURASIP Signal Processing Journal} and a member of
+the editorial boards of \textit{EURASIP Journal of Applied Signal Processing} and
+\textit{Foundations and Trends in Signal Processing}. He is a Fellow of the
+IEEE and EURASIP and a member of the IEEE Signal Processing Society
+Board of Governors. In 2011, he received the IEEE Signal Processing Society
+Technical Achievement Award. He is a first recipient of the European Research
+Council advanced research grant. His research interests include security and
+trust, reliable wireless communications, and statistical signal processing.
+\end{IEEEbiography}
+
+
+\begin{IEEEbiography}
+[{\includegraphics[width=1.0in,height=1.25 in,clip,keepaspectratio]{jondral.eps}}]{\textbf{Friedrich K. Jondral (SM'94)}} K. Jondral received a diploma in mathematics (Dipl.-Math.) and a doctoral degree in natural sciences (Dr.rer.nat.) from the Technische Universität Braunschweig (Germany) in 1975 and 1979, respectively. During the winter semester 1977/78, he was a visiting scientist to Professor Takeyuki Hida, Ph.D., at the Department of Mathematics of Nagoya University, Nagoya (Japan). \\
+From 1979 to 1992, Dr. Jondral was an employee of AEG-Telefunken (now Airbus Defence and Space), Ulm (Germany), where he held various research, development and management positions. During this period he also lectured on applied mathematics at the Universität Ulm, where he was appointed Adjunct Professor in 1991. \\
+In 1993 Dr. Jondral became Full Professor and Director of the Communications Engineering Lab (CEL) at the Universität Karlsruhe (TH) (Germany, now Karlsruhe Institute of Technology, KIT). Here, from 2000 to 2002, he served as the Dean of the Department of Electrical Engineering and Information Technology. During the summer semester 2005, he was a visiting faculty to Virginia Tech, Blacksburg (VA). He retired in 2015. 
+\end{IEEEbiography}
+
+% that's all from my side
+\end{document}

@@ -1,0 +1,492 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{abramo}
+Abramowitz, M., Stegun, I.A.: Handbook of Mathematical Functions with Formulas,
+  Graphs, and Mathematical Tables, {ninth Dover printing, tenth GPO printing}
+  edn.
+\newblock Dover, New York (1964)
+
+\bibitem{Andrews14}
+Andrews, J.G., Buzzi, S., Choi, W., Hanly, S.V., Lozano, A., Soong, A.C.K.,
+  Zhang, J.C.: {What Will 5G Be?}
+\newblock {IEEE} Journal on Selected Areas in Communications \textbf{32}(6),
+  1065--1082 (2014).
+\newblock \doi{10.1109/JSAC.2014.2328098}
+
+\bibitem{Andrews12}
+Andrews, J.G., Claussen, H., Dohler, M., Rangan, S., Reed, M.C.: {Femtocells:
+  Past, Present, and Future}.
+\newblock {IEEE} Journal on Selected Areas in Communications \textbf{30}(3),
+  497--508 (2012).
+\newblock \doi{10.1109/JSAC.2012.120401}
+
+\bibitem{Anna05}
+Annavajjala, R., Milstein, L.B.: {Performance analysis of linear
+  diversity-combining schemes on Rayleigh fading channels with binary signaling
+  and Gaussian weighting errors}.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{4}(5),
+  2267--2278 (2005).
+\newblock \doi{10.1109/TWC.2005.853834}
+
+\bibitem{Axell12}
+Axell, E., Leus, G., Larsson, E.G., Poor, H.V.: {Spectrum Sensing for Cognitive
+  Radio : State-of-the-Art and Recent Advances}.
+\newblock {IEEE} Signal Processing Magazine \textbf{29}(3), 101--116 (2012).
+\newblock \doi{10.1109/MSP.2012.2183771}
+
+\bibitem{Kaushik16_CC}
+Becker, H., Kaushik, A., Sharma, S.K., Chatzinotas, S., Jondral, F.K.:
+  {Experimental Study of an Underlay Cognitive Radio System: Model Validation
+  and Demonstration}.
+\newblock In: 11th International Conference on Cognitive Radio Oriented
+  Wireless Networks and Communications (CROWNCOM), pp. 511--523 (2016)
+
+\bibitem{Benn13}
+Bennis, M., Simsek, M., Czylwik, A., Saad, W., Valentin, S., Debbah, M.: {When
+  cellular meets WiFi in wireless small cell networks}.
+\newblock {IEEE} Communications Magazine \textbf{51}(6), 44--50 (2013).
+\newblock \doi{10.1109/MCOM.2013.6525594}
+
+\bibitem{Boga16}
+Bogale, T.E., Le, L.B.: {Massive MIMO and mmWave for 5G Wireless HetNet:
+  Potential Benefits and Challenges}.
+\newblock {IEEE} Vehicular Technology Magazine \textbf{11}(1), 64--75 (2016).
+\newblock \doi{10.1109/MVT.2015.2496240}
+
+\bibitem{Cabric04}
+Cabric, D., Mishra, S.M., Brodersen, R.W.: Implementation issues in spectrum
+  sensing for cognitive radios.
+\newblock In: Conference Record of the Thirty-Eighth Asilomar Conference on
+  Signals, Systems and Computers, vol.~1, pp. 772--776 (2004).
+\newblock \doi{10.1109/ACSSC.2004.1399240}
+
+\bibitem{Cabric06}
+Cabric, D., Tkachenko, A., Brodersen, R.W.: {Experimental Study of Spectrum
+  Sensing Based on Energy Detection and Network Cooperation}.
+\newblock In: Proceedings of the First International Workshop on Technology and
+  Policy for Accessing Spectrum. ACM (2006).
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/1234388.1234400}
+
+\bibitem{Cao14}
+Cao, N., Mao, M., Chen, Y., Long, M.: Analysis of collaborative spectrum
+  sensing with binary phase shift keying signal power estimation errors.
+\newblock IET Science, Measurement and Technology \textbf{8}(6), 350--358
+  (2014).
+\newblock \doi{10.1049/iet-smt.2013.0218}
+
+\bibitem{Juarez11}
+Cardenas-Juarez, M., Ghogho, M.: {Spectrum Sensing and Throughput Trade-off in
+  Cognitive Radio under Outage Constraints over Nakagami Fading}.
+\newblock {IEEE} Communications Letters \textbf{15}(10), 1110--1113 (2011).
+\newblock \doi{10.1109/LCOMM.2011.080811.111127}
+
+\bibitem{Chander08}
+Chandrasekhar, V., Andrews, J.G., Gatherer, A.: {Femtocell Networks: A Survey}.
+\newblock {IEEE} Communications Magazine \textbf{46}(9), 59--67 (2008).
+\newblock \doi{10.1109/MCOM.2008.4623708}
+
+\bibitem{Chav11}
+Chavali, V.G., da~Silva, C.R.C.M.: {Collaborative Spectrum Sensing Based on a
+  New SNR Estimation and Energy Combining Method}.
+\newblock {IEEE} Transactions on Vehicular Technology \textbf{60}(8),
+  4024--4029 (2011).
+\newblock \doi{10.1109/TVT.2011.2166284}
+
+\bibitem{CISCO14}
+Cisco: {Cisco Visual Networking Index: Global Mobile Data Traffic Forecast
+  Update, 2013 \($--$\) 2018}.
+\newblock White Paper  (2014)
+
+\bibitem{Alouini03}
+Digham, F.F., Alouini, M.S., Simon, M.K.: On the energy detection of unknown
+  signals over fading channels.
+\newblock In: IEEE International Conference on Communications (ICC), vol.~5,
+  pp. 3575--3579 (2003).
+\newblock \doi{10.1109/ICC.2003.1204119}
+
+\bibitem{Dig07}
+Digham, F.F., Alouini, M.S., Simon, M.K.: {On the Energy Detection of Unknown
+  Signals Over Fading Channels}.
+\newblock {IEEE} Transactions on Communications \textbf{55}(1), 21--24 (2007).
+\newblock \doi{10.1109/TCOMM.2006.887483}
+
+\bibitem{Elsawy13}
+ElSawy, H., Hossain, E., Haenggi, M.: {Stochastic Geometry for Modeling,
+  Analysis, and Design of Multi-Tier and Cognitive Cellular Wireless Networks:
+  A Survey}.
+\newblock {IEEE} Communications Surveys and Tutorials \textbf{15}(3), 996--1019
+  (2013).
+\newblock \doi{10.1109/SURV.2013.052213.00000}
+
+\bibitem{Elsawy13_cmag}
+ElSawy, H., Hossain, E., Kim, D.I.: {HetNets with cognitive small cells: user
+  offloading and distributed channel access techniques}.
+\newblock {IEEE} Communications Magazine \textbf{51}(6), 28--36 (2013).
+\newblock \doi{10.1109/MCOM.2013.6525592}
+
+\bibitem{Eric15}
+Ericsson: {Ericsson Mobility Report}.
+\newblock Tech. rep. (2015).
+\newblock
+  \urlprefix\url{http://www.ericsson.com/res/docs/2015/mobility-report/ericsson-mobility-report-nov-2015.pdf}
+
+\bibitem{ETSI13}
+{ETSI TS 103 113}: {Electromagnetic compatibility and Radio spectrum Matters
+  (ERM); System Reference document (SRdoc); Mobile broadband services in the
+  2300 - 2400 MHz frequency band under Licensed Shared Acces regime} (2013)
+
+\bibitem{Ettus}
+{Ettus Research}: \url{http://www.ettus.com/}.
+\newblock [Online; accessed Dec. 2, 2015]
+
+\bibitem{Gans71}
+Gans, M.: {The Effect of Gaussian Error in Maximal Ratio Combiners}.
+\newblock {IEEE} Transactions on Communication Technology \textbf{19}(4),
+  492--500 (1971).
+\newblock \doi{10.1109/TCOM.1971.1090666}
+
+\bibitem{Gel13}
+Gelabert, X., Legg, P., Qvarfordt, C.: {Small Cell densification requirements
+  in high capacity future cellular networks}.
+\newblock In: IEEE International Conference on Communications (ICC) Workshops,
+  pp. 1112--1116 (2013).
+\newblock \doi{10.1109/ICCW.2013.6649403}
+
+\bibitem{Ghasemi07}
+Ghasemi, A., Sousa, E.S.: Fundamental limits of spectrum-sharing in fading
+  environments.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{6}(2),
+  649--658 (2007).
+\newblock \doi{10.1109/TWC.2007.05447}
+
+\bibitem{Ghasemi08_cm}
+Ghasemi, A., Sousa, E.S.: Spectrum sensing in cognitive radio networks:
+  requirements, challenges and design trade-offs.
+\newblock {IEEE} Communications Magazine \textbf{46}(4), 32--39 (2008).
+\newblock \doi{10.1109/MCOM.2008.4481338}
+
+\bibitem{Gifford05}
+Gifford, W.M., Win, M.Z., Chiani, M.: Diversity with practical channel
+  estimation.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{4}(4),
+  1935--1947 (2005).
+\newblock \doi{10.1109/TWC.2005.852127}
+
+\bibitem{Gifford08}
+Gifford, W.M., Win, M.Z., Chiani, M.: Antenna subset diversity with non-ideal
+  channel estimation.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{7}(5),
+  1527--1539 (2008).
+\newblock \doi{10.1109/TWC.2008.05744}
+
+\bibitem{Goldsmith05}
+Goldsmith, A.: Wireless Communications.
+\newblock Cambridge University Press, New York, NY, USA (2005)
+
+\bibitem{Goldsmith09}
+Goldsmith, A., Jafar, S.A., Maric, I., Srinivasa, S.: {Breaking Spectrum
+  Gridlock With Cognitive Radios: An Information Theoretic Perspective}.
+\newblock Proceedings of the IEEE \textbf{97}(5), 894--914 (2009).
+\newblock \doi{10.1109/JPROC.2009.2015717}
+
+\bibitem{grad}
+Gradshteyn, I.S., Ryzhik, I.M.: {Table of Integrals, Series, and Products},
+  sixth edn.
+\newblock San Diego, CA: Academic Press. (2000)
+
+\bibitem{Haenggi}
+Haenggi, M.: Stochastic Geometry for Wireless Networks.
+\newblock Cambridge University Press (2013)
+
+\bibitem{Hal13}
+Halbauer, H., Saur, S., Koppenborg, J., Hoek, C.: {3D beamforming: Performance
+  improvement for cellular networks}.
+\newblock Bell Labs Technical Journal \textbf{18}(2), 37--56 (2013).
+\newblock \doi{10.1002/bltj.21604}
+
+\bibitem{Herath09}
+Herath, S.P., Rajatheva, N., Tellambura, C.: {Unified Approach for Energy
+  Detection of Unknown Deterministic Signal in Cognitive Radio Over Fading
+  Channels}.
+\newblock In: IEEE International Conference on Communications (ICC) Workshops,
+  pp. 1--5 (2009).
+\newblock \doi{10.1109/ICCW.2009.5208031}
+
+\bibitem{Jiang13_}
+Jiang, C., Beaulieu, N.C., Jiang, C.: A novel asynchronous cooperative spectrum
+  sensing scheme.
+\newblock In: IEEE International Conference on Communications (ICC), pp.
+  2606--2611 (2013).
+\newblock \doi{10.1109/ICC.2013.6654928}
+
+\bibitem{Jiang15}
+Jiang, C., Beaulieu, N.C., Zhang, L., Ren, Y., Peng, M., Chen, H.H.: {Cognitive
+  radio networks with asynchronous spectrum sensing and access}.
+\newblock {IEEE} Network \textbf{29}(3), 88--95 (2015).
+\newblock \doi{10.1109/MNET.2015.7113231}
+
+\bibitem{Jondral05}
+Jondral, F.K.: {Software-defined radio-basic and evolution to cognitive radio}.
+\newblock EURASIP Journal on Wireless Communication and Networking
+  \textbf{2005}(3), 275--283 (2005)
+
+\bibitem{Kang09}
+Kang, X., Liang, Y.C., Garg, H.K., Zhang, L.: {Sensing-Based Spectrum Sharing
+  in Cognitive Radio Networks}.
+\newblock {IEEE} Transactions on Vehicular Technology \textbf{58}(8),
+  4649--4654 (2009).
+\newblock \doi{10.1109/TVT.2009.2018258}
+
+\bibitem{Kang209}
+Kang, X., Liang, Y.C., Nallanathan, A., Garg, H.K., Zhang, R.: {Optimal power
+  allocation for fading channels in cognitive radio networks: Ergodic capacity
+  and outage capacity}.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{8}(2),
+  940--950 (2009).
+\newblock \doi{10.1109/TWC.2009.071448}
+
+\bibitem{Kaushik13}
+Kaushik, A., Mueller, M., Jondral, F.K.: {Cognitive Relay: Detecting Spectrum
+  Holes in a Dynamic Scenario}.
+\newblock In: Tenth International Symposium on Wireless Communication Systems
+  (ISWCS), pp. 1--2 (2013)
+
+\bibitem{Kaushik14_CC}
+Kaushik, A., Raza, M.R., Jondral, F.K.: {On the Deployment of Cognitive Relay
+  as Underlay Systems}.
+\newblock In: 9th International Conference on Cognitive Radio Oriented Wireless
+  Networks and Communications (CROWNCOM), pp. 329--334 (2014)
+
+\bibitem{Kaushik15_ICC}
+Kaushik, A., Sharma, S.K., Chatzinotas, S., Ottersten, B., Jondral, F.K.:
+  {{Estimation-Throughput} Tradeoff for Underlay Cognitive Radio Systems}.
+\newblock In: {IEEE International Conference on Communications (ICC)}, pp.
+  7701--7706 (2015)
+
+\bibitem{Kaushik15_CC}
+Kaushik, A., Sharma, S.K., Chatzinotas, S., Ottersten, B., Jondral, F.K.:
+  {Sensing-Throughput Tradeoff for Cognitive Radio Systems with Unknown
+  Received Power}.
+\newblock In: 10th International Conference on Cognitive Radio Oriented
+  Wireless Networks and Communications (CROWNCOM), pp. 308--320 (2015)
+
+\bibitem{Kaushik16_TWC}
+Kaushik, A., Sharma, S.K., Chatzinotas, S., Ottersten, B., Jondral, F.K.:
+  {Sensing-Throughput Tradeoff for Interweave Cognitive Radio System: A
+  Deployment-Centric Viewpoint}.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{15}(5),
+  3690--3702 (2016).
+\newblock \doi{10.1109/TWC.2016.2525986}
+
+\bibitem{Kaushik15_D}
+Kaushik, A., Wunsch, F., Sagainov, A., Cuervo, N., Demel, J., Koslowski, S.,
+  J\"akel, H., Jondral, F.: {Spectrum sharing for 5G wireless systems (Spectrum
+  sharing challenge)}.
+\newblock In: IEEE International Symposium on Dynamic Spectrum Access Networks
+  (DySPAN), pp. 1--2 (2015).
+\newblock \doi{10.1109/DySPAN.2015.7343841}
+
+\bibitem{Kay}
+Kay, S.: Fundamentals of Statistical Signal Processing: Detection theory.
+\newblock Prentice Hall Signal Processing Series. Prentice-Hall PTR (1998)
+
+\bibitem{Kim15}
+Kim, D., Lee, H., Hong, D.: {A Survey of In-Band Full-Duplex Transmission: From
+  the Perspective of PHY and MAC Layers}.
+\newblock {IEEE} Communications Surveys and Tutorials \textbf{17}(4),
+  2017--2046 (2015).
+\newblock \doi{10.1109/COMST.2015.2403614}
+
+\bibitem{Kim12}
+Kim, H., Wang, H., Lim, S., Hong, D.: {On the Impact of Outdated Channel
+  Information on the Capacity of Secondary User in Spectrum Sharing
+  Environments}.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{11}(1),
+  284--295 (2012).
+\newblock \doi{10.1109/TWC.2011.112311.110307}
+
+\bibitem{Kim10}
+Kim, K., Xin, Y., Rangarajan, S.: {Energy Detection Based Spectrum Sensing for
+  Cognitive Radio: An Experimental Study}.
+\newblock In: IEEE Global Telecommunications Conference (GLOBECOM), pp. 1--5
+  (2010).
+\newblock \doi{10.1109/GLOCOM.2010.5683560}
+
+\bibitem{Lar14}
+Larsson, E.G., Edfors, O., Tufvesson, F., Marzetta, T.L.: {Massive MIMO for
+  next generation wireless systems}.
+\newblock {IEEE} Communications Magazine \textbf{52}(2), 186--195 (2014).
+\newblock \doi{10.1109/MCOM.2014.6736761}
+
+\bibitem{Lee12}
+Lee, C., Haenggi, M.: {Interference and Outage in Poisson Cognitive Networks}.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{11}(4),
+  1392--1401 (2012).
+\newblock \doi{10.1109/TWC.2012.021512.110131}
+
+\bibitem{Liang08}
+Liang, Y.C., Zeng, Y., Peh, E.C.Y., Hoang, A.T.: {Sensing-Throughput Tradeoff
+  for Cognitive Radio Networks}.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{7}(4),
+  1326--1337 (2008).
+\newblock \doi{10.1109/TWC.2008.060869}
+
+\bibitem{Liao15}
+Liao, Y., Song, L., Han, Z., Li, Y.: Full duplex cognitive radio: a new design
+  paradigm for enhancing spectrum usage.
+\newblock {IEEE} Communications Magazine \textbf{53}(5), 138--145 (2015).
+\newblock \doi{10.1109/MCOM.2015.7105652}
+
+\bibitem{Liu15}
+Liu, G., Yu, F.R., Ji, H., Leung, V.C.M., Li, X.: {In-Band Full-Duplex
+  Relaying: A Survey, Research Issues and Challenges}.
+\newblock {IEEE} Communications Surveys and Tutorials \textbf{17}(2), 500--524
+  (2015).
+\newblock \doi{10.1109/COMST.2015.2394324}
+
+\bibitem{Ali12}
+Maddah-Ali, M.A., Tse, D.: {Completely Stale Transmitter Channel State
+  Information is Still Very Useful}.
+\newblock {IEEE} Transactions on Information Theory \textbf{58}(7), 4418--4431
+  (2012).
+\newblock \doi{10.1109/TIT.2012.2193116}
+
+\bibitem{Mchen07}
+McHenry, M., Livsics, E., Nguyen, T., Majumdar, N.: {XG Dynamic Spectrum Access
+  Field Test Results}.
+\newblock {IEEE} Communications Magazine \textbf{45}(6), 51--57 (2007).
+\newblock \doi{10.1109/MCOM.2007.374432}
+
+\bibitem{Mchen05}
+McHenry, M.A.: {NSF Spectrum Occupancy Measurements Project Summary}.
+\newblock Shared Spectrum Company  (2005)
+
+\bibitem{Mitola99}
+Mitola, J., Q.~Jr.~Maguire, G.: Cognitive radio: making software radios more
+  personal.
+\newblock {IEEE} Personal Communications Magazine \textbf{6}(4), 13--18 (1999).
+\newblock \doi{10.1109/98.788210}
+
+\bibitem{Pao07}
+Paolini, M.: {Meeting the Challenges of High-Capacity Indoor and Outdoor
+  Coverage}.
+\newblock Senza Fili Consulting  (2007).
+\newblock Available at
+  \url{http://www.senzafiliconsulting.com/downloads/SenzaFili_IndoorCoverageSurvey.pdf}
+
+\bibitem{Pawe11}
+Pawelczak, P., Nolan, K., Doyle, L., Oh, S.W., Cabric, D.: {Cognitive radio:
+  Ten Years of Experimentation and Development}.
+\newblock {IEEE} Communications Magazine \textbf{49}(3), 90--100 (2011).
+\newblock \doi{10.1109/MCOM.2011.5723805}
+
+\bibitem{peh07}
+Peh, E., Liang, Y.C.: Optimization for cooperative sensing in cognitive radio
+  networks.
+\newblock In: IEEE Wireless Communications and Networking Conference (WCNC),
+  pp. 27--32 (2007).
+\newblock \doi{10.1109/WCNC.2007.11}
+
+\bibitem{Rapp13}
+Rappaport, T.S., Sun, S., Mayzus, R., Zhao, H., Azar, Y., Wang, K., Wong, G.N.,
+  Schulz, J.K., Samimi, M., Gutierrez, F.: {Millimeter Wave Mobile
+  Communications for 5G Cellular: It Will Work!}
+\newblock {IEEE} Access \textbf{1}, 335--349 (2013).
+\newblock \doi{10.1109/ACCESS.2013.2260813}
+
+\bibitem{Kaushik16_VTC2}
+Rodes, L., Kaushik, A., Sharma, S.K., Chatzinotas, S., Jondral, F.K.:
+  {Square-Law Selector and Square-Law Combiner for Cognitive Radio Systems: An
+  Experimental Study}.
+\newblock In: {IEEE 84th Vehicular Technology Conference (VTC)} (2016).
+\newblock (to appear)
+
+\bibitem{Sab14}
+Sabharwal, A., Schniter, P., Guo, D., Bliss, D.W., Rangarajan, S., Wichman, R.:
+  {In-Band Full-Duplex Wireless: Challenges and Opportunities}.
+\newblock {IEEE} Journal on Selected Areas in Communications \textbf{32}(9),
+  1637--1652 (2014).
+\newblock \doi{10.1109/JSAC.2014.2330193}
+
+\bibitem{Scha14}
+Schaich, F., Wild, T.: {Waveform contenders for 5G -- OFDM vs. FBMC vs. UFMC}.
+\newblock In: 6th International Symposium on Communications, Control and Signal
+  Processing (ISCCSP), pp. 457--460 (2014).
+\newblock \doi{10.1109/ISCCSP.2014.6877912}
+
+\bibitem{Sharma15}
+Sharma, S., Bogale, T., Chatzinotas, S., Ottersten, B., Le, L., Wang, X.:
+  {Cognitive Radio Techniques under Practical Imperfections: A Survey}.
+\newblock {IEEE} Communications Surveys and Tutorials \textbf{17}(4),
+  1858--1884 (2015).
+\newblock \doi{10.1109/COMST.2015.2452414}
+
+\bibitem{Sharma14}
+Sharma, S., Chatzinotas, S., Ottersten, B.: {A hybrid cognitive transceiver
+  architecture: Sensing-throughput tradeoff}.
+\newblock In: 9th International Conference on Cognitive Radio Oriented Wireless
+  Networks and Communications (CROWNCOM), pp. 143--149 (2014)
+
+\bibitem{Sharma13}
+Sharma, S.K., Chatzinotas, S., Ottersten, B.: {SNR Estimation for
+  Multi-dimensional Cognitive Receiver under Correlated Channel/Noise}.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{12}(12),
+  6392--6405 (2013).
+\newblock \doi{10.1109/TWC.2013.103113.130523}
+
+\bibitem{Song14}
+Song, X., Yin, C., Liu, D., Zhang, R.: {Spatial Throughput Characterization in
+  Cognitive Radio Networks with Threshold-Based Opportunistic Spectrum Access}.
+\newblock {IEEE} Journal on Selected Areas in Communications \textbf{32}(11),
+  2190--2204 (2014).
+\newblock \doi{10.1109/JSAC.2014.1411RP05}
+
+\bibitem{Stoica03}
+Stoica, P., Besson, O.: Training sequence design for frequency offset and
+  frequency-selective channel estimation.
+\newblock {IEEE} Transactions on Communications \textbf{51}(11), 1910--1917
+  (2003).
+\newblock \doi{10.1109/TCOMM.2003.819199}
+
+\bibitem{Suraweera10}
+Suraweera, H.A., Smith, P.J., Shafi, M.: Capacity limits and performance
+  analysis of cognitive radio with imperfect channel knowledge.
+\newblock {IEEE} Transactions on Vehicular Technology \textbf{59}(4),
+  1811--1822 (2010).
+\newblock \doi{10.1109/TVT.2010.2043454}
+
+\bibitem{Tah10}
+Taherpour, A., Nasiri-Kenari, M., Gazor, S.: Multiple antenna spectrum sensing
+  in cognitive radios.
+\newblock {IEEE} Transactions on Wireless Communications \textbf{9}(2),
+  814--823 (2010).
+\newblock \doi{10.1109/TWC.2009.02.090385}
+
+\bibitem{Tan08}
+Tandra, R., Sahai, A.: {SNR Walls for Signal Detection}.
+\newblock {IEEE} Journal of Selected Topics in Signal Processing \textbf{2}(1),
+  4--17 (2008).
+\newblock \doi{10.1109/JSTSP.2007.914879}
+
+\bibitem{Tse05}
+Tse, D., Viswanath, P.: {Fundamentals of Wireless Communication}.
+\newblock Cambridge University Press (2005)
+
+\bibitem{Urkowitz}
+Urkowitz, H.: Energy detection of unknown deterministic signals.
+\newblock Proceedings of the IEEE \textbf{55}(4), 523 -- 531 (1967).
+\newblock \doi{10.1109/PROC.1967.5573}
+
+\bibitem{Wu14}
+Wu, S., Wang, H., Youn, C.H.: {Visible light communications for 5G wireless
+  networking systems: from fixed to mobile communications}.
+\newblock {IEEE} Network \textbf{28}(6), 41--45 (2014).
+\newblock \doi{10.1109/MNET.2014.6963803}
+
+\end{thebibliography}

@@ -1,0 +1,20 @@
+[1] Config.pm:300> INFO - This is Biber 0.9.9
+[2] Config.pm:303> INFO - Logfile is 'PIMRC14.blg'
+[3] biber:145> INFO - === Fr Aug 29, 2014, 16:38:48
+[6] Biber.pm:271> INFO - Reading 'PIMRC14.bcf'
+[31] Biber.pm:586> INFO - Found 4 citekeys in bib section 0
+[38] Biber.pm:2585> INFO - Processing bib section 0
+[52] Biber.pm:2677> INFO - Looking for bibtex format file '../refs.bib' for section 0
+[55] bibtex.pm:704> INFO - Found BibTeX data source '../refs.bib'
+[79] Utils.pm:168> WARN - BibTeX subsystem: /tmp/HgNLslul1l/refs.bib_9347.utf8, line 19, warning: undefined macro "IEEE_J_JSAC"
+[79] Utils.pm:168> WARN - BibTeX subsystem: /tmp/HgNLslul1l/refs.bib_9347.utf8, line 41, warning: undefined macro "IEEE_J_JSAC"
+[79] Utils.pm:168> WARN - BibTeX subsystem: /tmp/HgNLslul1l/refs.bib_9347.utf8, line 106, warning: undefined macro "IEEE_J_COML"
+[80] Utils.pm:168> WARN - BibTeX subsystem: /tmp/HgNLslul1l/refs.bib_9347.utf8, line 131, warning: undefined macro "IEEE_J_WCOM"
+[81] Utils.pm:168> WARN - BibTeX subsystem: /tmp/HgNLslul1l/refs.bib_9347.utf8, line 158, warning: undefined macro "IEEE_J_STSP"
+[123] Biber.pm:2480> INFO - Sorting list 'MAIN' keys
+[123] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[141] Biber.pm:2480> INFO - Sorting list 'SHORTHANDS' keys
+[142] Biber.pm:2484> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[158] bbl.pm:427> INFO - Writing 'PIMRC14.bbl' with encoding 'ascii'
+[159] bbl.pm:498> INFO - Output to PIMRC14.bbl
+[160] Biber.pm:106> INFO - WARNINGS: 5

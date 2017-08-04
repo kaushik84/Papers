@@ -1,0 +1,11 @@
+\select@language {english}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\beamer@endinputifotherversion {3.10pt}
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Contents}{2}{0}{1}
+\beamer@sectionintoc {2}{Problem Statement}{3}{0}{2}
+\beamer@sectionintoc {3}{System Model}{6}{0}{3}
+\beamer@sectionintoc {4}{Interference Analysis}{10}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{22}{0}{5}

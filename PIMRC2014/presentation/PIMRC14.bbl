@@ -1,0 +1,126 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% $ biber version 0.9.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber or bibtex as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \entry{Goldsmith09}{article}{}
+    \name{labelname}{4}{}{%
+      {{uniquename=0,hash=634ad569783310f2800e082f5fd14db9}{Goldsmith}{G\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=1923dda8f0cdb6538c906df8e3ed99c3}{Jafar}{J\bibinitperiod}{S.A.}{S\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=f7cfe03ede767b3bf1841d36a04974fa}{Maric}{M\bibinitperiod}{I.}{I\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=d6a78bd9c211b0466ea95642be494a83}{Srinivasa}{S\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{4}{}{%
+      {{uniquename=0,hash=634ad569783310f2800e082f5fd14db9}{Goldsmith}{G\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=1923dda8f0cdb6538c906df8e3ed99c3}{Jafar}{J\bibinitperiod}{S.A.}{S\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=f7cfe03ede767b3bf1841d36a04974fa}{Maric}{M\bibinitperiod}{I.}{I\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=d6a78bd9c211b0466ea95642be494a83}{Srinivasa}{S\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{1a9eeff2dece7e7fe1f808abe7ce3a80}
+    \strng{fullhash}{b912592d85885c45273dfd717bd61b60}
+    \field{sortinit}{G}
+    \field{issn}{0018-9219}
+    \field{journaltitle}{Proceedings of the IEEE}
+    \field{month}{05}
+    \field{number}{5}
+    \field{title}{{Breaking Spectrum Gridlock With Cognitive Radios: An Information Theoretic Perspective}}
+    \field{volume}{97}
+    \field{year}{2009}
+    \field{pages}{894\bibrangedash 914}
+    \verb{doi}
+    \verb 10.1109/JPROC.2009.2015717
+    \endverb
+    \keyw{cognitive radio;a priori rules;cognitive radios;degree of freedom;information theoretic perspective;intelligent wireless communication device;spectrum gridlock;spectrum utilization;wireless network design;Availability;Bandwidth;Cognitive radio;FCC;Frequency;Guidelines;Radio spectrum management;Telecommunication standards;Wireless communication;Wireless networks;Capacity;cognitive radio;degrees of freedom;interweave;overlay;side information;underlay}
+  \endentry
+
+  \entry{Haenggi08now}{article}{}
+    \name{labelname}{2}{}{%
+      {{uniquename=0,hash=97a2b2e3481ae87422446ab6c2988e55}{Haenggi}{H\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=0d7c54ce019b50e172a5283bbdba7085}{Ganti}{G\bibinitperiod}{R.\bibnamedelimi K.}{R\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{2}{}{%
+      {{uniquename=0,hash=97a2b2e3481ae87422446ab6c2988e55}{Haenggi}{H\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=0d7c54ce019b50e172a5283bbdba7085}{Ganti}{G\bibinitperiod}{R.\bibnamedelimi K.}{R\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{b44f6cb1078b3a09cafa54dca5869403}
+    \strng{fullhash}{b44f6cb1078b3a09cafa54dca5869403}
+    \field{sortinit}{H}
+    \field{journaltitle}{Foundations and Trends in Networking}
+    \field{note}{Available at \url{http://www.nd.edu/~mhaenggi/pubs/now.pdf}}
+    \field{number}{2}
+    \field{title}{{Interference in Large Wireless Networks}}
+    \field{volume}{3}
+    \field{year}{2008}
+    \field{pages}{127\bibrangedash 248}
+  \endentry
+
+  \entry{Kaushik13}{inproceedings}{}
+    \name{labelname}{3}{}{%
+      {{uniquename=0,hash=185f3a9b350f00f84876ecb374f0c6be}{Kaushik}{K\bibinitperiod}{Ankit}{A\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=5ee682807c987c55476c50f1e6d179e3}{Mueller}{M\bibinitperiod}{Marcus}{M\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=a9c318baa0ccf86de69064d307ef5729}{Jondral}{J\bibinitperiod}{Friedrich\bibnamedelima K.}{F\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{3}{}{%
+      {{uniquename=0,hash=185f3a9b350f00f84876ecb374f0c6be}{Kaushik}{K\bibinitperiod}{Ankit}{A\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=5ee682807c987c55476c50f1e6d179e3}{Mueller}{M\bibinitperiod}{Marcus}{M\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=a9c318baa0ccf86de69064d307ef5729}{Jondral}{J\bibinitperiod}{Friedrich\bibnamedelima K.}{F\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{0a91885938f245b81c10e5cbf796f287}
+    \strng{fullhash}{0a91885938f245b81c10e5cbf796f287}
+    \field{sortinit}{K}
+    \field{booktitle}{Proceedings of the Tenth International Symposium on Wireless Communication Systems (ISWCS 2013)}
+    \field{month}{{Apr.}}
+    \field{title}{{Cognitive Relay: Detecting Spectrum Holes in a Dynamic Scenario}}
+    \field{year}{2013}
+    \field{pages}{1\bibrangedash 2}
+  \endentry
+
+  \entry{Tan12}{article}{}
+    \name{labelname}{4}{}{%
+      {{uniquename=0,hash=96fe220ec5aed2b0526651fe28dba880}{Tanbourgi}{T\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=1b423af096532d007ed952111ef37df5}{Elsner}{E\bibinitperiod}{J.P.}{J\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=ce42242bb3e9bc3ab9cc934b8b4cc49e}{Jaekel}{J\bibinitperiod}{Holger}{H\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=309316d9e9780cfffbe38231cf937a1b}{Jondral}{J\bibinitperiod}{Freidrich\bibnamedelima K.}{F\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+    }
+    \name{author}{4}{}{%
+      {{uniquename=0,hash=96fe220ec5aed2b0526651fe28dba880}{Tanbourgi}{T\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=1b423af096532d007ed952111ef37df5}{Elsner}{E\bibinitperiod}{J.P.}{J\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=ce42242bb3e9bc3ab9cc934b8b4cc49e}{Jaekel}{J\bibinitperiod}{Holger}{H\bibinitperiod}{}{}{}{}}%
+      {{uniquename=0,hash=309316d9e9780cfffbe38231cf937a1b}{Jondral}{J\bibinitperiod}{Freidrich\bibnamedelima K.}{F\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+    }
+    \strng{namehash}{0b8b588a6fa0441f0c0f4e820eef11a4}
+    \strng{fullhash}{2b08deae6fd32533cbbb3f392a7e8e9a}
+    \field{sortinit}{T}
+    \field{issn}{2162-2337}
+    \field{journaltitle}{IEEE Wireless Commun Lett}
+    \field{month}{06}
+    \field{number}{3}
+    \field{title}{{Adaptive Frequency Hopping in Ad Hoc Networks with Rayleigh Fading and Imperfect Sensing}}
+    \field{volume}{1}
+    \field{year}{2012}
+    \field{pages}{185\bibrangedash 188}
+    \verb{doi}
+    \verb 10.1109/WCL.2012.031512.120034
+    \endverb
+    \keyw{Rayleigh channels;ad hoc networks;optimisation;probability;radiofrequency interference;AFH sensing techniques;ASE;Rayleigh fading;adaptive frequency hopping;area spectral efficiency;carrier detection based sensing;imperfect sensing;packet error rate;probabilistic model;received signal strength sensing;self-interference;self-varying external interference;slow-varying external interference;system optimization;wireless ad hoc networks;Ad hoc networks;Fading;Interference;Probes;Sensors;Wireless communication;Wireless sensor networks;Adaptive frequency hopping;ad hoc networks;area spectral efficiency}
+  \endentry
+
+\endrefsection
+\endinput
+

@@ -1,0 +1,141 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fancyhdr, tabularx, epsfig, amsmath, amssymb, amsfonts, amsthm, epsfig, ae, graphicx, geometry, color}
+%\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\renewcommand{\baselinestretch}{1}	% spacings
+\newcommand{\itemline}[3]{\noindent\begin{tabular}{p{2.7cm}p{10.5cm}}\rule{0mm}{#1mm}#2&#3\end{tabular}\\}
+\newcommand{\itemlinewide}[3]{\noindent\begin{tabular}{p{2.7cm}p{12.5cm}}\rule{0mm}{#1mm}#2&#3\end{tabular}\\}
+\newcommand{\itemlinex}[4]{\noindent\begin{tabular}{p{2.7cm}p{12.5cm}}\hspace{#4}\rule{0mm}{#1mm}#2&#3\end{tabular}\\}
+\newcommand{\itembull}[1]{\rule{#1mm}{0mm}\begin{footnotesize}$^{_{\circ}}$\end{footnotesize}}
+\newcommand{\itemcirc}[1]{\rule{#1mm}{0mm}\begin{footnotesize}$^{_{\bullet}}$\end{footnotesize}}
+\newcommand{\drawhline}{\noindent \begin{tabular}{p{\textwidth}}\hline\\ \vspace{\textwidth}\\ \end{tabular}}
+\newcommand{\itemmin}[1]{\hspace{#1mm}-}
+\usepackage{CV}
+\geometry{a4paper,hdivide={35mm,*,35mm},vdivide={35mm,*,35mm}}
+\fancyfoot{}
+\fancyhead{\empty}
+\fancyfoot[R]{\small\thepage/2}
+\renewcommand{\headrule}{}
+
+\begin{document}
+%\pagestyle{empty}
+\pagestyle{fancy}
+
+%Ueberschrift
+\begin{center}
+\huge{\textsc{Curriculum Vitae}}
+\vspace{\baselineskip}
+
+\Large{\textsc{Ankit Kaushik}}
+\end{center}
+\vspace{1.5\baselineskip}
+
+\begin{center}
+\begin{minipage}{1.0\textwidth}
+\begin{minipage}{.50\textwidth}
+\section{Contact Details}
+\begin{minipage}{1.0\textwidth}
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+\begin{tabular}{l}
+	Luise Riegger Strasse 58\\
+%	Apartment 119\\
+	76137 Karlsruhe, Germany\\
+	Mobile: +49 (0)176 23645733\\
+	E-Mail: Ankit.Kaushik@kit.edu\\
+\end{tabular}
+\vspace{1.5\baselineskip}
+\end{minipage}
+\end{center}
+\end{minipage}
+\\
+\begin{minipage}{0.85\textwidth}
+\section{Personal Details}
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+\begin{tabular}{ll}
+	Date of birth:& 07.06.1984\\
+	Place of birth:&  Delhi, India\\
+	Nationality:& Indian\\
+	Marital Status:& Married\\
+\end{tabular}
+\end{minipage}
+\end{center}
+\end{minipage}
+\end{minipage}
+\hspace{2cm}
+\begin{minipage}{.5\textwidth}
+\includegraphics[scale=0.2]{AnkitKaushik.jpeg}
+\end{minipage}
+\end{minipage}
+\end{center}
+\vspace{.2cm}
+
+\section*{Education}
+%\vspace{.5cm}
+\itemline{0}{Since 04.2012}{ 	\textbf{Pursuing Ph.D}, Karlsruhe Institute of Technology, Karlsruhe, Germany} \newline
+\itemline{0}{10.2005--07.2007}{ 	\textbf{Master's Degree:\newline  
+						\textbf{\emph{Information and Communication Engineering}}}\newline 
+						\emph{University of Karlsruhe, Germany and Politecnico di Torino, Italy}\newline
+						\textit{Qualification:} M.Sc. \emph{(Master of Science,  European Master of Research on Information and Communications Technologies (MERIT))} 
+\newline
+						 \textbf{Final Grade:} 1,4 (German Standards) 110/110 with Honours (Italian Standards) 
+}
+						
+\vspace{0.4cm}
+\itemline{0}{08.2001--06.2005}{ 	\textbf{Bachelor's Degree:\newline  
+								\textbf{\emph{Electronics and Communication Engineering}}}\newline 
+								\textit{Qualification:} B.Tech. \emph{(Bachelor of Technology, Guru Gobind Singh Indraprastha University), Delhi}
+\newline
+						 \textbf{Final Grade:} 75\%
+} 
+						
+%\vspace{0.2cm}
+%\drawhline
+%-------------------------------------------------------------------------------
+%\newpage
+\section*{Schooling}
+
+\itemline{0}{04.1999--03.2001}{ 	Visited \emph{Oxford Senior Secondary School}, Delhi, India\newline 
+						\textit{Qualification}: CBSE $12^{th}$ 
+\newline
+						 \textbf{Final Grade:} 76\%
+}
+
+\section*{Work Experience}
+
+\itemline{6}{09.2007--03.2012}{\textbf{Design Engineer}, Leica Camera AG \newline
+			\begin{tabular} {p{2mm}p{10cm}}
+%			\itemcirc{0} & Development of software modules for system cameras for system control and image processing.
+% \\ 
+%			\itemcirc{0} & Collaboration with external partner.\\
+			\itemcirc{0} & {\textbf{Accomplishment:}} Devised an algorithm of lossless image compression for RAW image inside camera using context adaptive Huffman codes. 
+			\end{tabular}}
+
+
+%\vspace{.3cm}
+
+\section*{Languages known}
+	\begin{table}[h] %\centering
+		\begin{tabular}{p{.8cm}p{3.5cm}p{9.5cm}}
+			& Hindi  		& Mother tongue\\
+			& English 	& Written and spoken\\
+			& German 	& Conversational\\ 
+			
+		\end{tabular}
+	\end{table}
+\vspace{.3cm}
+
+
+\vspace{.4cm}
+\noindent \includegraphics[height=.6cm]{SignAnkit3}\\
+%\vspace{1cm}
+\noindent Ankit Kaushik\\
+\noindent Karlsruhe, \today
+\end{document}
+
+
+
+

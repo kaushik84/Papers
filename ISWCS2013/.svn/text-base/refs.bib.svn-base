@@ -1,0 +1,178 @@
+% This file was created with JabRef 2.6.
+% Encoding: Cp1252
+
+@ARTICLE{Haykin, 
+author={Haykin, S.}, 
+journal={Selected Areas in Communications, IEEE Journal on}, title={Cognitive radio: brain-empowered wireless communications}, 
+year={2005}, 
+month={feb.}, 
+volume={23}, 
+number={2}, 
+pages={ 201 - 220}, 
+keywords={ brain-empowered wireless communication; channel-state estimation; cognitive radio; interference temperature; machine learning; predictive modeling; radio electromagnetic spectrum; radio-scene analysis; software-defined radio; stochastic games; transmit-power control; understanding-by-building; channel estimation; cognitive systems; learning (artificial intelligence); power control; radio spectrum management; software radio; stochastic games;}, 
+doi={10.1109/JSAC.2004.839380}, 
+ISSN={0733-8716},}
+
+@INPROCEEDINGS{Long, 
+author={Xin Long and Xiaoying Gan and Youyun Xu and Jing Liu and Meixia Tao}, 
+booktitle={Cognitive Radio Oriented Wireless Networks and Communications, 2008. CrownCom 2008. 3rd International Conference on}, title={An Estimation Algorithm of Channel State Transition Probabilities for Cognitive Radio Systems}, 
+year={2008}, 
+month={may}, 
+volume={}, 
+number={}, 
+pages={1 -4}, 
+keywords={Markov channel model;central limit theorem;channel state transition probabilities;cognitive radio systems;estimation algorithm;maximum likelihood method;partially observable Markov decision process;Markov processes;channel estimation;cognitive radio;probability;}, 
+doi={10.1109/CROWNCOM.2008.4562505}, 
+ISSN={},}
+
+@ARTICLE{Weiss, 
+author={Weiss, T.A. and Jondral, F.K.}, 
+journal={Communications Magazine, IEEE}, title={Spectrum pooling: an innovative strategy for the enhancement of spectrum efficiency}, 
+year={2004}, 
+month={mar}, 
+volume={42}, 
+number={3}, 
+pages={ S8 - 14}, 
+keywords={ Internet; MAC layer; frequency band; handoff algorithms; mobile radio system; mutual interference; regulatory authorities; scheduling algorithms; spectrum allocation; spectrum efficiency enhancement; spectrum pooling; synchronization; ubiquitous wireless access; Internet; frequency allocation; mobile radio; radiofrequency interference; scheduling; synchronisation;}, 
+doi={10.1109/MCOM.2004.1273768}, 
+ISSN={0163-6804},}
+
+@ARTICLE{Zhao, 
+author={Qing Zhao and Lang Tong and Ananthram Swami and Yunxia Chen}, 
+journal={Selected Areas in Communications, IEEE Journal on}, title={Decentralized cognitive MAC for opportunistic spectrum access in ad hoc networks: A POMDP framework}, 
+year={2007}, 
+month={april }, 
+volume={25}, 
+number={3}, 
+pages={589 -600}, 
+keywords={POMDP;ad hoc network;application layer;decentralized cognitive MAC protocol;medium access control;opportunistic spectrum access;partially observable Markov decision process;physical layer;probability;receiver;spectrum sensing;traffic statistics;transmitter;Markov processes;access protocols;ad hoc networks;cognitive radio;decision theory;multivariable systems;telecommunication traffic;}, 
+doi={10.1109/JSAC.2007.070409}, 
+ISSN={0733-8716},}
+
+@ARTICLE{Kim2008, 
+author={Hyoil Kim and Shin, K.G.}, 
+journal={Mobile Computing, IEEE Transactions on}, title={Efficient Discovery of Spectrum Opportunities with MAC-Layer Sensing in Cognitive Radio Networks}, 
+year={2008}, 
+month={may }, 
+volume={7}, 
+number={5}, 
+pages={533 -545}, 
+keywords={MAC-layer sensing;cognitive radio networks;delay minimization;dynamic spectrum allocation;environment-adaptive channel-usage pattern estimation;idle-channel discovery delay;licensed channels availability;optimal channel-sequencing technique;sensing-period adaptation;sensing-period optimization;spectrum availability;spectrum opportunities discovery;time-varying channel-parameters tracking;access protocols;channel allocation;channel estimation;cognitive radio;minimisation;time-varying channels;}, 
+doi={10.1109/TMC.2007.70751}, 
+ISSN={1536-1233},}
+
+@ARTICLE{durstenfield,
+  author = {Durstenfeld, Richard},
+  title = {Algorithm 235: Random permutation},
+  journal = {Commun. ACM},
+  year = {1964},
+  volume = {7},
+  pages = {420--},
+  number = {7},
+  month = jul,
+  acmid = {364540},
+  address = {New York, NY, USA},
+  doi = {10.1145/364520.364540},
+  issn = {0001-0782},
+  issue_date = {July 1964},
+  publisher = {ACM},
+  url = {http://doi.acm.org/10.1145/364520.364540}
+}
+
+
+@ARTICLE{mitola,
+  author = {Mitola, J., III and Maguire, G.Q., Jr.},
+  title = {Cognitive radio: making software radios more personal},
+  journal = {Personal Communications, IEEE},
+  year = {1999},
+  volume = {6},
+  pages = {13 -18},
+  number = {4},
+  month = {aug},
+  doi = {10.1109/98.788210},
+  issn = {1070-9916},
+  keywords = {GSM;RF bands;air interfaces;automated reasoning;cognitive radio agents;multiband
+	multimode personal communications systems;personal services;protocol
+	stack;radio equalizer;radio etiquette;radio knowledge representation
+	language;radio networks;radio nodes;radio propagation;radio spectrum;radio-domain
+	model-based reasoning;radio-domain-aware intelligent agents;software
+	modules;software radios;spatial patterns;temporal patterns;cellular
+	radio;cognitive systems;equalisers;knowledge representation languages;model-based
+	reasoning;personal communication networks;protocols;software agents;software
+	architecture;telecommunication computing;}
+}
+
+@Article{Hoeffding,
+  author =       "Hoeffding, Wassily",
+  title =        "Probability Inequalities for Sums of Bounded Random Variables",
+  journal =      "Journal of the American Statistical Association",
+  year =         "1963",
+  volume =    "58",
+  number =    "301",
+  pages =     "13--30",
+  month =     "March",
+  bib2html_rescat = "Bandits",
+}
+
+@article{Chernoff,
+  author = {Chernoff, H.},
+  journal = {Annals of Mathematical Statistics},
+  pages = {409-507},
+  title = {A measure of asymptotic efficiency for tests of a hypothesis based on the sums of observations},
+  volume = 23,
+  year = 1952
+}
+
+@Book{Papoulis84,
+  author =       "A. Papoulis",
+  title =        "Probability, Random Variables, and Stochastic
+                 Processes",
+  publisher =    pub-mcgraw-hill,
+  address =      pub-mcgraw-hill:adr,
+  edition =      "2nd",
+  year =         "1984",
+}
+
+@book{fellervol1,
+  author = {Feller, William},
+  address = {New York},
+  description = {Feller volume 1},
+  howpublished = {Hardcover},
+  isbn = {0471257087},
+  keywords = {book combinatorics d4.1 discrete feller probability tagora},
+  priority = {2},
+  publisher = {John Wiley \& Sons Inc.},
+  series = {Third edition},
+  title = {An Introduction to Probability Theory and Its Applications {V}ol. {I}. },
+  year = 1968
+}
+
+
+@Book{fellervol2,
+  added-at = {2009-03-19T17:13:29.000+0100},
+  address = {New York},
+  author = {Feller, William},
+  biburl = {http://www.bibsonomy.org/bibtex/2780e5c7a7c4d5e1c30f5e8128c6cca34/peter.ralph},
+  description = {Feller volume 2},
+  interhash = {1cb77c0723c4f6777267e0becc521356},
+  intrahash = {780e5c7a7c4d5e1c30f5e8128c6cca34},
+  keywords = {feller reference},
+  mrclass = {60.00},
+  mrnumber = {MR0270403 (42 \#5292)},
+  pages = {xxiv+669},
+  publisher = {John Wiley \& Sons Inc.},
+  series = {Second edition},
+  timestamp = {2009-03-19T17:13:29.000+0100},
+  title = {An introduction to probability theory and its applications.
+              {V}ol. {II}. },
+  year = 1971
+}
+
+@misc{LectureR,
+  Author = {Gallager, Robert},
+  Institution = {Massachusetts Institute of Technology},
+  Howpublished = {MIT Opencourseware, Course Notes, MIT Course Number 6.262},
+  Year = {2011},
+  Title = {{Discrete Stochastic Processes.}}
+}
+

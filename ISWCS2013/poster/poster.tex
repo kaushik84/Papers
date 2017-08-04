@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\usepackage{hyperref}
+\usepackage[paperheight=12in,paperwidth=8.5in]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{siunitx}
+
+\title{Cognitive Relay: Detecting Spectrum Holes in a Dynamic Scenario}
+\date{Ilmenau, 28.08.2013}
+\author{Ankit Kaushik, Marcus M\"uller, Friedrich K. Jondral \\
+        Communications Engineering Lab, Karlsruhe Institute of Technology (KIT) \\
+        \{\href{mailto:Ankit.Kaushik@kit.edu}{Ankit.Kaushik}, 
+        \href{mailto:Friedrich.Jondral@kit.edu}{Friedrich.Jondral}\}@kit.edu,
+        \href{mailto:Marcus.Mueller@student.kit.edu}{Marcus.Mueller@student.kit.edu} }
+\begin{document}
+  \maketitle
+	\section*{Introduction and Motivation}
+	%\textbf{Cognitive radio} illustrates a dynamic model that provides human intervention to the underlying radio hardware. \\
+	\textbf{Dynamic Spectrum Access} (DSA) is one of the many applications of cognitive radio.\\
+	Main tasks for a DSA operating as Secondary User (SU):
+	\begin{itemize}
+%	\item Realizes secondary access to the primary user (PU) spectrum
+	\item Sensing $\rightarrow$ \textit{Learning} and intelligent access $\rightarrow$ \textit{Act}
+	\item Avoid interference to the Primary User (PU)
+	\end{itemize}
+	
+	Purpose of this work:
+	\begin{itemize}
+	\item Realize the cognitive concepts over the hardware.
+	\item Use sophisticated algorithms to reduce the time constraints and computational complexity
+	\item Demonstrate the radio in a real scenario
+	\end{itemize}
+	\section*{Scenario}
+		\textbf{Cognitive Relay} (CR) is network element of the SU system.
+	\begin{itemize}
+	\item Supports wireless services for devices operating indoor
+	\item Enables dynamic access to increase spectral efficiency
+	\end{itemize}
+	\section*{System Model}
+	Cross-Layer optimization\\
+	\begin{itemize}
+		\item {
+			Receiver model: 
+			\begin{align*}
+				y[k] = x[k] + w[k]
+			\end{align*}	
+			Energy Detection 
+			\begin{align*}
+				t(\textbf{y}) = \frac{1}{K} \sum\limits_{k=0}^{K-1} |y[k]|^2 \mathop{\gtrless}_{\mathcal{H}_1}^{\mathcal{H}_0} \gamma
+			\end{align*}	
+			\renewcommand{\arraystretch}{1.3}
+			\begin{tabular}{p{0.15\columnwidth}p{0.73\columnwidth}} 
+			$t(\textbf{y})$  &    \text{Test statistics}, \\ 
+			$K$    & \text{  Number of samples,} \\
+			$y[k]$ & \text{  Received waveform,} \\
+			$x[k]$ & \text{  Transmitted waveform,} \\
+			$w[k]$ & \text{  Noise waveform,} \\
+			$\gamma$ & \text{ Threshold, determined using constant false alarm}
+			\end{tabular} }	
+		\item {Learning	\\
+			Modelling channel access model as discrete time discrete state Markov Process (Fig.2)
+			\begin{itemize}
+				\item PU subchannels $N$
+				\item Multiband sensing through subchannel scanning
+				\item State transitional probabilities $(\alpha, \beta)$		
+				\item {Utilization Probability $u$ 
+				\begin{align*}
+					u &= \mathbb {P}(z(t) = 0) \\
+        				\quad &= \frac{\alpha}{\alpha + \beta }
+				\end{align*} }
+				\end{itemize}
+				}			
+		\end{itemize}
+	
+	\section*{Implementation and User Interaction}
+	Demonstrator Setup (Fig. Demonstrator) \\
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Test scenario &  GSM Channels at \SI{1800}{MHz} \\ \hline
+			Hardware platform & USRP N210 \\ \hline
+			Multiband sensing &  \\  Software Defined architecture &  GnuRadio  \\  \hline	
+		\end{tabular}
+	\end{center}
+
+	Analysis (Fig.3)		\\
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+		\hline
+		Detection of spectral holes &  time slots \\ \hline
+		Estimation of model parameters $(\widehat{\alpha}, \widehat{\beta)}$ & Maximum Likelihood Estimation \\ \hline
+		Channel Ranking & $\textbf{u} = [u^1,u^2,...,u^N]$	 \\ \hline	
+		\end{tabular}
+	\end{center}
+		
+		
+	\section*{Conclusion and Future Work}	
+			
+		\begin{itemize}
+			\item Cognitive radio implementation in a dynamic scenario
+			\item Potential to sense non-contiguous multiple band simultaneous over low cost hardware		
+			\item Capable to learn and interact with its environment
+			\item {Considering other scenarios such as Overlay Systems
+			\begin{itemize}
+				\item spatial separation of the PU and SU systems $\rightarrow$ Transmit Power Control
+			\end{itemize}}
+			\item Cooperation with other the CRs					
+		\end{itemize}	
+\end{document}

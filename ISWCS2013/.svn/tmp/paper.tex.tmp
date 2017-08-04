@@ -1,0 +1,143 @@
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[journal]{IEEEtran}
+
+%\usepackage[latin1]{inputenc} % Latin1
+\usepackage[utf8]{inputenc} 	% UTF-8
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+%\usepackage{breeq}
+\usepackage[pdftex]{graphicx}
+%\graphicspath{{./figures/}}
+\newcommand{\e}[1]{{\mathbb E}\left[ #1 \right]}
+\newcommand{\p}{P}
+%\DeclareGraphicsExtensions{.pdf}
+
+
+% Metadata
+\usepackage[final=true]{hyperref}
+\hypersetup{
+	pdfauthor = {Ankit Kaushik et al.},
+	pdftitle = {Crowncom 2013},
+	pdfsubject = {Crowncom 2013},
+	pdfcreator = {PDFLaTeX with hyperref package},
+	pdfproducer = {PDFLaTeX}
+%	hidelinks = {true}
+}
+
+\begin{document}
+%
+\title{Cognitive Relay: An application to dynamic spectrum access}
+
+<<<<<<< .mine
+\author{Ankit Kaushik, Marcus Mueller, Friedrich K. Jondral \\ Communications Engineering Lab \\ Karlsruhe Institute of Technology (KIT) \\ \{\href{mailto:Ankit.Kaushik@kit.edu}{Ankit.Kaushik},  \href{mailto:Friedrich.Jondral@kit.edu}{Friedrich.Jondral}\}@kit.edu, \{\href{mailto:Marcus.Mueller}{Markus.Mueller}\}@student.kit.edu \\
+=======
+\author{Ankit Kaushik, Marcus Mueller, Friedrich K. Jondral \\ Communications Engineering Lab \\ Karlsruhe Institute of Technology (KIT) \\ \{\href{mailto:Ankit.Kaushik@kit.edu}{Ankit.Kaushik},  \href{mailto:Friedrich.Jondral@kit.edu}{Friedrich.Jondral}\}@kit.edu, \{\href{mailto:Marcus.Mueller}{Marcus.Mueller}\}@student.kit.edu \\
+>>>>>>> .r198
+}
+
+% make the title area
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{abstract}
+..
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Cognitive radio first coined by Mitola \cite{mitola} in 1999,.... 
+Cognitive Relay is a device that dynamically access the spectrum, to support wireless services operating indoor. The goal is accomplished through the fusion of sensing and medium access. 
+
+The paper discusses the hardware and software implementation for the prototype. \\
+\textit{The main targets for the paper.}
+\begin{itemize}
+\item \textit{Sensing algorithm: Scanning the primary user channels by regulating the RF parameters over the software. The sensing is performed using energy detection.}
+\item \textit{The device access the channels and rank them according to their utilization probability.}
+\item \textit{The device performs a real test measurements by monitoring the GSM at 1800 MHz bands at our labs}
+\end{itemize}
+
+The rest of the paper is organized as follows: Section \ref{sec:scenario} discusses the scenario for the cognitive relay. Section \ref{sec:dect} explains the detection technique involved for sensing. Section \ref{sec:imple} describes the implementation of the device. Finally, Section \ref{sec:mea res} presents the measurement results in a real scenario followed by Section \ref{sec:conc} which concludes the paper.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cognitive Relay Scenario} \label{sec:scenario}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}
+	\centering
+	\includegraphics{figures/CR_Scenario_B}
+	\caption{A scenario demonstrating the interaction between the primary user and the cognitive relay.}
+	\label{fig:scenario}
+\end{figure*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Detection Technique} \label{sec:dect} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Energy detection ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Implementaion} \label{sec:imple} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Hardware\footnote{Universal Serial Radio Peripheral} and Software\footnote{GNURadio}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Measurement Results} \label{sec:mea res}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+GSM channels at 1800 MHz ... 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion} \label{sec:conc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Conclusion and future steps with the device ..
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Appendix} \label{sec:appendix}
+\subsection*{Noise Calibration}
+The theoretical noise floor is determined using (\ref{eq:theornoisefloor}) is the thermal noise power with added noise figure.
+\begin{equation} \label{eq:theornoisefloor}
+\begin{split}
+\text{Noise floor} &= kTB  + \text{NF} \\
+			  &= -121 + 8\\
+			  &= -115 \text{ dBm} 
+\end{split}
+\end{equation}
+Fig. \ref{fig:USRPCallib} demonstrate the physical interpretation of the digital values in terms of known input power.  
+\begin{figure}[!t]
+	\centering
+	\includegraphics[trim=5.0cm 0.0cm 7.0cm 0.0cm,clip=true,width=\columnwidth]{figures/Callib}
+	\caption{USRP calibration with different gain values.}
+	\label{fig:USRPCallib}
+\end{figure}
+\begin{center}
+	\begin{tabular}{| c | c | c | c |}  
+	\hline
+	Gain 	 & Th. Noise floor  & Noise Floor & Noise Figure  \\ 
+ 	(dB) 	 &     (dBm)		&  (dBm)      & (dB) 	      \\ \hline
+	10   	 & -113 		    & -85 		  & 26 			  \\ \hline
+	15   	 & -113 	    	& -85  		  & 26 		 	  \\ \hline
+	20   	 & -113 	    	& -95 	   	  & 18 			  \\ \hline
+	25   	 & -113 	    	& -95 	 	  & 18 		 	  \\ \hline
+	30   	 & -113 	   	    & -95 		  & 18 			  \\ \hline
+	30 + 23  & -119	    		& -118	      & 3			  \\ \hline
+	\end{tabular}
+\end{center}
+\begin{equation} \label{eq:noisefig}
+\begin{split}
+nf  = nf1 + \frac{(nf2 - 1)}{gain1} 
+\end{split}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,refs}
+
+% that's all folks
+\end{document}

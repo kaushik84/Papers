@@ -1,0 +1,170 @@
+
+\newcommand{\e}[2]{{\mathbb E}_{#1}\left[ #2 \right]}
+\newcommand{\s}[2]{{\frac{1}{{#1}}\sum_n^{#1}} {#2}}
+\newcommand{\q}[3]{{\mathcal Q}_{#1}\left( #2 \right)}
+\newcommand{\p}{\mathbb P}
+\newcommand{\sub}[1]{_{\text{#1}}}
+\newcommand{\pd}{\text{P}\sub{d}}
+\newcommand{\op}{\text{P}\sub{out}}
+\newcommand{\opc}{\rho\sub{out}}
+\newcommand{\pc}{P\sub{Tx,ST,full}}
+\newcommand{\pdd}{\bar{\text{P}}\sub{d}}
+\newcommand{\preg}{P\sub{Tx,ST,cont}}
+\newcommand{\xreg}{x\sub{ST,cont}}
+\newcommand{\prcvd}{P\sub{Rx,ST}}
+\newcommand{\prcvdsr}{P\sub{Rx,SR}}
+\newcommand{\eprcvd}{\hat{P}\sub{Rx,ST}}
+\newcommand{\eprcvdsr}{\hat{P}\sub{Rx,SR}}
+\newcommand{\yrcvd}{y\sub{ST}}
+\newcommand{\ptran}{P\sub{Tx,PR}}
+\newcommand{\ptranpt}{P\sub{Tx,PT}}
+\newcommand{\xtran}{x\sub{PR}}
+\newcommand{\xtranpt}{x\sub{PT}}
+\newcommand{\pp}{P\sub{Rx,PR}}
+\newcommand{\yp}{y\sub{PR}}
+\newcommand{\ys}{y\sub{SR}}
+\newcommand{\nap}{w\sub{PR}}
+\newcommand{\nas}{w\sub{ST}}
+\newcommand{\nasr}{w\sub{SR}}
+\newcommand{\ite}{\theta\sub{I}}
+\newcommand{\rs}{R\sub{s}}
+\newcommand{\trs}{R\sub{s}}
+\newcommand{\ers}{\e{}{\rs}}
+%\newcommand{\gp}{g\sub{p}}
+\newcommand{\gpo}{h\sub{PR,ST}}
+\newcommand{\gpt}{h\sub{PT,SR}}
+\newcommand{\egpo}{\hat{h}\sub{PR,ST}}
+\newcommand{\egpt}{\hat{h}\sub{PT,SR}}
+\newcommand{\epgpo}{|\hat{h}\sub{PR,ST}|^2}
+\newcommand{\epgpt}{|\hat{h}\sub{PR,SR}|^2}
+\newcommand{\epgs}{|\hat{h}\sub{ST,SR}|^2}
+\newcommand{\gs}{h\sub{ST,SR}}
+\newcommand{\pgpo}{|h\sub{PR,ST}|^2}
+\newcommand{\pgpt}{|h\sub{PT,SR}|^2}
+\newcommand{\egs}{\hat{h}\sub{s}}
+\newcommand{\pgs}{|h\sub{ST,SR}|^2}
+\newcommand{\bpgpo}{|\bar{h}\sub{PR,ST}|^2}
+\newcommand{\bpgpt}{|\bar{h}\sub{PT,SR}|^2}
+\newcommand{\bpgs}{|\bar{h}\sub{ST,SR}|^2}
+%\newcommand{\ap}{\alpha\sub{p}}
+%\newcommand{\apt}{\alpha\sub{p}}
+\newcommand{\npp}{\sigma^2\sub{p}}
+\newcommand{\nps}{\sigma^2}
+\newcommand{\npu}{\Delta\sigma^2}
+\newcommand{\fsam}{f\sub{s}}
+\newcommand{\ttau}{\tilde{\tau}}
+\newcommand{\ca}{\text{C}\sub{s}}
+\newcommand{\eca}{\hat{\text{{C}}}\sub{s}}
+\newcommand{\mpo}{m\sub{PR,ST}}
+\newcommand{\mpt}{m\sub{PT,SR}}
+\newcommand{\ms}{m\sub{ST,SR}}
+
+% distribution functions
+\newcommand{\fpreg}{F_{\preg}}
+\newcommand{\fprcvd}{F_{\eprcvd}}
+\newcommand{\fpgpo}{F_{\pgpo}}
+\newcommand{\fpgpt}{F_{\pgpt}}
+\newcommand{\fpgs}{F_{\pgs}}
+\newcommand{\fprcvdsr}{F_{\eprcvdsr}}
+\newcommand{\fpp}{F_{\pp}}
+\newcommand{\frs}{F_{\rs}}
+\newcommand{\fgs}{F_{\epgs}}
+\newcommand{\fgp}{F_{\epgpo}}
+\newcommand{\fc}{F_{\eca}}
+
+% density functions
+\newcommand{\dprcvd}{f_{\prcvd}}
+\newcommand{\dK}{f_{\gpo \prcvd}}
+\newcommand{\dpp}{f_{\pp}}
+\newcommand{\dpreg}{f_{\preg}}
+\newcommand{\drs}{f_{\rs}}
+\newcommand{\dgp}{f_{\epgpo}}
+\newcommand{\dgs}{f_{\epgs}}
+\newcommand{\dc}{f_{\eca}}
+
+\newcommand{\lpo}{\lambda\sub{p,1}}
+\newcommand{\lpt}{\lambda\sub{p,2}}
+\newcommand{\ls}{\lambda\sub{s}}
+\newcommand{\Ks}{\tau\sub{p}{\fsam}}
+
+\newcommand{\apo}{a\sub{p,1}}
+\newcommand{\bpo}{b\sub{p,1}}
+\newcommand{\apt}{a\sub{p,2}}
+\newcommand{\bpt}{b\sub{p,2}}
+\newcommand{\as}{a\sub{s}}
+\newcommand{\bs}{b\sub{s}}
+\newcommand{\tp}{\frac{\tau\sub{p}}{2}}
+
+\newcommand{\imp}{\uline}
+\newcommand{\ur}{\uuline}
+\newcommand{\ns}{\uwave} 
+\newcommand{\ws}{\sout}
+\newcommand{\fl}{\dashuline}
+\newcommand{\un}{\dotuline}
+\DeclareMathOperator*{\Pro}{Pr}
+\DeclareMathOperator*{\maxi}{max}
+\DeclareMathOperator*{\expec}{\mathbb{E}}
+\DeclareMathOperator*{\gthan}{\ge}
+\DeclareMathOperator*{\eqto}{=}
+\DeclareMathOperator*{\cosi}{ci}
+\DeclareMathOperator*{\sini}{si}
+\DeclareMathOperator*{\iGamma}{\text{inv}-\Gamma}
+\DeclareMathOperator*{\ncchi2}{{\mathcal{X}\sp{\prime}}^2}
+\DeclareMathOperator*{\invncchi2}{\text{}\mathcal{X'}^2}
+
+
+\newtheorem{theorem}{\tc{Problem}}
+\newtheorem{case}{Case}
+\newtheorem{constraint}{Constrai3}
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{coro}{Corollary}
+\newtheorem{defi}{Definition}
+\newtheorem{approxi}{Approximation}
+%\DeclareGraphicsExtensions{.pdf}
+
+% correct bad hyphenation here
+%\hyphenation{net-works hop-set}
+\makeatletter
+\if@twocolumn
+	\newcommand{\figscale}{0.92 \columnwidth}
+	\newcommand{\figscalet}{\columnwidth}
+	\newcommand{\figscalett}{\columnwidth}
+\else
+	\newcommand{\figscale}{0.44 \columnwidth}
+	\newcommand{\figscalet}{0.46 \columnwidth}
+	\newcommand{\figscalett}{0.68 \columnwidth}
+\fi
+\makeatother
+
+
+\makeatletter
+\if@twocolumn
+	\newcommand{\figmara}{0mm}
+	\newcommand{\figmarb}{-2mm}
+	\newcommand{\figmarc}{0mm}
+	\newcommand{\figmard}{0mm} % margin between figure and caption matlab and single 
+	\newcommand{\subfigmar}{4mm}
+	\newcommand{\tablespacing}{1.4}
+	\newcommand{\tmara}{-0.0cm}
+	\newcommand{\tmarb}{-0.0cm}
+	\newcommand{\absmara}{-0.0cm}
+	\newcommand{\absmarb}{-0.0cm}
+	\newcommand{\keymara}{-0.0cm}
+	\newcommand{\keymarb}{-0.0cm}
+\else
+	\newcommand{\figmara}{-4mm}
+	\newcommand{\figmarb}{-10mm}
+	\newcommand{\figmarc}{-5mm} % margin between figure and caption gimp figures
+	\newcommand{\figmard}{-3mm} % margin between figure and caption matlab and single 
+	\newcommand{\subfigmar}{2mm}
+	\newcommand{\tablespacing}{0.85}
+	\newcommand{\tmara}{-0.6cm}
+	\newcommand{\tmarb}{-0.4cm}
+	\newcommand{\absmara}{-2.0cm}
+	\newcommand{\absmarb}{-0.2cm}
+	\newcommand{\keymara}{-0.3cm}
+	\newcommand{\keymarb}{-0.3cm}
+\fi
+\makeatother

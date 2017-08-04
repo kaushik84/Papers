@@ -1,0 +1,200 @@
+\documentclass[12pt,a4wide,peerreview]{IEEEtran}
+% Load packages
+%\usepackage{cite} % Make references as [1-4], not [1,2,3,4]
+%\usepackage{url}  % Formatting web addresses
+%\usepackage{ifthen}  % Conditional
+%\usepackage{multicol}   %Columns
+%\usepackage[utf8]{inputenc} %unicode support
+%%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+%\urlstyle{rm}s
+%\usepackage{psfig}
+%\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amsopn,amsmath,amssymb,amsfonts}
+%\usepackage{verbatim}
+%\usepackage{Latex_styles/citesort}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage{psbox}
+\usepackage{cite}
+%\usepackage{citesort}
+%\usepackage{Latex_styles/setspace}
+%\usepackage{epstopdf}
+%\usepackage[center]{caption}
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+\usepackage{amsmath}
+%\usepackage{graphicx}
+\usepackage{amssymb}
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+\usepackage{balance}
+\usepackage{float}
+%\floatstyle{plain}
+\newfloat{longequation}{t}{ext}
+\usepackage{siunitx}
+
+\newcounter{mytempeqncnt}
+%\usepackage{stfloats}
+
+\usepackage{xcolor}
+\newcommand{\tc}[1]{#1}
+%\newcommand{\tc}[1]{\textcolor[rgb]{0.0,0.0,1.0}{#1}}
+\newcommand{\tcg}[1]{\textcolor[RGB]{139,69,19}{#1}}
+\input{../SourceFiles/macro.tex}
+
+
+
+\begin{document}
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{ \hsize=6.5in
+Response to the Reviewers' comments on
+``On the Performance Analysis of Underlay Cognitive Radio Systems: A Deployment Perspective (TCCN-TPS-16-0015.R1)''}
+\author{\baselineskip10pt
+Ankit Kaushik, Shree Krishna Sharma, Symeon Chatzinotas, \\ Bj\"orn Ottersten, Friedrich K. Jondral
+}
+%SnT - securityandtrust.lu, University of Luxembourg \\
+%Email:\{shree.sharma, symeon.chatzinotas, bjorn.ottersten\}@uni.lu}
+\maketitle
+\baselineskip24pt
+\textbf{Dear Editor},\\
+ We thank you again for your assistance in the review process which has helped us improve our manuscript significantly. We have revised our manuscript addressing all the remaining comments provided by the reviewers. We have highlighted \tcg{(with braun color)} the significant changes in the revised paper. The main revisions are described below.
+\begin{enumerate}
+\item The time allocation for the access channel estimation has been included in the frame structure as well as in the analysis (theoretical and numerical).
+\item As per the reviewer's suggestion, some of the notations have been modified in the revised manuscript. 
+\item Section I has been carefully revised to enhance the brevity in context to the existing literature. 
+\item The manuscript has been extensively revised to remove the remaining typos and the grammatical errors. 
+\end{enumerate}
+In the following paragraphs, we respond to the reviewers' comments point by point. \\
+\line(1,0){500} \\
+\textbf{Dear Reviewer 1},\\
+\baselineskip24pt
+We would like to thank you again for providing your valuable suggestions and insightful comments on our manuscript. The detailed revisions are listed in the following points. 
+\\
+\textbf{Comment 5}: 
+\textit{Thank you for revising the text accordingly. However, still, terms CSC, CSC-BS, MC-BS, MS are only once or twice used and make reading a harder task. Also, for the involved channels, the following convention can be used by referring to the link between BS i and UE j, that is $h_{i,j}$. Moreover, a specific underlay CR system setup is investigated in the paper, therefore, referring to "USs" (i.e., in plural) throughout the text is confusing
+}
+\\
+\textbf{Authors' Response}:
+These concerns have been resolved in the revised manuscript in the following way: 
+\begin{itemize}
+\item Certainly, the abbreviations CSC, CSC-BS, MC-BS, MS are specific to the deployment scenario and limited to Section II-A ``Underlay Scenario and Medium Access''. In order to enhance the brevity of the abbreviations used in the paper, they have been removed from Table 1 in the revised manuscript.
+\item For the clarity of the exposition, the notations for the interacting channels $h_{\text{p,1}}$, $h_{\text{p,2}}$ and $h_{\text{s}}$ have been replaced with $\gpo$, $\gpt$ and $\gs$, respectively, in the revised manuscript. These changes are further reflected in text as well as in figures Fig. 1 - Fig. 9 of the revised manuscript.  
+\item In addition, the plural form ``USs'' has been replaced with ``US'' in the revised manuscript. 
+\end{itemize}
+\textbf{Comment 7}: 
+\textit{In equation (2), the PT-to-PR signal term is missing. Also subscripts "cont" and "tran" make it hard for the reader to understand to which network node is each quantity associated.
+}
+\\
+\textbf{Authors' Response}: 
+This comment has been addressed by substituting the expressions representing the power (which include $P_{\text{cont}}$ [controlled power at the ST] and $P_{\text{tran}}$ [transmit power at the PR]) with more suitable expressions like $\preg$ and $\ptran$ in the revised manuscript. Again, these changes in the notations are reflected in text as well as in figures Fig. 1 - Fig. 9 of the revised manuscript.
+\\
+\textbf{Comment 10, second point}:
+\textit{
+It is understandable that a short time interval is devoted to pilot-aided estimation of channel $h_s$, however, that time interval is not zero and it should appear in Fig. 2, as well as in the analysis.
+}
+\\
+\textbf{Authors' Response}: 
+Thank you for raising this concern. In order to strengthen the accuracy of the proposed analysis, the time allocation for the estimation of the access channel has been included in the frame structure and in the analysis. The corresponding changes are reflected in Fig. 2, Fig. 6 - 9, and (25), (27) and (36). In accordance with our proposition concerning the time allocation, it is noticed that the degradation in the performance in terms of the secondary throughput (refer to Fig. 6 (b), Fig. 7, Fig. 8 (b) and Fig.9) due to the inclusion of time allocation for the estimation of access channel is negligible.   
+\\
+\textbf{Comment 26}:
+\textit{
+Thank you for the corrections made. Nevertheless, there are still quite some typos and syntax errors which need to be fixed after some detailed proofreading.
+}
+\\
+\textbf{Authors' Response}: 
+Thank you for suggesting this. In order to address this, we have thoroughly revised the manuscript to eliminate the remaining typos and the syntax errors. The siginicant changes have been highligted in the revised manuscript. 
+\\
+\textbf{Comment 27}:
+\textit{
+The publication month needs to appear in a specific form, i.e., the three first letters of the word, accompanied by a full-stop.
+}
+\\
+\textbf{Authors' Response}: 
+This issue has been resolved in the revised manuscript. 
+\\
+\textbf{Additional Remark 1}:
+\textit{Section I: The text seems to be a bit too wordy; the state-of-the-art could have been adequately described in much less space. Also, sentences carrying contradictory messages need to be rephrased, for example: ``An increase in the estimation time reduces the uncertain interference,...more time is allocated for channel estimation and less for data transmission''.
+}
+\\
+\textbf{Authors' Response}: 
+Thank you for pointing out this. In order to further enhance the brevity and clarity of the paper, Section I ``Introduction'' has been carefully revised:  (i) by rephrasing unclear sentences (including the one revealed by the reviewer), and (ii) by reconsidering Section I-A ``Motivation and Related Work'' so that the comparisons made to the state-of-the-art models/techniques in context to the underlay system are addressed adequately. In this way, we are able to squeeze Section I from 6.75 pages to 6 pages in single column format and from 2.75 to 2.5 pages in double column format. 
+\\
+\textbf{Additional Remark 2}:
+\textit{
+ Instead of referring to the SNR at a network node, where the signal refers to interference, it would be more straightforward to refer to this quantity as the interference-to-noise ratio, i.e., INR measured/observed at that node.
+}
+\\
+\textbf{Authors' Response}: 
+This concern has been resolved in the revised manuscript. The interference to noise ratio has been used for quantifying the interference from PT to the SR over secondary interference channel in Section III-A (in reference to Fig. 4), Section IV-A (in reference to Fig. 7) and Section IV-B (in reference to Fig. 9) of the revised manuscript. 
+\\
+\textbf{Additional Remark 3}:
+\textit{
+Section II.D.3: ``In the downlink, the SR cancels the ST pilot signal over the access channel in order to estimate the secondary interference (power) received from the PT''. How is this cancellation undertaken? In Fig. 2, ST seems to be idle during the first $\tau$ time-slots (or ms) of the DL frame.
+}
+\\
+\textbf{Authors' Response}: 
+Thank you for pointing out this. Following the frame structure illustrated in Fig. 2, the ST remains in idle mode, hence, no cancellation is required at the SR. In this regard, this assumption has been relaxed in the revised manuscript. In order to address this issue, the following statement ``In the downlink, the SR cancels the ST pilot signal over the access channel in order to estimate the secondary interference (power) received from the PT'' has been rephrased as ``In the downlink, the SR estimates the secondary interference (power) received from the PT'' in the revised manuscript. 
+\\
+\textbf{Additional Remark 4}:
+\textit{
+Expression (35) should be placed elsewhere in full, as it is separated between two pages.
+}
+\\
+\textbf{Authors' Response}: 
+This issue has been addressed in the revised manuscript.
+\\
+\line(1,0){500} \\
+\textbf{Dear Reviewer 2},\\
+Thank you agian for providing valuable suggestions. We have carried out a minor revision on the manuscript guided by these comments. The detailed corrections are listed in the following points. \\
+\textbf{\tc{Comment 1}}: 
+\textit{
+The first one is about the interference between the primary and the secondary systems. The authors mentioned that there is no interference between SR and PR. The reason is that both downlink transmissions happen at the same time. However, this procedure includes the challenge of total synchronization between the primary and the secondary systems.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for raising this concern. In order to address this, the following statement has been added in Section II-A ``Underlay Scenario and Medium Access'' of the revised manuscript stating ``As depicted in \figurename~2, the frame duration $T$ is chosen in such a way that the frames are aligned to the primary users' transmissions, i.e., the uplink/downlink transmissions for the primary and secondary systems occur simultaneously. In this regard, a perfect frame synchronization is assumed between the two systems.'' 
+\\
+\textbf{\tc{Comment 2}}: 
+\textit{
+The second comment is about the ``deterministic'' case in III-A. If the channels are deterministic, what are the random variable in which the probability is introduced in (15) and (16)? 
+}
+\\
+\textbf{Authors' Response}:
+In the deterministic case, the random behaviour is due to the variations incurred by the system because of the employed channel estimation, hence, the estimated parameters are the random variables. As stated in the text above (15), which states, `` to capture the variations in $\prcvd$ incurred due to the channel estimation...''. In (15), $\epgpo$ is the random variable, which cannot be estimated directly, since we employ received power-based channel estimation. Therefore, $\epgpo$ is substituted with $\eprcvd$, which is the estimated parameter and represents a random variable in (16). \\
+\line(1,0){500} \\
+\textbf{Dear Reviewer 3},\\
+Again, thank you very much for providing valuable suggestions. We have carried out a minor revision on the manuscript guided by the remaining comment. The detailed correction is listed in the following point. \\
+\textbf{{Comment 1}}: 
+\textit{
+Please carefully double check the reference list to get rid of typos. For example; Ref [9] author names with correct initials must be:  H. A. Suraweera, P. J. Smith and M. Shafi
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this. We have carefully revised the reference list to remove the remaining typos. In particular, the issue in Ref. [9] concerning the author names has been addressed in the revised manuscript. 
+\\
+\line(1,0){500} \\
+Many thanks again for your assistance in this review process, which leads to significant improvement of this work. If further revision is required, we will be very happy to address future comments in this manuscript. \\
+Sincerely yours,\\
+\hspace{5 pt} Ankit Kaushik\\
+\hspace{5 pt} Shree Krishna Sharma\\
+\hspace{5 pt} Symeon Chatzinotas\\
+\hspace{5 pt} Bj\"orn Ottersten\\
+\hspace{5 pt} Friedrich K. Jondral \\
+%\begin{thebibliography}{}
+%\bibitem{Wnh:12} W. Ejaz, N. U. hasan, and H. S. KIM, ``SNR-Based Adaptive Spectrum Sensing for Cognitive Radio Networks'', International J. Innovative Computing, Information and Control, vol. 8, No. 9, Sept. 2012.
+%\bibitem{Tir:12} O. Tirkkonen and L. Wei, Foundation of Cognitive Radio Systems: Exact and asymptotic analysis of largest eigenvalue based spectrum sensing. InTech, 2012, no. 978-953-51-0268-7, ch. 1.
+%\bibitem{Cda:11} Chavali, V.G.; da Silva, C.R.C.M., ``Collaborative Spectrum Sensing Based on a New SNR Estimation and Energy Combining Method,'' Vehicular Technology, IEEE Transactions on , vol.60, no.8, pp.4024,4029, Oct. 2011.
+%
+
+%\bibitem{Cdb:08} L.S. Cardoso, and et al, ''Cooperative spectrum sensing using random matrix theory,'' \textit{3rd Int. Symp. on Wireless Pervasive Computing}, pp.334-338, 7-9 May 2008.
+%\bibitem{Mfp:03} X. Mestre, J. R. Fonollosa, A. Pages-Zamora, ``Capacity of MIMO channels: asymptotic evaluation under correlated fading,'' \textit{IEEE Journal on Selected Areas in Comm.}, vol.21, no.5, pp. 829- 838, June 2003.
+%\bibitem{Ant:04} A. M. Tulino, and S. Verdu, `'Random Matrix Theory and Wireless Communications'', \textit{Comm. Inform. Theory}, vol.1, no. 1, pp 1-182, 2004.
+
+%\end{thebibliography}
+\end{document}
+
+

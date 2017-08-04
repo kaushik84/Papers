@@ -1,0 +1,538 @@
+\documentclass[12pt,a4wide,peerreview]{IEEEtran}
+% Load packages
+%\usepackage{cite} % Make references as [1-4], not [1,2,3,4]
+%\usepackage{url}  % Formatting web addresses
+%\usepackage{ifthen}  % Conditional
+%\usepackage{multicol}   %Columns
+%\usepackage[utf8]{inputenc} %unicode support
+%%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+%\urlstyle{rm}s
+%\usepackage{psfig}
+%\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amsopn,amsmath,amssymb,amsfonts}
+%\usepackage{verbatim}
+%\usepackage{Latex_styles/citesort}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage{psbox}
+\usepackage{cite}
+%\usepackage{citesort}
+%\usepackage{Latex_styles/setspace}
+%\usepackage{epstopdf}
+%\usepackage[center]{caption}
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+\usepackage{amsmath}
+%\usepackage{graphicx}
+\usepackage{amssymb}
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+\usepackage{balance}
+\usepackage{float}
+%\floatstyle{plain}
+\newfloat{longequation}{t}{ext}
+\usepackage{siunitx}
+
+\newcounter{mytempeqncnt}
+%\usepackage{stfloats}
+
+\usepackage{xcolor}
+\newcommand{\tc}[1]{#1}
+%\newcommand{\tc}[1]{\textcolor[rgb]{0.0,0.0,1.0}{#1}}
+\input{../SourceFiles/macro.tex}
+
+
+
+\begin{document}
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{ \hsize=6.5in
+Response to the Reviewers' comments on
+``On the Performance Analysis of Underlay Cognitive Radio Systems: A Deployment Perspective (TCCN-TPS-16-0015)''}
+\author{\baselineskip10pt
+Ankit Kaushik, Shree Krishna Sharma, Symeon Chatzinotas, \\ Bj\"orn Ottersten, Friedrich K. Jondral
+}
+%SnT - securityandtrust.lu, University of Luxembourg \\
+%Email:\{shree.sharma, symeon.chatzinotas, bjorn.ottersten\}@uni.lu}
+\maketitle
+\baselineskip24pt
+\textbf{Dear Editor},\\
+ We wish to thank you for your assistance in the review process which has helped us improve our manuscript significantly. We have revised our manuscript addressing all the valuable comments provided by the reviewers. We have highlighted (with blue color) the major changes in the revised paper. The main revisions are described below.
+
+\begin{enumerate}
+  \item In order to highlight the main contributions of the paper, we have extensively revised Section I ``Introduction'' (including Section I-A and Section I-B). In particular, we have carefully addressed the problem of imperfect channel knowledge that focuses on the key aspects that facilitate the hardware deployment of underlay cognitive radio systems in the revised manuscript. 
+\item In addition, in accordance to the literature, including the ones suggested by the reviewers, we have provided a clear distinction between the related work and our work in the revised manuscript. 
+  \item In order to extract useful conclusions and emphasize the key observations from the performed analysis, we have rewritten Section V ``Conclusion'', where we have outlined some possible extensions of the proposed framework in reference to the multiple primary and secondary users in the network and asymmetric fading conditions. 
+  %\item In order to outline the significance of the considered analysis with regard to the previous investigations (in reference to the already cited in the previous manuscript and the ones mentioned by the reviewers), we have revised the Section I-A ``Motivation and Related Work'' in the revised manuscript. We have included the discussions related to the references suggested by the reviewers in the revised manuscript. In particular, we have provided a clear distinction between the existing works and the one carried out in this paper.  
+  \item %We want to reveal the fact that the performance gap in context to the imperfect channel knowledge was included, however, was not addressed precisely in the previous manuscript. The performance gap (referred as performance degradation) has been qualified by comparing the performance of the ideal scenario (with perfect channel knowledge) to the proposed approach. 
+We have further clarified the performance gap between the cases of the perfect and imperfect channel knowledge as requested by the reviewers, with regard to its reference in Section I-B ``Contributions'' under ``Analytical Framework'' of the revised manuscript.
+ \item In order to (i) emphasize on the existence of the estimation-throughput tradeoff (characterized in Problem 1 and Problem 2), and (ii) highlight the requirement of this tradeoff for evaluating the achievable secondary throughput, a remark (Remark 2) has been added in the revised manuscript. 
+ \item While addressing the comments of the reviewers, we have revised Section II ``System Model'' by providing clarifications and simplifications to the proposed analysis. 
+ \item We have revised several sections of the paper (including Remark 1, Remark 2, Remark 3 and Corollary 2) to further enhance the clarity of the performed analysis. 
+ \item In order to facilitate black and white printing, we have included markers in figures - Fig. 6, Fig. 7, Fig. 8, Fig. 9, Fig. 10 and Fig. 11 in the revised manuscript as suggested by the reviewers. 
+  \item In order to improve the presentation style, we have revised the whole manuscript carefully to avoid any typos and confusing statements.  
+\end{enumerate}
+In the following paragraphs, we respond to the reviewers' comments point by point. \\
+\line(1,0){500} \\
+\textbf{Dear Reviewer 1},\\
+\baselineskip24pt
+Thank you very much for providing your valuable suggestions and insightful comments on our manuscript. The detailed revisions are listed in the following points. 
+\\
+\textbf{Comment 1}: 
+\textit{
+The topic of cognitive radio and effect of imperfect channel estimation has been a topic of research for some years now. Although authors have presented their contributions, still the reviewer is not exactly convinced whether the work contains sufficient technical contributions to qualify as a journal paper. Hence, the authors could consider much more relevant literature and discussed your contributions in much more detail. 
+ti
+\\ 
+R1. P. J. Smith, P. A. Dmochowski, H. A. Suraweera and M. Shafi, ``The effects of limited channel knowledge on cognitive radio system capacity,'' IEEE Transactions on Veh. Technol., vol. 62, pp. 927-933, Feb. 2013.
+}
+\\
+\textbf{Authors' Response}:
+In order to address this concern, we have extensively reformulated Section I in the revised manuscript. In order to highlight the contributions in reference to the existing works, we have revised the related literature (including [R1-R2] and all the references suggested by other reviewers), as reflected in Section I-A ``Motivation and Related Work'' of the revised manuscript. In particular, we have provided a detailed comparison between the existing works and the one carried out in this paper, for instance,
+\begin{itemize}
+\item ``It is worth noticing that the majority of these works [8], [10], [11] in reference to imperfect channel knowledge consider that the channel's knowledge at the ST is obtained from a band manager \footnote{An entity that mediates between the primary and the secondary systems.}, an approach proposed in [19]. Whereas [9], [13] rely on the presence of a feedback link from the PR to the ST [20]. The fact is, the feasibility of the band manager or the feedback link across two completely different systems is unrealistic from a practical standpoint. In addition, due to latency, the channel knowledge obtained while implementing these approaches may be outdated, as considered in [9]-[11], [13]. Besides, even if we assume the existence of the feedback link, the demodulation of the secondary user signals at the PR and a resource (time) allocation explicitly for communicating the channel state impose an additional overhead for the primary system. With these issues in hand, the hardware implementation of the US in reference to the aforementioned approaches becomes challenging. In contrast to these approaches, we propose a novel strategy according to which the channel estimation is employed directly at the secondary system. Thus, by avoiding the realization of the band manager or feedback link and the issues related to it, in this paper, we focus on the key aspects that facilitate the hardware deployment of the US.'' 
+\item ``Along with the performance of the primary system, the achievable data rate at the Secondary Receiver (SR) for the link between the ST and the SR also contributes significantly to the overall performance of the USs [7]-[9], [11], [13]-[15]. As a matter of fact, the knowledge of the data rate at the ST can be utilized for guaranteeing a certain quality of service, thereby determining potential applications or prominent use cases for the CR system. For instance, using this knowledge, the CR system is allowed to execute a band allocation policy, based on which, the ST can relinquish those channels that are largely responsible for causing interference at the PR. In order to characterize the data rate, the ST (along with the primary interference channel, which is associated with power control mechanism) requires the knowledge of \textit{access} channel between the ST and the SR, and \textit{secondary interference} channel between the Primary Transmitter (PT) and the SR. Despite these facts, the performance characterization of the US's data rate in reference to the estimation of the access and the secondary interference channels has not been considered [8]-[11], [13], [14] or only marginally in [12], [15], [16].''
+\item ``From the discussion above, it is clear that the performance of the USs can be depicted in terms of the achievable \textit{secondary throughput} for a certain interference threshold (IT). However, a certain time needs to be allocated by the secondary user for channel estimation. It is worthy to note that [8]-[17] consider that the PR employs pilot-based channel estimation for the channel PR-ST, which is possible only if the PR is willing: (i) to allocate resources, (ii) to assign a dedicated circuitry for demodulating the secondary user signals and (iii) to establish a feedback link to the ST. In this context, the hardware implementation of the USs becomes challenging.''
+\end{itemize}
+%Besides, we have thoroughly revised Section I-B ``Contributions'' in the revised manuscript to further clarify the novelty of the major contributions of the paper. 
+%\\
+\textbf{Comment 2}: 
+\textit{
+Another issue is the considered system model. It is not clear whether is too simplistic or captures the essence of a practical cognitive radio system. For example, authors admit that the influence of multiple primary / secondary users as a future work. Hence, if possible please improve the system model of this paper. Also most of the systems now consider the use of multiple antennas and if possible include that aspect as well.
+}
+\\
+\textbf{Authors' Response}: 
+Thank you for raising this concern. In this paper, we strongly support the argument that the power control mechanism can be implemented only if the knowledge of channel is made available at the ST so that the interference level at the PR can be kept below a certain tolerance limit. The existing models, tackling this issue rely on the existence of a band manager or a feedback link from a PR to the ST that relays the channel knowledge to the ST. In practice, such approaches of acquiring channels' knowledge are challenging, hence, forbid the hardware deployment of the underlay cognitive radio system. Due to these concerns, the performance analysis of the USs has been limited to theoretical analysis. To overcome this, we propose a novel strategy by which the estimation of the related channels is employed at the secondary system. 
+In addition, considering the fact the involved channels are associated with two completely different systems, we intend to retain low-complexity of the channel estimation techniques and versatility towards the unknown primary user signal, which consequently facilitates the hardware deployment. %Besides, in practice, a certain time duration is required to the perform channel estimation, which on one hand controls the variations induced in the system and on the other hand affects the secondary throughput. In order to quantify the effect of the imperfect channel knowledge on the performance, we have developed an analytical framework.  
+\\
+In consideration of the comments of the reviewers, we have revised Section II ``System Model'' to provide simplifications and explanations to the proposed system model. 
+Despite the fact that the system model is preliminary (or limited) in terms to the following aspects, such as, multiple antennas mounted at the ST or the absence of other primary and secondary users in the network, it captures significant aspects (such as performing channel estimation at the secondary system and propose to employ simplified estimation techniques, namely received power-based estimation) that facilitate the successful deployment of the US. In order to convey this message in the paper, these aspects have been further highlighted in Section I ``Introduction'' in the revised manuscript. Considering the complexity of the formulated problem, demanding detailed analysis as presented in the paper, and with limited space availability, we have planned to extend the existing model and the related performance analysis taking multiple antennas and multiple primary and secondary users into account in our future work. Along with the discussions after (14) in Section II-D, this has been included in Section V ``Conclusion'' of the revised manuscript. \\
+\textbf{Comment 3}:
+\textit{
+The analysis seems correct yet the authors have not simplified their work to provide useful insights.  This aspect could be further improved.
+}
+\\
+\textbf{Authors' Response}: 
+The authors have addressed this concern in the revised manuscript by considering the following points:\begin{itemize}
+\item We have thoroughly revised the Section I ``Introduction'' to emphasize the novelty of the work in reference to the existing literature. We have further reformulated Section I-B ``Contributions'' to clearly bring out major findings concerning the analysis performed in the paper. 
+\item The Section V ``Conclusion'' has been also revised to reveal the main insights to the observations made while performing the analysis.   
+\item Following the comments from other reviewers and based on our own understanding, we have modified/rewritten different sections (including Remark 1, 2 and 3, and Corollary 1 and 2) and rephrased complicated sentences in the revised manuscript to enhance the clarity of the performed analysis.
+\end{itemize} 
+\textbf{\tc{Comment 4}}: 
+\textit{
+The authors report about asymmetric fading conditions yet its effect on imperfect channel estimates and subsequently the performance is not clear. See for example relevant performance analysis paper:
+\\
+R2. H. A. Suraweera, J. Gao, P. J. Smith, M. Shafi and M. Faulkner, ``Channel capacity limits of cognitive radio in asymmetric fading environments,'' in Proc. IEEE Intl. Conf. Commun. (ICC 2008), Beijing, China, May 2008, pp. 4048-4053.
+}
+\\
+\textbf{Authors' Response}: Thank you for suggesting this. The expressions (particularly those that depict the random behavior of the channels, which include, the outage constraint (33), the power control (35) and the estimation-throughput tradeoff (38)) provided in the manuscript reflect the symmetric fading, i.e., the channel gains are subjected to the same value of $m$ ($\mpo = \mpt = \ms$). In contrast to this, the manuscript examines the behavior of the US under situations, which correspond to severe fading $m = 1$ and mild fading $m = 5$. In accordance to the deployment scenario, the individual gains for the related channels acquire different values. However, it is worth noticing that the Nakagami-$m$ model selected for characterizing the random behavior spans all fading scenarios ranging from AWGN ($m = \infty$) to Rayleigh $m = 1$, or different fading conditions (mild $(m > 1)$ and severe $(m < 1)$ fading). Although the analysis presented in the manuscript has been limited to the symmetric fading, the derived expressions can be utilized to analyze the effect of asymmetric fading. Therefore, to realize asymmetric fading, the provided expressions can be easily modified by selecting different values of $m$ for the corresponding links. The fact is, the underlying scenario with 3 channels results in different fading combinations for which the effect of asymmetric fading can be analyzed. Due to limited space available, we consider this investigation as our future work. This aspect has been included in the Section V ``Conclusion'' of the revised manuscript stating ``In addition, the performance evaluation presented in the paper considers symmetric fading, i.e., the channel gains are subjected to the same value of $m$ (which means $\mpo = \mpt = \ms$), however, the derived expressions are generic. Depending on the deployment scenario, these expressions can be used to realize asymmetric fading by substituting different values of $m$ corresponding to different channels. In this regard, we plan to extend the proposed framework to study the influence of asymmetric fading on the performance in our future work.''. 
+\\
+\textbf{Comment 5}: 
+\textit{
+Can the authors study the performance gap between perfect and imperfect cases? In this case we could clearly see how much of effort needs to be put into channel estimation process to obtain reasonable performance gains.
+}
+\\
+\textbf{Authors' Response}: 
+Thank you for pointing out this. We have already studied the performance gap between the perfect and the imperfect cases. Such a performance gap referred as the performance degradation in our paper has been examined in the numerical analysis by comparing the ideal model (perfect case) and the estimation model (imperfect case) for the deterministic and the random behavior of the interacting channels. In addition, the estimation-throughput tradeoff considered in the theoretical and the numerical analysis, illustrates the fact that the performance degradation is sensitive to the estimation time. Moreover, it emphasizes the fact that the maximum performance of an underlay system in terms of secondary throughput can be achieved only if the estimation time is selected appropriately. This issue has been further addressed in the revised manuscript in Section I-B under ``Analytical Framework'' stating ``Clearly, the channel estimation is detrimental (in terms of the time allocation and the estimation error) to the performance of the US, leading to performance degradation. By comparing its performance with the ideal scenario (with perfect channel knowledge), we study the performance degradation caused due to imperfect channel knowledge.''.  
+\\
+\textbf{\tc{Comment 6}}: 
+\textit{
+In some places of the analysis, authors consider approximations. How accurate they are not elucidated.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this. We have already considered the accuracy of Approximation 1 by comparing the analytical expression of the cdf of $\eca$ in Lemma 5 to the simulated results, please consider Fig. 4. In order to highlight this issue, the sentence referring to Fig. 4 after Lemma 5 has been rephrased in the revised manuscript as ``In consideration to the Approximation 1, which is applied to obtain the cdfs' of $\eprcvd$, $\epgs$ and $\eprcvdsr$ in Lemma 5, the theoretical expression of the cdf depicted in (23) is validated by means of simulations in \figurename~4 with different choices of system parameters, which include $\gamma = \SI{10}{dB}$, $\preg = \SI{0}{dBm}$, $\frac{\pgpt \ptran}{\nps} \in \{-10, 0, 10\} \SI{}{dB}$ and $\tau = \{0.1, 1, 10\} \SI{}{ms}$.''.
+\\
+\textbf{\tc{Comment 7}}: 
+\textit{
+What is the reason for considering Rayleigh and Nakagami-m fading separately? If m=1, should we not be able to obtain the results of Rayleigh fading? If so, please present the results only for Nakagami-m fading and then consider the special case of Rayleigh fading in brief. 
+}
+\\
+\textbf{Authors' Response}:
+We agree with the reviewer's comment, however, the intention here is not to compare the Nakagami-$m$ and Rayleigh fading models, but to investigate the impact of severity in fading on the performance. %The fact is, $m = 1$, which also corresponds to Rayleigh fading, is a close representative of a severe fading scenario. 
+This confusion has been resolved in the revised manuscript by including a footnote in the first paragraph of Section IV-B stating ``Please note that our objective here is to consider the impact of severity in fading on the performance of the US with regard to the channel estimation. The value $m = 1$, which corresponds to Rayleigh fading, is an obvious representative of a severe fading scenario.''. 
+\\
+\textbf{\tc{Comment 8}}: 
+\textit{
+The conclusion only considers what was performed but not about results / observations and what they mean for practical design. Hence, the section could be rewritten by inserting such information as well.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for raising this concern. To address this comment, the Section V ``Conclusion'' has been modified to further emphasize on the main facts and important observations of the paper. For instance,
+\begin{itemize}
+\item ``Considering the time resources utilized for the channel estimation and the uncertainty due its imperfect knowledge, it has been shown that the channel estimation has a detrimental effect on the performance, leading to its degradation.''
+\item ``Besides, it has been observed that the operation of power control at the ST is limited by the maximum transmit power. This limitation, complementing with the channel estimation has been studied in terms of the interference-limited and the power-limited regimes to determine the performance bounds of the USs.''
+\end{itemize} 
+Moreover, the possible extensions of the proposed analytical model that are subject of future work, in terms of multiple user in the network or the deployment of multiple antennas has been included in the revised manuscript stating ``In addition, the performance evaluation presented in the paper considers symmetric fading, i.e., the channel gains are subjected to the same value of $m$ (which means $\mpo = \mpt = \ms$), however, the derived expressions are generic. Depending on the deployment scenario, these expressions can be used to realize asymmetric fading by substituting different values of $m$ corresponding to different channels. In this regard, we plan to extend the proposed framework to study the influence of asymmetric fading on the performance in our future work.''.
+\line(1,0){500} \\
+\textbf{Dear Reviewer 2},\\
+Thank you very much for providing valuable suggestions. We have carried out a major revision on the manuscript guided by these insightful comments. The detailed corrections are listed in the following points. \\
+\textbf{\tc{Comment 1}}: 
+\textit{
+Section I.A: ``The knowledge of the secondary throughput at the ST...secondary interference channel between the PT and the SR''.The need for guaranteeing some QoS-related provisioning for the secondary system is more typical for Authorized/Licensed Shared Access (LSA/ASA) systems, as compared to CR systems, where, SUs are unlicensed. Moreover, in the literature, the so-called Z-channel for a CR system is discussed, where the PT to SR interference can be discarded in the analysis. Also, in current literature, statistical CSI knowledge at the secondary system can be exploited. Such information is slow-varying, hence, the feedback overhead can be quite low. The authors are invited to analyze the advantages of their proposed framework, as compared to the mentioned system models. The following references can be useful:
+\\
+R3. Z. Rezki and M. S. Alouini, ``Ergodic Capacity of Cognitive Radio Under Imperfect Channel-State Information,'' in IEEE Transactions on Vehicular Technology, vol. 61, no. 5, pp. 2108-2119, Jun 2012.
+\\
+R4. P. de Kerret, M. C. Filippou and D. Gesbert, ``Statistically coordinated precoding for the MISO cognitive radio channel,'' 2014 48th Asilomar Conference on Signals, Systems and Computers, Pacific Grove, CA, 2014, pp. 1083-1087.
+\\
+R5. E. Stathakis, M. Skoglund and L. K. Rasmussen, ``On combined beamforming and OSTBC over the cognitive radio Z-channel with partial CSI,'' 2012 IEEE International Conference on Communications (ICC), Ottawa, ON, 2012, pp. 2380-2384.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for raising this concern. We agree with the fact that the QoS-provisioning is a subject that matters more to the LSA/ASA systems than the unlicensed systems, still the capacity analysis is useful metric for judging the overall performance, leading to potential applications of CR systems. This concern has been addressed in the revised manuscript in Section I-A stating ``As a matter of fact, the knowledge of the data rate at the ST can be utilized for guaranteeing a certain quality of service, thereby determining potential applications or prominent use cases for the CR system. For instance, using this knowledge, the CR system is allowed to execute a band allocation policy, based on which, the ST can relinquish those channels that are largely responsible for causing interference at the PR.''. \\ 
+In order to address the second claim regarding the distinction between the system models [R3-R5] from the analysis performed in the manuscript, we have revised Section I-A ``Motivation and Related work'' to outline the significant comparisons between the related work (also the one suggested by other reviewers) and our work. In consideration to the exploitation of statistical CSI knowledge, it is important to understand that the [R3-R5] (and the one referred by the other reviewers) consider that the channel's knowledge (or the slow changing statistical knowledge) at the ST is obtained from a band manager or a feedback link from the PR. These approaches are complicated in terms of their the feasibility, prohibiting the hardware implementation of the US. In this context, an alternative approach of estimation channel knowledge at the ST has been proposed. Moreover, [R3-R5] consider that PR employs pilot-based channel estimation for the channel PR-ST, which is possible only if the PR is willing: (i) to allocate resources, (ii) to assign a dedicated circuitry for demodulating the secondary user signals and (iii) to establish a feedback link to the ST. In this context, the hardware implementation of the USs becomes challenging. Such discussions and other aspects pertaining to the hardware deployment emphasizing the contributions of the proposed approach have been addressed in Section I-A of the revised manuscript. \\ 
+Specifically, we would like to point out that the Z-channel considered in [R5] simplifies the analysis by ignoring the interference from the PT to the SR based on the assumption that the interference power is negligible. However, it is worthy to note that the Z-channel represents a special case of the analysis proposed in our paper, i.e., by substituting a low value of the interference power received over the secondary interference channel (PT-SR), our system model and following analysis will converge to the analysis revealed by the Z-channel. 
+%In addition, Section I-B has been revised by rephrasing several unclear sentences to further enhance the novelty and emphasize on the major contributions of the paper.   
+\\
+\textbf{\tc{Comment 2}}: 
+\textit{
+Section I.A: ``From the discussion above, it is clear that the performance of the USs can be depicted in terms of the primary interference (at the PR) and the secondary throughput (at the SR)''. Since, in CR, a best-effort transmission scheme is applied at the secondary side, then the sentence should be better rephrazed as: ``the performance of the USs can be depicted in terms of the achievable secondary throughput (at the SR) for a given primary interference threshold (at the PR)''.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this. As reflected in Section I-A, this issue has been resolved in the revised manuscript.
+\\
+\textbf{\tc{Comment 3}}: 
+\textit{
+Section I.A: ``Since the aspect concerning the time allocation for the channel estimation has not been taken into account in any of the previous investigations related to the cognitive USs...''. The authors are invited to consult the following work on the topic:
+\\
+R6. Yuanxuan Li, Gang Zhu, Siyu Lin, Ke Guan, Lina Liu and Yan Li, "Power allocation scheme for the underlay cognitive radio user with the imperfect channel state information," 5th IET International Conference on Wireless, Mobile and Multimedia Networks (ICWMMN 2013), Beijing, 2013, pp. 320-324. 
+}
+\\
+\textbf{Authors' Response}:
+Thank you for providing this useful reference. Li \textit{et al.} [R6] determine a power allocation strategy for the OFDM sub-carriers transmitted by the US. In addition, the US considers the influence of time-varying nature of the channels by including outdated channel knowledge and the measurement error due to channel estimation. Despite the analysis performed in [R6] has certain similarities with our work in reference to the motivation, which include the inclusion of estimation error, implementation of interference and power constraints, but the approach considered in [R6] and ours differ completely. For instance, time allocation of the channel estimation and its effect on the performance is not included in [R6], this is due to the fact that the PR employs pilot-based channel estimation for the channel PR-ST. This again falls to the claim that is already emphasized in our response to Comment 1, which is based on the fact that the pilot-based estimation can be employed at the PR only if the PR is willing: (i) to allocate resources, (ii) to assign a dedicated circuitry for demodulating the secondary user signals and (iii) to establish a feedback link to the ST. In practice, such a situation is very unlikely to occur. In oder to address this reviewer's comment, we have referred [R6] in the related work in Section I-A. In addition, along with the similar works, we have identified the significant differences for our work in Section I-A ``Motivation and related work'' of the revised manuscript stating ``It is worthy to note that [8]-[17] consider that the PR employs pilot-based channel estimation for the channel PR-ST, which is possible only if the PR is willing to allocate resources, assign a dedicated circuitry for demodulating the secondary user signals and establish a feedback link to the ST. In this context, the hardware implementation of the USs becomes challenging.''. 
+\\
+\textbf{\tc{Comment 4}}: 
+\textit{
+Section I.B.3: ``This can be explained as follows: the channel estimation error translates to the variations on the primary interferenc (characterized as excessive interference)''. Actually, short channel estimation times would also lead to a situation where the PR to ST (random) channel is overestimated. As a result, the term "excessive" only corresponds to the occurrence of an interference underestimation event. The reviewer would propose terms such as "coarse interference" or "uncertain interference", which better capture the phenomenon described.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for suggesting this. To address this issue, the term ``excessive interference'' has been replaced with ``uncertain interference'' in the revised manuscript.
+\\
+\textbf{\tc{Comment 5}}: 
+\textit{
+Section I.C: Too many terms seem to be used in Table I (but also throughout the text), that correspond to the same entity. A simplification would be very beneficial, i.e., merely using terms: PT, PR, ST, SR.
+}
+\\
+\textbf{Authors' Response}:
+We have addressed this concern in the revised manuscript by referring the primary and the secondary systems using PT, PR, ST and SR, respectively. This representation has been followed throughout the paper and reflected in Table 1 of the revised manuscript. 
+\\
+\textbf{\tc{Comment 6}}: 
+\textit{
+Section II.A: The MAC frame structure seems to have some disadvantages. More specifically:
+\begin{itemize}
+\item The primary system seems to always be in busy mode. This is unlikely to occur in reality.
+\item Focusing on the MAC frame in Fig. 2: The first sub-frame of Frame 1 (of length of $\tau$) constitutes an unutilized time resource. Alternatively, orthogonal pilot sequences to the transmitted by PR could be simultaneously used (this is not an unrealistic assumption, since synchronized primary and secondary MAC frames are considered.)
+\item ``In order to consider variations due to channel fading, we assume that the interacting channels remain constant over at least two frame durations (2T)''. What is a typical value for $T$? It is possible that such a time interval (i.e., 2T) would be quite long, hence, the studied frame structure would only be satisfactory only for zero or very low mobility deployments.
+\end{itemize}
+}
+\textbf{Authors' Response}:
+Please find our response to the mentioned points below:
+\begin{itemize}
+\item The authors agree with the reviewer's claim. However, in the literature, the utilization of the temporal gaps arising from the ``on/off'' behaviour of the primary user traffic has been considered only for the interweave scenarios. The USs behave differently under this situation, described as follows: During the ``on'' period, the response of the US to the primary user is similar to the one presented in the paper. During the ``off'' period, the US detects a noise signal and consider it as a primary user signal, whose power is equivalent to the noise power. As a result, during ``off'' period, the ST transmits with full power. The performance of the underlay system will be conditioned on the probability that the frame being in ``on'' or ``off'' state. Based on the traffic model used for characterizing the primary user traffic, these probabilities can be determined. In this context, it is possible to extend the current analysis by including a primary user traffic model. Due to limited space, we would like to consider the impact of primary user traffic on the performance of the US in the future.  
+\item The frame structure presented in Fig. 2 illustrates the perspective of the secondary system that operates in a half-duplex. The first sub-frame is utilized to perform estimation of the channel $\gpo$ by the ST, but not for transmitting. The SR remains idle during this period. Similarly, the second sub-frame is utilized to perform estimation of the channel $\gpt$ by the SR, but not for transmitting. The ST remains idle during this period. We agree to the fact that the present frame structure can be modified in several different ways, but, the main motivation is to put emphasis on the time allocation and its effect on the systems' performance. It is worth noticing that the main analysis carried out in this paper followed by derived expressions is robust to such modifications in the frame structure. 
+\item For the considered analysis in the paper, the value of $T$ is \SI{100}{ms} for a sampling frequency of $\fsam = \SI{1}{MHz}$, please consider the first paragraph of Section IV ``Numerical Analysis''. Considering the time-bandwidth product, an equivalent performance can be achieved for a system with $\fsam = \SI{10}{MHz}$ and $T = \SI{10}{ms}$. Under this situation, the considered assumption even for mobile system becomes realistic. On top of this, the estimation time $\tau$ acquires a value below $\SI{10}{ms}$ for both the deterministic and the random channels, hence, selecting $T = \SI{10}{ms}$ will be sufficient to perform estimation and data transmission. As a result, the performance analysis depends largely on the design parameters for the considered scenario or the application involved. 
+\end{itemize}
+\textbf{\tc{Comment 7}}: 
+\textit{
+Section II.B: Focusing on equations (1) - (3), it would be helpful to define to which subframe (channel estimation or data transmission/reception) of which frame (DL or UL), the equations correspond to. Also, the AWGN at ST seems to be the same with the AWGN measured at the SR (i.e., $w_s[n]$). Is this the case? Moreover, in these equations, the information symbols and the corresponding transmit power levels should appear explicitly.
+}
+\\
+\textbf{Authors' Response}:
+In order to highlight the data transmission/reception, we have appended the mode of operation (DL or UL) followed by the secondary system in the revised manuscript. In addition, we represent the noise signal at the ST and at the SR in (1) and (3) using notations $\nas[n]$  and $\nas'[n]$, respectively. With regard to the noise power, we have added a footnote (footnote 5) in the revised manuscript stating ``In practice, the noise power at the ST, the SR and the PR have different values. The fact is, only the signal to noise ratio received at the ST, and SR and the PR, respectively, are affected due to these noise powers. Since these signal to noise ratios are already included in the performance analysis, the assignment of different notations to these noise powers are excluded in the expressions.''. Moreover, the information symbols and the corresponding transmit power have been stated separately in the revised manuscript, see (1) - (3).
+\\
+\textbf{\tc{Comment 8}}: 
+\textit{
+Section II.C: Given the frame structure given in Fig.2, when one focuses on the DL frames, the expression describing the instantaneous data rate at the SR, should be multiplied by $(T - \tau)/T$, since the ST is not in transmission mode during the first $\tau$ time-slots of the DL-related MAC frame. The authors are kindly invited to comment on that.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for raising this issue. We would like to point out that the instantaneous data rate $\eca$ follows from (22) and its relation to the throughput $\rs$, which represents the average data rate over the frame duration (takes $(T - \tau)/T$ into account) is presented in (25). However, we completely understand the fact that it may cause confusion to the readers. In order to tackle this, a footnote stating ``Please note, we have introduced the following terms the data rate $\ca$ and the throughput $\rs$ to make a clear distinction between the instantaneous data rate and its average value over the frame duration'' has been added in the revised manuscript, following the definition of the data rate, above (22). 
+\\
+\textbf{\tc{Comment 9}}: 
+\textit{
+Section II.D.1 (right after eq. (6)): It needs to be stated that the training time, $\tau$ and the sampling frequency, $f_s$, are such that the number of samples, i.e., $\tau f_s$ is an integer number. Also, it would be better to denote the received SNR values by using a letter different than $\gamma$, i.e., $\rho$, because one can be confuse it with the lower incomplete Gamma function.
+}
+\\
+\textbf{Authors' Response}:
+This issue has been resolved in the revised manuscript by retaining the notation $\gamma$ for signal to noise ratio, and representing the cdfs in terms of regularized upper-incomplete Gamma function $\Gamma$ instead of regularized lower-incomplete Gamma function $\gamma$. In addition, the suggestion concerning the  integer number of samples has been addressed in Section II-D below (6) of the revised manuscript. 
+\\
+\textbf{\tc{Comment 10}}: 
+\textit{
+Section II.D.2: ``In the uplink, the pilot signal received from the SR undergoes matched filtering and demodulation at the ST, hence, we employ a pilot-based estimation at the ST to acquire the knowledge of the access channel''. A few comments are the ones following:
+\begin{itemize}
+\item In the uplink, the pilot signal is transmitted and not received by the SR.
+\item The fact that pilot-aided channel estimation takes place, in order for the ST to estimate channel $h_s$ is not reflected in Fig. 2. When (in terms of time) does this procedure take place? If it occurs in the beginning of the uplink MAC frame, then, the estimation of $|h_{p,1}|^2$ would be affected by the pilots transmitted by the SR. Why is this not the case according to the presented analysis?
+\item How is the number of pilot symbols, $N_s$ related to the number of ``samples'' $\tau f_s$?
+\end{itemize}
+}
+\textbf{Authors' Response}: These issues have been resolved in the revised manuscript. The individual comments related to this issue has been addressed as follows: 
+\begin{itemize}
+\item The sentence has been rephrased in the revised manuscript as ``In the uplink, the pilot signal transmitted by the SR undergoes matched filtering and demodulation at the ST,''. 
+\item It is worth noticing that proposed approach considers the variations in the system due to the channel estimation. With regard to the pilot-based and received power based channel estimation, since the number of pilot symbols $\Ks$ is relatively small in comparison to the samples $\tau \fsam$ utilized for received power-based channel estimation for the primary systems. The performance degradation due to the time allocation of the pilot symbols considered to be negligible. Hence, the time allocation in reference to the pilot based channel estimation, does not have effect on the system's performance. In this regard, the pilot symbols are incorporated within the data transmission time interval of the ST in the downlink, hence, the time allocation is not visible in Fig. 2. 
+
+This issue has been addressed in the Section II-A ``Underlay Scenario and Medium Access'' of the revised manuscript stating ``Besides this, since the access channel estimation is performed by listening to the pilot symbols transmitted by the SR, classified as pilot-based channel estimation. Considering the fact that the number of pilot symbols is relatively smaller in comparison to the samples used for performing received power-based channel estimation, the time allocation of the pilot symbols does not affect the overall performance of the USs. Hence, no time resources are allocated for access channel estimation in the frame structure.''
+\item As stated above, $\Ks << \tau \fsam$, the pilot symbols used for pilot-based channel estimation of the access channel are relatively small compared to the samples used for received power-based channel estimation for the sensing and the interference channel. 
+\end{itemize}
+\textbf{\tc{Comment 11}}: 
+\textit{
+Section II.D.3: In the symbolization of the non-central chi-squared distribution - just before Lemma 3 -, parameter $\lambda_s$ needs to be substituted by $\lambda_{p,2}$.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this. This issue has been resolved in the revised manuscript. 
+\\
+\textbf{\tc{Comment 12}}: 
+\textit{
+Section III.A: In the inequality just above eq. (15), there seems to be a typo error in the expression.
+}
+\\
+\textbf{Authors' Response}:
+As reflected in (15), this issue has been resolved in the revised manuscript.
+\\
+\textbf{\tc{Comment 13}}: 
+\textit{
+Section III.A: The first sentence, right after the proof of Lemma 4, needs to be rephrased as: ``Clearly, $P_{cont}$ increases when $|h_{p,1}|^2$ is such that a low $\gamma$ is achieved, which enhances the performance in terms of the secondary throughput achieved by the USs''.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for suggesting this correction. In reference to the reviewer's suggestion and considering the clarity of the observations made, we have rephrased in the revised manuscript stating ``Clearly, the performance of the US improves over the access channel (in terms of the secondary throughput) with $\preg$, but $\preg$ increases for the values of $\pgpo$, which correspond to the lower values of $\gamma$.''. 
+\\
+\textbf{\tc{Comment 14}}: 
+\textit{
+Section III.A: Figure 3 needs to be explained in much more detail. The authors can revise that part of the manuscript by answering to the following questions, that are raised when observing the figure:
+\begin{itemize}
+\item What is the transmit power applied by the ST, when being in the power limited region? Is it $P_{full}$, as when being on the boundary ${\gamma}^*$?
+\item What is the importance of the asymptotic regime ${\gamma}^*$? Is it the fact that it corresponds to a regime, where the ST can be transmitting with full power in the DL, when the ST to PR interference is the maximum tolerable one, corresponding to a feasible outage probability constraint (as defined in eq. (15))?
+\item Also, why do the points of the 2D plot that jointly correspond to very short channel estimation periods and low strength of the PR SNR, as received by the ST (in the uplink), belong to the "interference-limited" regime? Is it due to the fact that the probability of the occurrence of excessive interference is quite increased, when the channel estimation period is too short, hence, the ST needs to be quite proactive in terms of the transmitted power in the DL?
+\end{itemize}
+}
+\textbf{Authors' Response}:
+Thank you for raising these concerns and for providing fruitful suggestions. In particular, while answering the above questions and based on our understanding, we have extensively revised the discussions considered in Remark 1. The individual questions related to this issue referred by the reviewer are addressed below: 
+\begin{itemize}
+\item Yes, the transmit power in the power limited regime is $\pc$ and it acquires the same value while operating at $\gamma = \gamma^*$. This fact has been highlighted in the revised manuscript stating ``At $\gamma = \gamma^*$, the USs are allowed to operate with maximum transmit power $\pc$ without exceeding the tolerance limits defined for the interference'' and ``On the other side, the region $\gamma \le \gamma*$, which depicts a weak link quality between the ST and the PR, hence, is beneficial to the secondary user. However, due to the transmit power constraint, the USs are confined to operate at $\pc$.''. 
+\item Again yes, this issue has been addressed in the revised manuscript stating ``At $\gamma = \gamma^*$, the ST operates at the maximum allowable power $\preg = \pc$ while respecting the tolerance limits defined for the uncertain interference. From a different perspective, the situation $\gamma = \gamma^*$ also represents those underlay systems that are unable to carry out power control. With regard to desired outage constraint on the uncertain interference and the lack of the power control, for a given choice of $\gamma^*$, such systems can operate only at a specific value of $\tau$.''. 
+\item Many thanks for putting forward this issue. This issue has been addressed in the revised manuscript stating ``Besides, it is interesting to observe that for low values of the estimation time, $\gamma^* \rightarrow -\infty$, which signifies that low $\tau$ increases the uncertainty in the interference. In order to regulate the level of this uncertainty, US has to be proactive in terms of power control mechanism to be able to satisfy the interference constraint. It is also observed that as $\tau \rightarrow \infty$, $\gamma^*$ converges asymptotically to a certain value. This signifies the fact that additional time resources allocated for the channel estimation, after a certain value, does not account to any significant improvement in the terms of the uncertain interference or indirectly controlled power. As a result, the performance of the US in the form of controlled power gets saturated.''.
+\end{itemize}
+\textbf{\tc{Comment 15}}: 
+\textit{
+Section III.A: Once more, focusing on eq. (21), it should be explained why the time-slot allocation, illustrated in Fig. 2 is not reflected in the rate expression. Is it due to the fact that $\hat{C}_s$ is the instantaneous rate measure during two consecutive time-slots of the data transmission sub-frame?
+}
+\\
+\textbf{Authors' Response}:
+Yes, $\eca$ corresponds to the instantaneous data rate, while $\rs$ represents the throughput. Following the reviewer's Comment 8, this issue has been the resolved in the revised manuscript. \\
+\textbf{\tc{Comment 16}}: 
+\textit{
+Section III.A: Considering Fig. 4, it would be much helpful for the reader to present the different curves by using different line colors and/or markers.
+}
+\\
+\textbf{Authors' Response}:
+These issues have been resolved in the revised manuscript.
+\\
+\textbf{\tc{Comment 17}}: 
+\textit{
+Section III.A: The statement expressed in Theorem 1 is just a definition of an optimization problem, which needs to be solved, having as variable the channel estimation time, $\tau$. As a consequence, it would be better characterized as a definition or a statement. A theorem would be a statement which takes some mathematical effort to be proven.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for raising this concern. Since the Theorems 1 and 2 present the optimization problem that yields the suitable estimation time, the phrase ``Theorem'' has been replaced with the ``Problem'' in the revised manuscript. 
+\\
+\textbf{\tc{Comment 18}}: 
+\textit{
+Section III.A: The comparison framework explained in Corollary 2 needs to be better explained. To the reviewer's understanding, it seems that the aim is to compare the average rate experienced at the SR, when the system is either power- or interference-limited. Is this the case? \\:
+Furthermore, the phrase "substituting the expression of $P_{full}$" cannot be understood. $P_{full}$ is the maximum available power level at the ST, thus, it is a fixed quantity. Is this not the case?
+}
+\\
+\textbf{Authors' Response}:
+The objective here is to compare the performance of the USs that employ channel estimation, however, operate with and without power control, which consequently correspond to the systems operating in interference-limited regime and on the curve $\gamma^* = \gamma$, respectively, as illustrated in Fig. 3. These systems in reference to the Corollary 1 have been addressed in the revised manuscript stating ``In accordance to Corollary 1, these USs correspond to the USs that operate in the interference-limited regime $\gamma^* \ge \gamma $'' and ``With regard to Corollary 1, these systems correspond to the ones operating on the curve $\gamma^*  = \gamma$''. Moreover, the sentence ``substituting the expression of $P_{full}$'' has been rephrased in the revised manuscript as ``For the latter approach, the secondary throughput is obtained by substituting $\preg$ with $\pc$ in (25), where $\tau$ in (25) is determined using Corollary 1.''. 
+\\
+\textbf{\tc{Comment 19}}: 
+\textit{
+Section III.B: The CDFs described in equations (27) - (29) need to be checked again; in the right hand side formulas, the denominators are the random variables themselves.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this. This issue has been resolved in the revised manuscript as reflected in equations (28) - (30), where $\bpgpo$, $\bpgpt$ and $\bpgs$ correspond to the expected values of the random variables $\pgpo$, $\pgpt$ and $\pgs$, respectively.
+\\
+\textbf{\tc{Comment 20}}: 
+\textit{
+Section III.B: Optimization problem (30), (31) needs to be rewritten correctly (the "max" prefix before the objective function is missing along with the variable(s) to be optimized). Also, in eq. (31), the constraint needs to be written in a simpler manner (the $P_p (= |h_{p,1}^2| P_{cont})$ 
+part looks like a product).
+}
+\\
+\textbf{Authors' Response}:
+This issue has been resolved in the revised manuscript. In this regard, $\underset{\preg}\maxi$, i.e., maximization over the control power has been added to (31). In addition, (32) has been simplified in the revised manuscript.
+\\
+\textbf{\tc{Comment 21}}: 
+\textit{
+Section III.B: The statement referred as Theorem $2$ in the manuscript is just a definition of the equivalent optimization problem, in the existence of random channels.
+}
+\\
+\textbf{Authors' Response}:
+Similar to the Comment 17, the term ``Theorem'' has been replaced with the ``Problem'' in the revised manuscript. 
+\\
+\textbf{\tc{Comment 22}}: 
+\textit{
+Section IV.A: ``It is depicted that for $\tau <= 0.1$ ms, the ST has to control its transmit power...''. From what it is illustrated in Fig. 6, focusing on the Estimation Model (EM), the transmit power of the ST needs to be controlled for the whole examined interval of $\tau$.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this. We have addressed this comment in the revised manuscript by rephrasing the sentence as ``It is noticed that the ST controls its transmit power ($\preg$) more severely for low values of $\tau$, consequently affecting the link budget for the access channel.''. 
+\\
+\textbf{\tc{Comment 23}}: 
+\textit{
+Section IV.A: ``To procure further insights, the variation of...are considered in Fig. 8''. The sentence needs to be rewritten (it seems there is a verb missing).
+}
+\\
+\textbf{Authors' Response}:
+The sentence related to this comment has been rephrased in the revised manuscript as ``To procure further insights, it is necessary to consider the variation of $\trs(\ttau)$ with $\gamma$ for different choices of the secondary interference at the SR (regulated using $\pgpt \in \{-90, -100\} \SI{}{dBm}$), as depicted in Fig. 7. ''.
+\\
+\textbf{\tc{Comment 24}}: 
+\textit{
+Section IV.A: "In order to sustain such situations, the US can exercise power control in order to deliver non-zero throughput". Please substitute the verb ``sustain'' with the verb ``avoid''.
+}
+\\
+\textbf{Authors' Response}:
+We have addressed this comment in the revised manuscript.
+\\
+\textbf{\tc{Comment 25}}: 
+\textit{
+Section IV.B: ``To investigate further, the estimation-throughput tradeoff..., refer to Theorem 2''. The sentence needs to be rewritten clearly and correctly.
+}
+\\
+\textbf{Authors' Response}:
+The following sentence ``To investigate further, the estimation-throughput tradeoff..., refer to Theorem 2'' has been rephrased in the revised manuscript as ``Besides, we capture the influence of the random channels on the performance in terms of the estimation-throughput tradeoff, as depicted in Problem 2. In this regard, the estimation-throughput tradeoff for corresponding to the fading scenarios is illustrated in Fig. 10''.
+\\
+\textbf{\tc{Comment 26}}: 
+\textit{
+There were quite some typos, punctuation and grammatical errors throughout the manuscript that need to be corrected. Also, the frequently used phrase ``refer to (A)'', where (A) is either a figure or an equation number, could be avoided, along with expressions as ``we break the expression''appearing in the Appendix.
+}
+\\
+\textbf{Authors' Response}
+We have omitted the expression ``refer to'' that existed before the referred Figures, equations, etc.,  in the revised manuscript. In addition, we have revised the manuscript to remove the typos, grammatical errors that existed in the previous manuscript. Furthermore, we have replaced several informal sentences (included the one mentioned by the reviewer) with their formal versions, for instance:
+\begin{itemize}
+\item ``For simplification, we break the expression'' appearing in appendix with ``For simplification, we deal $\frac{\epgs \ptran}{\eprcvdsr}$ as individual terms $\epgs \ptran$ and $\eprcvdsr$ and determine the pdfs...''.
+\item ``Along with the performance of the primary system, the data rate received at the SR for the link between the ST and the SR also contributes significantly to the overall performance of the USs'' in Section I-B ``Motivation and Related Work''.
+\item ``In this paper, we studied the performance of USs from a deployment perspective by putting emphasis on the fact that the knowledge of the interacting channels is pivotal to the CR systems.'' in Section V ``Conclusions''.
+\end{itemize} 
+\textbf{\tc{Comment 27}}: 
+\textit{
+References: Some references need to be corrected, by following the well-known guidelines (e.g., regarding the month of publication, the abbreviations which need to appear in capitals for instance, QoS).
+}
+\\
+\textbf{Authors' Response}:
+We have addressed this comment in the revised manuscript.\\
+\line(1,0){500} \\
+\textbf{Dear Reviewer 3},\\
+Thank you very much for providing valuable suggestions. We have carried out a major revision on the manuscript guided by these valuable comments. The detailed corrections are listed in the following points. \\
+\textbf{{Comment 1}}: 
+\textit{
+The novelty of this work with respect to the literature need to be more specific. The part I-B in the introduction is very long and does not reveal the novelty of this work.
+\\
+The below references are similar to this work but not discussed: \\
+R7. X. Zhang, J. Xing, Z. Yan, Y. Gao and W. Wang, "Outage Performance Study of Cognitive Relay Networks with Imperfect Channel Knowledge," in IEEE Communications Letters, vol. 17, no. 1, pp. 27-30, January 2013.  \\
+R8. L. Sboui, Z. Rezki and M. S. Alouini, "A Unified Framework for the Ergodic Capacity of Spectrum Sharing Cognitive Radio Systems," in IEEE Transactions on Wireless Communications, vol. 12, no. 2, pp. 877-887, February 2013.
+}
+\\
+\textbf{Authors' Response}:
+We have addressed this concern in the revised manuscript by reconsidering Section I-B in order to emphasize the main contributions and the key observations revealed in the paper. Further, several sentences in reference to Section I-B have been rephrased to enhance its brevity as-well-as clarity. While making a proper distinction corresponding to the above references [R7-R8], and including the ones referred by other reviewers, we carefully depict the inadequacy of the existing analysis in the literature in approaching the problem of channel estimation while considering the hardware implementation as reflected in the Section I-A ``Motivation and Related Work'', for instance
+\begin{itemize}
+\item ``It is worth noticing that the majority of these works [8], [10], [11] in reference to imperfect channel knowledge consider that the channel's knowledge at the ST is obtained from a band manager \footnote{An entity that mediates between the primary and the secondary systems.}, an approach proposed in [19]. Whereas [9], [13] rely on the presence of a feedback link from the PR to the ST [20]. The fact is, the feasibility of the band manager or the feedback link across two completely different systems is unrealistic from a practical standpoint. In addition, due to latency, the channel knowledge obtained while implementing these approaches may be outdated, as considered in [9]-[11], [13]. Besides, even if we assume the existence of the feedback link, the demodulation of the secondary user signals at the PR and a resource (time) allocation explicitly for communicating the channel state impose an additional overhead for the primary system. With these issues in hand, the hardware implementation of the US in reference to the aforementioned approaches becomes challenging. In contrast to these approaches, we propose a novel strategy according to which the channel estimation is employed directly at the secondary system. Thus, by avoiding the realization of the band manager or feedback link and the issues related to it, in this paper, we focus on the key aspects that facilitate the hardware deployment of the US.'' 
+\item ``Along with the performance of the primary system, the achievable data rate at the Secondary Receiver (SR) for the link between the ST and the SR also contributes significantly to the overall performance of the USs [7]-[9], [11], [13]-[15]. As a matter of fact, the knowledge of the data rate at the ST can be utilized for guaranteeing a certain quality of service, thereby determining potential applications or prominent use cases for the CR system. For instance, using this knowledge, the CR system is allowed to execute a band allocation policy, based on which, the ST can relinquish those channels that are largely responsible for causing interference at the PR. In order to characterize the data rate, the ST (along with the primary interference channel, which is associated with power control mechanism) requires the knowledge of \textit{access} channel between the ST and the SR, and \textit{secondary interference} channel between the Primary Transmitter (PT) and the SR. Despite these facts, the performance characterization of the US's data rate in reference to the estimation of the access and the secondary interference channels has not been considered [8]-[11], [13], [14] or only marginally in [12], [15], [16].''
+\item ``From the discussion above, it is clear that the performance of the USs can be depicted in terms of the achievable \textit{secondary throughput} for a certain interference threshold (IT). However, a certain time needs to be allocated by the secondary user for channel estimation. It is worthy to note that [8]-[17] consider that the PR employs pilot-based channel estimation for the channel PR-ST, which is possible only if the PR is willing: (i) to allocate resources, (ii) to assign a dedicated circuitry for demodulating the secondary user signals and (iii) to establish a feedback link to the ST. In this context, the hardware implementation of the USs becomes challenging.''
+\end{itemize}
+ In this regard, we have highlighted the main contributions and motivated the significance of the proposed analysis considered in the paper. 
+\\
+\textbf{\tc{Comment 2}}: 
+\textit{
+Is the noise $w_s[n]$ in (1) and (3) the same? Please check since there is no dependency between the noises ate ST and SR.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this, the noise signal at the ST and at the SR are different, hence, they are distinguished from each other by assigning different notations in the revised manuscript.
+\\
+\textbf{\tc{Comment 3}}: 
+\textit{
+The reason behind assuming that PT and PR have the same transmission is not clear.
+}
+\\
+\textbf{Authors' Response}:
+These issues have been addressed in the revised manuscript by rephrasing the footnote stating ``In reference to the proposed framework, the knowledge of the transmit power at the PT is not necessary at the secondary system. Hence, its ignorance at the SR doesn't affect the analysis concerning the secondary interference. For clarity of the exposition, we choose $\ptran$ to denote the transmit power for the PT and for the PR. With no loss of generality, in our analysis, the PT and the PR are alloted the same transmit power.''.
+\\
+\textbf{\tc{Comment 4}}: 
+\textit{
+Why the interference between SR and PR is not considered? If this interference is considered how will it affect the results presented in the rest of the paper?
+}
+\\
+\textbf{Authors' Response}:
+For the proposed analysis, in reference to the frame structure depicted in Fig. 2, it is observed that the PR is performing transmissions (beacon signal) to the PT while the secondary system is operating in the uplink mode, i.e., the ST is receiving data from the SR. Conversely, in the downlink, the PR is receiving signal from the PT, thus, the SR observes interference from the PT, which is included in the analysis. Taking this aspect into account, the interference at the SR arising from the PR can be discarded from the performance analysis.   
+\\
+\textbf{\tc{Comment 5}}: 
+\textit{
+Please explain more the estimation procedure of  $\hat{P}_{rcvd,ST}$ after (6).
+}
+\\
+\textbf{Authors' Response}:
+To address this concern, we have rephrased the several sentences after (6) to precisely describe estimation process stating ``Considering
+\begin{equation*}
+\prcvd = \pgpo \ptran + \nps \label{eq:prcvd}, 
+\end{equation*}
+and the knowledge of PR's transmit power $\ptran$, the ST employs received power-based estimation to obtain the knowledge of $\pgpo$. 
+To accomplish this, in reference to (1), the ST listens to the transmissions from the PR and acquires the knowledge of $\epgpo$ indirectly by estimating the power received in the uplink as $\eprcvd = \s{\tau \fsam}{|\yrcvd[n]|^2}$, where $\fsam$ being the sampling frequency and $\tau$ represents the estimation time interval. $\fsam$ and $\tau$ are such that the number of samples $\tau \fsam$ is an integer. The estimated received power $\eprcvd$ is utilized to determine the control power $\preg$ at which the data transmission over the downlink is carried out, \figurename~2. In accordance to the received power-based estimation for the channel $\pgpo$, it is noticed that the knowledge of $\ptran$ at the ST is essential for the characterization of the power control mechanism (considered later in Lemma 4).''.
+\\
+\textbf{\tc{Comment 6}}: 
+\textit{
+It was mentioned after (6) that  $\hat{P}_{rcvd,ST}$ follows chi-squared distribution, is it the case for any distribution of the channel $h_{p,1}$ ?
+}
+\\
+\textbf{Authors' Response}:
+With regard to the received power-based estimation and signal model depicted in (1), for a certain value of $\gpo$, $\eprcvd$ follows a non-central chi-squared distribution. As stated, the applicability of the previous statement is limited to the deterministic case. For the random case, the distribution of $\eprcvd$ can be determined by taking an expectation over the chi-squared distribution, where the probability density function of $\gpo$ depends on the characterization of the fading. In this paper, we have selected Nakagami-$m$ to characterize channel fading. We have addressed this concern by rewriting the statement as ``For a certain value of the channel gain, the estimated received power follows a non-central chi-squared distribution'' in the revised manuscript.   
+\\
+\textbf{\tc{Comment 7}}: 
+\textit{
+In III-A, ``deterministic'' means that the channels are not random variables. Is it the case in this part?
+}
+\\
+\textbf{Authors' Response}:
+Absolutely, the deterministic refer to where the corresponding channel gains does not represent random variables. We completely acknowledge the reviewer's point of view. This issue has been resolved by adding (not random) at its first instance in Section I-B.
+\\
+\textbf{\tc{Comment 8}}: 
+\textit{
+It is not clear what the main finding of Theorem 1 is? please clarify otherwise state it as ordinary result.
+}
+\\
+\textbf{Authors' Response}:
+Thank you for pointing out this. In the paper, Problems 1 and 2 (the ones stated as Theorems 1 and 2 in the previous manuscript) are the main optimization problems considered in the paper. The significance to these problems are well-explained in the revised version of Section I-A ``Motivation and Related Work'' and reflected in the Section I-B ``Contributions'' concerning the estimation-throughput tradeoff. In order to further emphasize the importance of these mathematical expressions, we have introduced Remark 2 before Problem 1 in the revised manuscript stating ``At this point, it is well-known that the performance degradation due to channel estimation in the form of the secondary throughput is inherent to the USs. Specifically, the time allocation and the uncertain interference are responsible of this degradation. The power control, determined in Lemma 4, represented as a function of estimation time is able to regulate the uncertain interference. As discussed previously in Remark 1, the low estimation time enables a severe control in power, thereby reducing the throughput. On the other hand, the time resources allocated for the channel estimation also decrease the throughput. This phenomenon can be captured by observing the variation of the secondary throughput along the estimation time such that the constraints depicted in (16) and (17) are fulfilled. Below, Problem 1 captures this relationship between the estimation time and the secondary throughput defined as estimation-throughput tradeoff. More importantly, we utilize this tradeoff to determine a suitable estimation time at which maximum throughput at the SR is achieved.''.
+\\
+\textbf{\tc{Comment 9}}: 
+\textit{
+It is preferable to use markers in the figures to distinguish between the IM and the EM curves for black and white printing.
+}
+\\
+\textbf{Authors' Response}:
+This issue has been in resolved in the revised manuscript. In this regard, the figures -- Fig. 6, Fig. 7, Fig. 8, Fig. 9, Fig. 10 and Fig. 11 have been updated in the revised manuscript.   
+\line(1,0){500} \\
+Many thanks again for your assistance in this review process, which leads to significant improvement of this work. If further revision is required, we will be very happy to address future comments in this manuscript. \\
+Sincerely yours,\\
+\hspace{5 pt} Ankit Kaushik\\
+\hspace{5 pt} Shree Krishna Sharma\\
+\hspace{5 pt} Symeon Chatzinotas\\
+\hspace{5 pt} Bj\"orn Ottersten\\
+\hspace{5 pt} Friedrich K. Jondral \\
+%\begin{thebibliography}{}
+%\bibitem{Wnh:12} W. Ejaz, N. U. hasan, and H. S. KIM, ``SNR-Based Adaptive Spectrum Sensing for Cognitive Radio Networks'', International J. Innovative Computing, Information and Control, vol. 8, No. 9, Sept. 2012.
+%\bibitem{Tir:12} O. Tirkkonen and L. Wei, Foundation of Cognitive Radio Systems: Exact and asymptotic analysis of largest eigenvalue based spectrum sensing. InTech, 2012, no. 978-953-51-0268-7, ch. 1.
+%\bibitem{Cda:11} Chavali, V.G.; da Silva, C.R.C.M., ``Collaborative Spectrum Sensing Based on a New SNR Estimation and Energy Combining Method,'' Vehicular Technology, IEEE Transactions on , vol.60, no.8, pp.4024,4029, Oct. 2011.
+%
+
+%\bibitem{Cdb:08} L.S. Cardoso, and et al, ''Cooperative spectrum sensing using random matrix theory,'' \textit{3rd Int. Symp. on Wireless Pervasive Computing}, pp.334-338, 7-9 May 2008.
+%\bibitem{Mfp:03} X. Mestre, J. R. Fonollosa, A. Pages-Zamora, ``Capacity of MIMO channels: asymptotic evaluation under correlated fading,'' \textit{IEEE Journal on Selected Areas in Comm.}, vol.21, no.5, pp. 829- 838, June 2003.
+%\bibitem{Ant:04} A. M. Tulino, and S. Verdu, `'Random Matrix Theory and Wireless Communications'', \textit{Comm. Inform. Theory}, vol.1, no. 1, pp 1-182, 2004.
+
+%\end{thebibliography}
+\end{document}
+
+

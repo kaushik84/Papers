@@ -1,0 +1,558 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.1
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+%%
+%%
+%% Modified: 30.1.2013, Schwall
+
+\documentclass[12pt]{beamer}
+
+%% SLIDE FORMAT
+\usepackage{templates/beamerthemekit}
+
+%% german time format (e.g 30.1.2013)
+\usepackage{datetime}
+\usepackage{bbm} %% Used to denote the indicator function
+%\usepackage[T1]{fontenc}
+%\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color,psfrag}
+\usepackage{subfig}
+
+\newdateformat{germandate}{\THEDAY.\THEMONTH.\THEYEAR}
+\newdateformat{americandate}{\THEMONTH/\THEDAY/\THEYEAR}
+
+% use these packages for PCM symbols and UML classes
+\usepackage{templates/tikzkit}
+\usepackage{templates/tikzuml}
+\usepackage{siunitx}
+
+\usepackage{times}
+\usepackage{tikz}
+
+
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\setquotestyle{american}
+\usepackage[language=american,autocite=footnote,citestyle=authortitle,citetracker=true,backend=biber,babel=other]{biblatex}
+\addbibresource{../refs.bib}
+
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+
+\setbeamerfont{footnote}{size=\tiny}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% the presentation starts here
+
+\usepackage{datetime}
+\newdate{date}{21}{09}{2016}
+
+\usepackage[framemethod=TikZ]{mdframed} %% For inserting the individual contributions in box
+\mdfdefinestyle{MyFrame}{%
+    linecolor=kit-green100,
+    outerlinewidth=0.8pt,
+    roundcorner=8pt,
+    frametitlerule=true,
+    frametitlebackgroundcolor=kit-green30,
+    innertopmargin=5pt,
+    frametitlealignment=\center,
+    %frametitleaboveskip=-5pt,
+}
+
+
+\newcounter{theo}[section]
+\newenvironment{theo}[1][]{%
+\stepcounter{theo}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=blue!20]
+{\strut Theorem~\thetheo};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=blue!20]
+{\strut Theorem~\thetheo:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=blue!20,%
+linewidth=2pt,topline=true,
+frametitleaboveskip=\dimexpr−\ht\strutbox\relax,}
+\begin{mdframed}[]\relax%
+}{\end{mdframed}}
+
+
+\newenvironment{myenv}[1]
+  {\mdfsetup{
+    frametitle={\colorbox{white}{\space#1\space}},
+    innertopmargin=10pt,
+    frametitleaboveskip=-\ht\strutbox,
+    frametitlealignment=\center
+    }
+  \begin{mdframed}%
+  }
+  {\end{mdframed}}
+
+
+
+% english vs. ngerman
+\selectlanguage{english}
+
+\title[Performance Analysis of Interweave Cognitive Radio Systems with Imperfect Channel Knowledge]{Performance Analysis of Interweave Cognitive Radio Systems with Imperfect Channel Knowledge over Nakagami Fading Channels
+ }
+\subtitle{VTC 2016, Montr\'eal}
+
+\author{A. Kaushik\inst{1}, \textbf{S.K. Sharma}\inst{2}, S. Chatzinotas\inst{2}, B. Ottersten\inst{2}, F. K. Jondral\inst{1}}
+\institute{\inst{1}Communications Engineering Lab, Karlsruhe Institute of Technology (KIT), Germany,\\
+\and
+\inst{2}SnT - securityandtrust.lu, University of Luxembourg, Luxembourg, \\
+}
+
+%% insert date in correct format
+\iflanguage{english}{
+	\date{21 Sept 2016}
+	}{
+	\date{\germandate\today}
+}
+
+\institute{\inst{1}CEL, Karlsruhe Institute of Technology (KIT), Germany and \inst{2}SnT, University of Luxembourg, Luxembourg}
+
+
+\input{macro.tex}
+\newcommand{\fs}[2]{\fontsize{#1 pt}{#2}\selectfont}
+
+
+\hyphenation{under-estimation over-estimation}
+
+% Position the text inside the frame
+\usepackage[absolute,overlay]{textpos}
+
+\addtobeamertemplate{footnote}{}{\vspace{1.0ex}}
+\addtolength{\footnotesep}{-5mm} % change to 1mm
+
+\begin{document}
+
+\newcommand\FrameText[1]{%
+  \begin{textblock*}{\paperwidth}(0pt,\textheight)
+    \raggedright #1\hspace{.5em}
+  \end{textblock*}}
+
+
+
+%title page
+\begin{frame}
+	\titlepage
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Contents}
+        \fs{10}{15}
+        \begin{itemize}
+                \item Interweave Scenario 
+                \item System Model
+                \item Perfect Channel Knowledge  
+                \item Imperfect Channel Knowledge  
+                \item Numerical Analysis
+                \item Conclusions  
+        \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}[t]{Interweave Scenario}
+        \begin{overlayarea}{\textwidth}{3.6cm}
+        \begin{center}
+                \only<1->
+                {
+                        \includegraphics[width = 0.42 \paperwidth]{../figures/CR_Scenario_Interweave}
+                }
+        \end{center}
+        \end{overlayarea}
+        \only<1>{
+                \fs{8}{8}
+                Interweave System:
+                \begin{itemize}
+                        \item A spectrum sensing mechanism is employed at the ST.
+                        \item To accomplish sensing $\Rightarrow$ Knowledge of the channel $\hpo$ is required. 
+                        \item To characterize the throughput at SR $\Rightarrow$ Knowledge of the channels $\hpt, \hs$ is required. 
+                \end{itemize}
+                In a realistic scenario:
+                \begin{itemize}
+                \item \keyword{Issue:} Channel knowledge is not available at the ST. \keyword{Solution:} needs to be estimated.
+                \item \keyword{Issue:} Conventional channel estimation techniques are incapable of sustaining requirements\footnote{Low-complexity and versatility towards unknown PU signals.} necessary for a hardware deployment of a CR system. \keyword{Solution:} Received power-based channel estimation is employed. 
+                \end{itemize}
+        }
+        \only<2->{
+                \fs{8}{8}
+                Contributions:
+                \begin{itemize}
+                        \item Considering a deployment perspective, an analytical framework, proposed by Kaushik \textit{et al.}\footnote{Kaushik \textit{et al.}, ``Sensing-Throughput Tradeoff for Interweave Cognitive Radio System: A Deployment-Centric Viewpoint'', IEEE Transactions on Wireless Communications, Vol. 15, No. 5, May 2016, pp. 3690-3702.}, facilitating a successful incorporation of the estimation of the involved channels. 
+                        \item We extend this analytical approach, where the interacting channels are subjected to Nakagami-$m$ fading.
+			\item We depict an estimation-sensing-throughput tradeoff that allows us to optimize the performance of the interweave system.
+                \end{itemize}
+        }
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{System Model}
+        \vspace{-0.8cm}
+        \fs{8}{8}
+        \begin{columns}[t]
+                \begin{column}{0.51 \paperwidth}
+                %\vspace{-0.4cm}
+		\begin{center}
+		\boxed{\mbox{ Signal Model}} 
+		%\begin{theo}[Signal Model]
+		\begin{itemize}
+                     \item Received signal at the ST
+                        \begin{equation*}
+                        \yrcvd[n] = 
+                                \begin{cases}
+                                \hpo \cdot \xp[n] + w[n] & : \mathcal{H}_1 \\
+                                w[n] & :\mathcal{H}_0
+                                \end{cases}
+                        \end{equation*}
+                     \item Received signal at the SR
+                        \begin{equation*}
+                        \begin{cases}
+                        \hs \cdot \xs[n] + \hpt \cdot \xp[n] + w[n] & : 1 - \pd \\
+			\hs \cdot \xs[n] + w[n] & : 1 - \pfa
+			\end{cases}
+                        \end{equation*}
+		  \end{itemize}
+		%\end{theo}
+                \end{center}
+                \end{column}
+                \begin{column}{0.49 \paperwidth}
+                \begin{center}
+		\boxed{\mbox{Interweave Scenario}} \\[0.3cm]
+                        \includegraphics[width = 0.38 \paperwidth]{../figures/CR_Scenario_Interweave}
+                \end{center}
+                \end{column}
+        \end{columns}
+        \begin{columns}[t]
+                \begin{column}{0.51 \paperwidth}
+		\begin{center}
+			\boxed{\mbox{(Symmetric) Channel fading}} \\[-0.4cm] 
+			\begin{align*}
+				\fphpo(x) = 1 - \Gamma\left(\mpo, \frac{\mpo x}{\bphpo}\right) \\  
+				\fphpt(x) = 1 - \Gamma\left(\mpt, \frac{\mpt x}{\bphpt}\right) \\
+				\fphs(x) = 1 - \Gamma\left(\ms , \frac{\ms x}{\bphs}\right) 
+			\end{align*}
+                \end{center}
+                \end{column}
+                \begin{column}{0.49 \paperwidth}
+                \begin{center}
+		\boxed{\mbox{Frame Structure}} \\[0.3cm]
+                        \includegraphics[width = 0.38 \paperwidth]{../figures/Frame_Structure_grau}
+                \end{center}
+                \end{column}
+        \end{columns}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Perfect Channel Knowledge}
+	\fs{8}{8}
+                \begin{center}
+		\begin{itemize}
+                \item Performance parameters, including detection probability ($\pd$) and secondary throughput ($\rs$), observe variations due to channel fading. \\[0.1cm] 
+                \end{itemize}
+                \begin{mdframed}[style=MyFrame, frametitle=Ideal Model (IM)] \keyword{Problem 1}: Subject to an outage constraint on $\pd$, the sensing-throughput tradeoff that considers perfect channel estimation and random behaviour of the interacting channels, is given by
+                \begin{align*}
+               		\trsoc(\ttsenoc) &= \maxi_{\tsen} \e{\pd, \phs, \phpt}{\rs(\tsen)}, \\
+			\text{s.t.} & \text{ }  \p( \pd \le \pdd) \le \mpd,  \\ 
+			\text{s.t.} & \text{ }  0 < \tsen \le T, 
+		\end{align*} \\[-0.6cm] 
+		where\\[-0.7cm] 
+		\begin{align*}
+%\hspace{-8mm}
+			\rs(\tsen) =& \frac{T - \tsen}{T} \mathbb{E}_{\phs \phpt} \bigg[ \phz (1 - \pfa) \smash[b]{\overbrace{\log_2 \bigg( 1 + \frac{\phs \ptranst}{\npo} \bigg)}^{\cz}} \\ &+ \pho (1 - \pd) \smash[b]{\overbrace{\log_2 \bigg( 1 + \frac{\phs \ptranst}{\phpt \ptranpt + \npo} \bigg)}^{\co}} \bigg]. 
+			\end{align*}
+
+		\end{mdframed}
+                \end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Perfect Channel Knowledge}
+        \fs{8}{8}
+                \begin{center}
+                \begin{mdframed}[style=MyFrame, frametitle=Ideal Model (IM)] \keyword{Problem 1}: Subject to an outage constraint on $\pd$, the sensing-throughput tradeoff that considers perfect channel estimation and random behaviour of the interacting channels, is given by
+                \begin{align*}
+                        \trsoc(\ttsenoc) &= \maxi_{\tsen} \e{\pd, \phs, \phpt}{\rs(\tsen)}, \\
+                        \text{s.t.} & \text{ }  \p( \pd \le \pdd) \le \mpd,  \\ 
+                        \text{s.t.} & \text{ }  0 < \tsen \le T. 
+                \end{align*} 
+                \end{mdframed}
+                \begin{itemize}
+                \item \keyword{Issue:} Despite the knowledge of the fading model, the characterization of the secondary throughput and interference constraint assumes the perfect knowledge\footnote{This knowledge signifies the perfect knowledge of the different realizations of the corresponding channels.} of the power gains for the corresponding channels.
+                \end{itemize}
+                \end{center}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Imperfect Channel Knowledge}
+	\fs{8}{8}
+                \begin{center}
+		\begin{itemize}
+                \item Performance parameters observe variations due to channel estimation and channel fading. 
+                \item The variations due to channel estimation in the performance parameters ($\epd$ and ($\eco, \ecz$)) have been characterized in Kaushik \textit{et al.}. 
+		\item Interference constraint to encounter uncertain interference: 
+                \end{itemize}
+		\begin{align*}
+			\smash[b]{\underbrace{\mathbb{E}_{\phpo}{\smash[b]{\overbrace{[\p( \epd \le \pdd)]}^{\text{Channel Estimation}}}}}_{\text{Channel fading}}} &\le \mpd \\[0.2cm] 
+\end{align*}
+
+		\begin{mdframed}[style=MyFrame, frametitle=Estimation Model (EM)] \keyword{Problem 2}: Subject to an outage constraint on $\pd$, the sensing-throughput tradeoff that considers imperfect channel estimation and random behaviour of the interacting channels, is given by
+                \begin{align*}
+			\trsoc(\ttest, \ttsen) &= \maxi_{\test, \tsen} \e{\epd, \ecz, \eco, \phpo, \phs, \phpt}{\rs(\test, \tsen)}, \nonumber \\ 
+			\text{s.t.} & \text{ }  \mathbb{E}_{\phpo}\p( \epd \le \pdd)  \le \mpd, \\
+			\text{s.t.} & \text{ }  0 < \test \le \tsen \le T.
+		\end{align*}
+		\end{mdframed}
+                \end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numerical Analysis}
+\vspace{-0.2cm}
+\fs{8}{8}
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{c||c|c}
+\bfseries Parameter & \bfseries Definition & \bfseries Value \\
+\hline\hline
+$\fsam$ & Sampling Frequency & $\SI{1}{MHz}$ \\ \hline
+$T$ & Frame duration & $\SI{100}{ms}$ \\ \hline
+$\bphpo$ & Sensing channel gain & $\SI{-100}{dB}$ \\ \hline
+$\bphpt$ & Interference channel gain & $\SI{-100}{dB}$ \\ \hline
+$\bphs$ & Access channel gain & $\SI{-80}{dB}$ \\ \hline 
+$\pdd$ & Target detection probability & 0.9 \\ \hline 
+$\mpd$ & Outage constraint & 0.05  \\ \hline 
+$\npo$ & Noise power & $\SI{-100}{dBm}$ \\ \hline
+$\snrrcvd$ & Signal to noise ratio at ST over $\hpo$ & $\SI{-10}{dB}$ \\ \hline
+$\snrpt$ & Signal to noise ratio at PT over $\hpt$ & $\SI{-10}{dB}$ \\ \hline
+$\snrso$ & Signal to noise ratio at SR over $\hs$ & $\SI{10}{dB}$ \\ \hline
+$\spo = \ptranpt$ & Transmit power at PT &$-\SI{10}{dBm}$ \\ \hline
+$\ptranst$ &Transmit power at ST & $-\SI{10}{dBm}$ \\ \hline
+$\pho$ &  Occurrence probability of hypothesis $\mathcal H_1$ & 0.2 \\ \hline
+$\test$ & Estimation time & $\SI{1}{ms}$ \\ \hline
+$\Ks$ & Number of pilot symbols &10 \\ \hline 
+$m$& Nakagami-$m$ parameter & $\{1, 1.5\}$  
+\end{tabular}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                \boxed{\mbox{Sensing-throughput tradeoff}} \\
+		\resizebox{0.55\textwidth}{!}{%
+		\input{../figures/fig_thr_sen_time_tradeoff_fading.tex}
+		\begin{tikzpicture}[scale=1]
+		\node[anchor=south west,inner sep=0] (image) at (0,0)
+		{
+  			\includegraphics[width= \figscale]{../figures/fig_thr_sen_time_tradeoff_fading}
+		};
+		\begin{scope}[x={(image.south east)},y={(image.north west)}]
+
+		%\node[draw,fill=gray!10,font=\small] (senid) at (0.232,0.83) {$\trs$};
+		%\draw[black, ->] (senid.north) -- (0.232,0.93);
+		%\node[draw,fill=gray!10,font=\small] (senac) at (0.378,0.882) {$\trsac$};
+		%\draw[black, ->] (senac.east) -- (0.478,0.882);
+		%\node[draw,fill=gray!10,font=\small] (senoc) at (0.614,0.733) {$\trsoc$};
+		%\draw[black, ->] (senoc.north) -- (0.614,0.833);
+
+		\draw[black,thick,<->] (0.082,0.12) --  node[above, font=\scriptsize] {$\test$} (0.14,0.12);
+		\draw (0.82,0.8) arc(-160:160:0.007 and 0.021);
+		\node[draw, fill=gray!10, font=\scriptsize] (text4) at (0.72,0.74) {$m = 1$};
+		\draw[black, ->] (text4.east) -- (0.82,0.795);
+
+		\draw (0.38,0.907) arc(-160:160:0.007 and 0.021);
+		\node[draw, fill=gray!10, font=\scriptsize] (text5) at (0.27,0.847) {$m = 1.5$};
+		\draw[black, ->] (text5.east) -- (0.38,0.902);
+
+		%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+		%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+		%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+		\end{scope}
+		\end{tikzpicture}
+		}
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item EM procures no secondary throughput for the estimation time. 
+                \item Suitable sensing time increases with severity in fading. 
+        \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                \boxed{\mbox{Estimation-sensing-throughput tradeoff}} \\
+		\resizebox{0.55\textwidth}{!}{%
+		\input{../figures/fig_opt_thr_vs_est_time_fading.tex}
+		\centering
+		\begin{tikzpicture}[scale=1]
+			\node[anchor=south west,inner sep=0] (image) at (0,0)
+			{
+				\includegraphics[width= \figscale]{../figures/fig_opt_thr_vs_est_time_fading.eps}
+			};
+			\begin{scope}[x={(image.south east)},y={(image.north west)}]
+
+
+			\draw (0.54,0.74) arc(-160:160:0.007 and 0.021);
+			\node[draw, fill=gray!10, font=\scriptsize] (text4) at (0.44,0.68) {$m = 1$};
+			\draw[black, ->] (text4.east) -- (0.54,0.735);
+
+			\draw (0.3,0.92) arc(-160:160:0.009 and 0.027);
+			\node[draw, fill=gray!10, font=\scriptsize] (text5) at (0.19,0.86) {$m = 1.5$};
+			\draw[black, ->] (text5.east) -- (0.302,0.913);
+
+
+			%%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+			%%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+			%%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+			\end{scope}
+		\end{tikzpicture}
+	}
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item $\rs(\test, \ttsen)$ increases for low values of $\test$ and then decreases beyond $\ttest$.
+                \item While comparing IM and EM, it is obseved that the mild fading scenarios (e.g. $m = 1.5$) are more sensitive to the performance degradation. 
+        \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                \boxed{\mbox{Expected detection probability vs estimation time}} \\
+		\resizebox{0.55\textwidth}{!}{%
+			\input{../figures/fig_P_d_vs_est_time_fading.tex}
+			\centering
+			\begin{tikzpicture}[scale=1]
+			\node[anchor=south west,inner sep=0] (image) at (0,0)
+			{
+				\includegraphics[width= \figscale]{../figures/fig_P_d_vs_est_time_fading.eps}
+			};
+			\begin{scope}[x={(image.south east)},y={(image.north west)}]
+			\draw (0.64,0.632) arc(-160:160:0.0095 and 0.0285);
+			\node[draw, fill=gray!10, font=\scriptsize] (text4) at (0.54,0.572) {$m = 1$};
+			\draw[black, ->] (text4.east) -- (0.6425,0.624);
+
+			\draw (0.12,0.60) arc(-160:160:0.007 and 0.021);
+			\draw (0.12,0.685) arc(-160:160:0.007 and 0.021);
+			\node[draw, fill=gray!10, font=\scriptsize] (text5) at (0.34,0.8) {$m = 1.5$};
+			\draw[black, ->] (text5.west) -- (0.132,0.708);
+			\draw[black, ->] (text5.west) -- (0.132,0.623);
+
+
+			%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+			%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+			%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+			\end{scope}
+		\end{tikzpicture}
+		}
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item It is observed that, despite the variations due to the channel estimation and the channel fading, considered by the EM, the outage constraint is satisfied for all values of $\test$. 
+        \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                \boxed{\mbox{Secondary throughput vs Nakagami-$m$ parameter}} \\
+		\resizebox{0.55\textwidth}{!}{%
+		\input{../figures/fig_opt_thr_vs_m_fading.tex}
+		\centering
+		\begin{tikzpicture}[scale=1]
+		\node[anchor=south west,inner sep=0] (image) at (0,0)
+		{
+			\includegraphics[width= \figscale]{../figures/fig_opt_thr_vs_m_fading.eps}
+		};
+		\begin{scope}[x={(image.south east)},y={(image.north west)}]
+		%\draw[black,->] (0.25,0.64) node[below =12.0,right=-20.0,  font=\scriptsize] {$\mpd \in \{0.05,0.10,0.15\}$} -- (0.18,0.84);
+		%%\draw[black,->] (0.25,0.6) node[below =12.0,right=-20.0,  font=\scriptsize] {$\mpd \in \{0.05,0.10,0.15\}$} -- (0.18,0.8);
+		%
+		%%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+		%%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+		%%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+		\end{scope}
+	\end{tikzpicture}
+	}
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item A greater performance degradation is observed by the EM for situations where the variations are affected more due to channel estimation as compared to channel fading. 
+        \end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\begin{frame}{Conclusions}
+\fs{8}{8}
+\begin{center}
+\begin{itemize}
+\item In this paper, the performance of the IS that incorporates imperfect knowledge of the interacting channels, which are subjected to Nakagami-$m$ fading, is characterized. \\[0.3cm]
+\item An outage constraint that jointly captures the variations in the IS due to channel estimation and channel fading has been employed. \\[0.3cm]
+\item An estimation-throughput tradeoff is characterized that determines suitable estimation and sensing time durations yielding an achievable secondary throughput for the IS. \\[0.3cm]
+\item Finally, it has been concluded that the suitable choice of the estimation time is essential for controlling the performance degradation, particularly for scenarios that encounter less severe fading. 
+\end{itemize}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\begin{frame}{}
+\begin{center}
+Thank you for attention! \\
+\end{center}
+\fs{7}{7}
+Related Publications:\\
+\begin{itemize} 
+\item A. Kaushik, S.K. Sharma, S. Chatzinotas, B. Ottersten,  F. K. Jondral: ``Sensing-Throughput Tradeoff for Interweave Cognitive Radio System: A Deployment-Centric Viewpoint'', IEEE Transactions on Wireless Communications, Vol. 15, No. 5, May 2016, pp. 3690-3702. \\
+\item A. Kaushik, S.K. Sharma, S. Chatzinotas, B. Ottersten,  F. K. Jondral: ``Performance analysis of Underlay Cognitive Radio System: A Deployment-Centric perspective'', IEEE Transactions on Cognitive Communications and Networking (to appear).
+\end{itemize} 
+\end{frame}
+
+%\printbibliography
+
+\end{document}

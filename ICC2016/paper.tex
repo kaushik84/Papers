@@ -1,0 +1,96 @@
+
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+%\documentclass[draftcls, onecolumn]{IEEEtran}
+\documentclass[conference, twocolumn]{IEEEtran}
+
+\IEEEoverridecommandlockouts
+%\usepackage[latin1]{inputenc} % Latin1
+\usepackage[utf8]{inputenc} 	% UTF-8
+
+%\usepackage{amsmath,amsthm}
+\usepackage{amssymb}
+%\usepackage{amsfonts}
+\usepackage{bbm} % For indicator function
+%\usepackage{breeq}
+%\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{color,psfrag}
+
+% Dashed arrow and control the size of the braces due to underbrace
+\usepackage{MnSymbol}
+%\graphicspath{{./figures/}}
+
+%Strike out the sentence
+\usepackage[normalem]{ulem}
+
+% Draw something blocks or ovelap
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{cite} % Combining multiple citations
+
+
+\input{SourceFiles/macro.tex}
+
+%\DeclareGraphicsExtensions{.pdf}
+
+% correct bad hyphenation here
+\hyphenation{net-works hop-set}
+
+
+% Subfigures
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+\usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+
+
+% Metadata
+%\usepackage[final=true]{hyperref}
+%\hypersetup{
+%	pdfauthor = {Ankit Kaushik et al.},
+%	pdftitle = {ICC 2015},
+%	pdfsubject = {ICC 2015},
+%	pdfcreator = {PDFLaTeX with hyperref package},
+%	pdfproducer = {PDFLaTeX}
+%	hidelinks = {true}
+%}
+
+
+% Used to break the theorems, proof between the columns
+%\allowdisplaybreaks
+
+%used to equalize the last pages
+\usepackage{flushend}
+
+\begin{document}
+%
+\title{Performance Analysis of Hybrid Cognitive Radio Systems with Imperfect Channel Knowledge}
+\author{\IEEEauthorblockN{Ankit Kaushik\IEEEauthorrefmark{1}, Shree Krishna Sharma\IEEEauthorrefmark{2}, Symeon Chatzinotas\IEEEauthorrefmark{2},  Bj\"orn Ottersten\IEEEauthorrefmark{2}, Friedrich Jondral\IEEEauthorrefmark{1}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Communications Engineering Lab, Karlsruhe Institute of Technology (KIT), Germany}
+\{ankit.kaushik, friedrich.jondral\}@kit.edu
+\IEEEauthorblockA{\IEEEauthorrefmark{2}SnT - securityandtrust.lu, University of Luxembourg, Luxembourg}
+\{shree.sharma, symeon.chatzinotas, bjorn.ottersten\}@uni.lu
+\thanks{This work was partially supported by the National Research Fund, Luxembourg under the CORE projects ``SeMIGod'' and ``SATSENT''.}
+}
+
+% make the title area
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\input{SourceFiles/content.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,refs}
+
+% that's all from my side
+\end{document}
+

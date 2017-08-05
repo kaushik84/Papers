@@ -1,0 +1,544 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.1
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+%%
+%%
+%% Modified: 30.1.2013, Schwall
+
+\documentclass[12pt]{beamer}
+
+%% SLIDE FORMAT
+\usepackage{templates/beamerthemekit}
+
+%% german time format (e.g 30.1.2013)
+\usepackage{datetime}
+\usepackage{bbm} %% Used to denote the indicator function
+%\usepackage[T1]{fontenc}
+%\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color,psfrag}
+\usepackage{subfig}
+
+\newdateformat{germandate}{\THEDAY.\THEMONTH.\THEYEAR}
+\newdateformat{americandate}{\THEMONTH/\THEDAY/\THEYEAR}
+
+% use these packages for PCM symbols and UML classes
+\usepackage{templates/tikzkit}
+\usepackage{templates/tikzuml}
+\usepackage{siunitx}
+
+\usepackage{times}
+\usepackage{tikz}
+
+
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\setquotestyle{american}
+\usepackage[language=american,autocite=footnote,citestyle=authortitle,citetracker=true,backend=biber,babel=other]{biblatex}
+\addbibresource{../refs.bib}
+
+\usepackage{verbatim}
+\usetikzlibrary{arrows,shapes}
+
+\setbeamerfont{footnote}{size=\tiny}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% the presentation starts here
+
+\usepackage{datetime}
+\newdate{date}{11}{06}{2016}
+
+% english vs. ngerman
+\selectlanguage{english}
+
+\title{\textbf{CRN\_IS9}: Performance Analysis of Hybrid Cognitive Radio
+Systems with Imperfect Channel Knowledge
+ }
+\subtitle{ICC 2016, Kuala Lumpur, Malaysia}
+
+\author{A. Kaushik\inst{1}, S.K. Sharma\inst{2}, S. Chatzinotas\inst{2}, B. Ottersten\inst{2}, F. K. Jondral\inst{1}}
+\institute{\inst{1}Communications Engineering Lab, Karlsruhe Institute of Technology (KIT), Germany,\\
+\and
+\inst{2}SnT - securityandtrust.lu, University of Luxembourg, Luxembourg, \\
+}
+
+%% insert date in correct format
+\iflanguage{english}{
+	\date{11 June 2016}
+	}{
+	\date{\germandate\today}
+}
+
+\institute{\inst{1}CEL, Karlsruhe Institute of Technology (KIT), Germany and \inst{2}SnT, University of Luxembourg, Luxembourg}
+
+
+\input{macro.tex}
+\newcommand{\fs}[2]{\fontsize{#1 pt}{#2}\selectfont}
+
+
+\hyphenation{under-estimation over-estimation}
+
+% Position the text inside the frame
+\usepackage[absolute,overlay]{textpos}
+
+\addtobeamertemplate{footnote}{}{\vspace{1.0ex}}
+\addtolength{\footnotesep}{-5mm} % change to 1mm
+
+\begin{document}
+
+\newcommand\FrameText[1]{%
+  \begin{textblock*}{\paperwidth}(0pt,\textheight)
+    \raggedright #1\hspace{.5em}
+  \end{textblock*}}
+
+
+
+%title page
+\begin{frame}
+	\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Contents}
+        \fs{10}{15}
+        \begin{itemize}
+                \item Hybrid Scenario 
+                \item Signal Model
+                \item Problem Description 
+                \item Proposed Approach 
+                \item Numerical Analysis
+                \item Summary
+        \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}[t]{Hybrid Scenario}
+        \begin{overlayarea}{\textwidth}{4.4cm}
+        \begin{center}
+                \only<1->
+                {
+                        \includegraphics[width = 0.45 \paperwidth]{../figures/CR_Scenario_Hybrid}
+                }
+        \end{center}
+        \end{overlayarea}
+        \only<1>{
+                \fs{8}{8}
+                Hybrid System:
+                \begin{itemize}
+                        \item A spectrum sensing and a power control mechanism is employed at the ST
+                        \item To accomplish this $\Rightarrow$ Knowledge of the channels $\hpo, \hpth$ is required at ST
+			\item Further, to characterize the throughput at SR $\Rightarrow$ Knowledge of the channels $\hptw, \hs$ is required at ST
+                \end{itemize}
+                In a realistic scenario:
+                \begin{itemize}
+                \item Channel knowledge is not available at the ST, \keyword{Solution} needs to be estimated
+                \item Without any knowledge of the primary system, direct estimation of channel is not possible
+                \end{itemize}
+        }
+        \only<2->{
+                \fs{8}{8}
+                Contributions:
+                \begin{itemize}
+                        \item We propose an analytical framework that facilitates a successful incorporation of the estimation of the involved channels 
+                        \item We examine the impact of channel knowledge in terms of interference encountered  
+                        \item We depict a estimation-sensing-throughput tradeoff that allow us to optimize the performance of the hybrid system
+                \end{itemize}
+        }
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+%\begin{frame}{Assumptions and Considerations}
+%        \begin{columns}
+%                \begin{column}{0.5 \paperwidth}
+%                        \begin{center}
+%                                \includegraphics[width = 0.38 \paperwidth]{../figures/CR_Scenario_Hybrid}
+%                        \end{center}
+%                \end{column}
+%                \begin{column}{0.5 \paperwidth}
+%                        \begin{center}
+%                                \includegraphics[width = 0.42 \paperwidth]{../figures/Frame_Structure}
+%                        \end{center}
+%                \end{column}
+%        \end{columns}
+%        \vspace{0.5cm}
+%        \begin{itemize}
+%                \fs{8}{10}
+%                \item Coherence time of the channel $\approx T$
+%                \item Power control at the ST is done by listening to the beacon or neighbouring pilot channel sent by the PR $\implies$ Channel reciprocity
+%                \item In each frame, the ST performs estimation of the received power followed by data transmission with controlled power
+%                \item In listening mode, ST considers proper alignment of the PR transmissions $\implies$ no interference is encountered at the SR from the PR
+%                \item Transmit power of the PR is known at the ST
+%        \end{itemize}
+%
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Signal Model}
+        %\vspace{-0.5cm}
+        \fs{8}{8}
+        \begin{columns}[t]
+                \begin{column}{0.51 \paperwidth}
+                \vspace{-0.4cm}
+                \begin{itemize}
+                     \item Received signal at the ST
+                        \begin{equation*}
+			\yrcvd[n] = 
+				\begin{cases}
+				\hpo \cdot \xp[n] + w[n] & : \mathcal{H}_1 \\
+				w[n] & :\mathcal{H}_0
+				\end{cases}
+                        \end{equation*}
+                     \item Received signal at the PR
+                        \begin{equation*}
+                        \yp[n] = 
+			\begin{cases}
+			\hpth \cdot \xscont[n] + w[n] & : \pd \\
+			\hpth \cdot \xsfull[n] + w[n] & : 1- \pd 
+			\end{cases}
+			\end{equation*}
+                     \item Received signal at the SR
+                        \begin{equation*}
+                                \ys[n] = 
+				\begin{cases}
+					\hs \cdot \xsfull[n] + \hptw \cdot \xp[n] + w[n] &: 1 - \pd \\
+					\hs \cdot \xsfull[n] + w[n] &: 1 - \pfa \\
+					\hs \cdot \xscont[n] + \hptw \cdot \xp[n] + w[n] &: \pd \\
+					\hs \cdot \xscont[n] + w[n] &: \pfa 
+					\end{cases}
+                        \end{equation*}
+                \end{itemize}
+                \end{column}
+                \begin{column}{0.06 \paperwidth}
+                \end{column}
+                \begin{column}{0.43 \paperwidth}
+                \begin{center}
+                        \includegraphics[width = 0.38 \paperwidth]{../figures/CR_Scenario_Hybrid}
+                \end{center}
+                \end{column}
+        \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Problem Description}
+        %\vspace{-0.5cm}
+        \fs{8}{8}
+		\begin{itemize}
+		\item Existing models (Ideal Model)
+		\end{itemize}
+		\vspace{-0.2cm}
+                     \begin{align*}
+	             	\text{Interference constraint} 
+			\begin{cases}
+			\pho \cdot \pd \cdot \phpth \preg \le \ite \\
+		     	\text{and   } \pho \cdot (1 - \pd) \cdot \phpth \pfull \le \ite			    	\end{cases} 
+		     \end{align*}
+		\vspace{-0.2cm}
+                     \begin{align*}
+		        \text{Throughput at SR}
+			\begin{cases}		
+			\rsz(\tsen) =& \frac{T- \tsen}{T} \cdot \log_2 \left(1 + |\hs|^2 \frac{\pfull}{\npo}\right) (1 - \pfa ) \cdot \phz,  \\ 
+			\rso(\tsen) =& \frac{T- \tsen}{T} \log_2 \left(1 + \frac{|\hs|^2 \pfull }{|\hptw|^2 \ptranpt  + \npo} \right) (1 - \pd) \cdot \pho,  \\ 
+			\rstw(\tsen) =& \frac{T- \tsen}{T} \cdot \log_2 \left(1 + |\hs|^2 \frac{\preg}{\npo}\right) \pfa \cdot \phz,  \\ 
+			\rsth(\tsen) =& \frac{T- \tsen}{T} \cdot \log_2 \left(1 + \frac{|\hs|^2 \preg }{|\hptw|^2 \ptranpt  + \npo} \right) \pd \cdot \pho.  
+			\end{cases}
+		     \end{align*}
+                \begin{itemize}
+                \item Without the knowledge of received power (sensing channel, $\hpo$), the characterization of $\pd$ at the ST is not possible
+		\item Without the knowledge of the interference channel towards the PR ($\hpth$), the power control mechanism cannot be employed at the ST
+		\item The knowledge of the access ($\hs$) and the interference channel ($\hptw$) to the SR, from the PT, is required at the ST for characterizing the SU throughput.
+		\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Proposed Approach}
+        \begin{overlayarea}{\textwidth}{4.4cm}
+        \begin{center}
+		\fs{8}{8}
+		Proposed frame structure for the secondary system \\
+        	\vspace{0.4cm}
+                \includegraphics[width = 0.45 \paperwidth]{../figures/Frame_Structure}
+	\end{center}
+	\end{overlayarea}
+	\fs{8}{8}
+	\begin{itemize}
+	\item We consider the estimation of involved channels. In order to facilitate deployment received power estimation is proposed for the sensing and interference channel. 
+	\item Next, we characterize the variations due to channel estimation in the estimation parameters in terms of their pdfs.
+	\item We further characterize the aforementioned variations, which include the interference received at PR and expected throughput at SR in terms of their cdf.
+	\item We utilize these cdfs to obtain the expression estimation-sensing-throughput tradeoff. 
+	\end{itemize}	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Performance Characterization}
+        \vspace{-0.8cm}
+        \fs{8}{8}
+		\begin{columns}[t]
+                \begin{column}{0.52 \paperwidth}
+		\begin{center}	%\begin{itemize}
+			%\item 
+			\textbf{Channel Estimation} 
+			\begin{itemize}
+       		 	\fs{8}{8}
+                	     \item Sensing channel
+            		\vspace{-0.2cm}     
+			\begin{align*}
+			    	 \feprcvdstpt(x) = 1 - \Gamma \left( \frac{\testpt \fsam}{2}, \frac{\testpt \fsam x}{2 \prcvdstpt} \right) 
+		     	     \end{align*}
+		     	\item Access channel	
+            		\vspace{-0.2cm}     
+                     	\begin{align*}
+		   		\fephs(x) \approx 1 - \Gamma \left(a, \frac{x}{b} \right)   
+		     	\end{align*}
+		     	\item Interference channel	
+            		\vspace{-0.2cm}     
+                     	\begin{align*}
+		   		\feprcvdsr(x) = 1 - \Gamma \left( \frac{\testptsr \fsam}{2}, \frac{\testptsr \fsam x}{2 \prcvdsr} \right) 
+		     	\end{align*}
+		     	\item Interference channel	
+            		\vspace{-0.2cm}     
+                     	\begin{align*}
+		     		\feprcvdstpr(x) = 1 - \Gamma \left( \frac{\testpr \fsam}{2}, \frac{\testpr \fsam x}{2 \prcvdstpr} \right)
+			\end{align*}
+		\end{itemize}
+	\end{center}		
+	%\end{itemize}
+	\end{column}
+        \begin{column}{0.48 \paperwidth}
+		\begin{center}		
+		\textbf{Detection probability constraint} 
+		\begin{align*}
+		\p(\pd(\eprcvdstpt) \le \pdd) &\le \opdc \\
+		\end{align*}
+		\textbf{Interference constraint} 
+		\begin{align*}
+		\p(\prcvdpr(\pd(\eprcvdstpt), \eprcvdstpr) \ge \ite) &\le \opc 
+		\end{align*}
+		\textbf{Expected secondary throughput}
+		\begin{align*}
+		\e{\Omega}{\rs(\tsen)} &= \frac{T - \testpr - \tsen}{T} \cdot \\ &\Bigg[ (1 - \pfa) \cdot \phz \cdot \e{\cz}{\cz} + \\  & (1 - \e{\pd}\pd) \cdot \pho \cdot \e{\co}{\co}  + \\ &\pfa \cdot \phz \cdot \e{\ctw}{\ctw} +  \nonumber \\ & \e{\pd}{\pd} \cdot \pho \cdot \e{\cth}{\cth} \Bigg]. 
+		\end{align*}
+		\end{center}
+	\end{column}
+	\end{columns}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\begin{frame}{Performance Characterization}
+        \fs{8}{8}
+		\begin{center}	
+		\begin{itemize}
+		\item \keyword{Theorem}: The expected achievable SU throughput subject to an outage constraint on detection probability at the ST and an outage constraint on interference power at the PR given by
+		\begin{align*}
+		\rs(\ttsen) &= \maxi_{\tsen, \preg} \e{\Omega}{\rs(\tsen)} \\
+		\text{s.t.} & \text{ }\; \p(\pd \le \pdd) \le \opdc \\
+		\text{s.t.} & \text{ }\; \p(\prcvdpr \ge \ite) \le \opc 
+		\end{align*}
+		\end{itemize}
+		\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numerical Analysis}
+\fs{8}{8}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{c||c|c}
+\hline
+\bfseries Parameter & \bfseries Definition & \bfseries Value \\
+\hline\hline
+$\fsam$ & Sampling Frequency & $\SI{1}{MHz}$ \\
+$T$ & Frame Duration & $\SI{100}{ms}$ \\
+$\testpt$ & Estimation time for the channel $\hpo$ & $\SI{1}{ms}$ \\
+$\testptsr$ & Estimation time for the channel $\hptw$ & $\SI{1}{ms}$ \\
+$\testpr$ & Estimation time for the channel $\hpth$ & $\SI{1}{ms}$ \\
+$\phpo$ & Power gain for channel $\hpo$ & $\SI{-120}{dB}$ \\
+$\phptw$ & Power gain for channel $\hptw$ & $\SI{-120}{dB}$ \\
+$\phpth$ & Power gain for channel $\hpth$ &$\SI{-100}{dB}$ \\
+$\phs$ & Power gain for channel $\hs$ &$\SI{-80}{dB}$ \\
+$\ite$ & Interference threshold &$\SI{-110}{dBm}$ \\
+$\opc$ & Outage constraint on interference power at PR& $0.1$ \\
+$\opdc$ & Outage constraint on detection probability & $0.1$ \\
+$\nps$ & Transmit power at PT and PR&$\SI{10}{dBm}$ \\
+$\npo$ & Noise power at ST, SR and PR &$\SI{-100}{dBm}$ \\
+$\pdd$ & Detection probability threshold  &$0.9$ \\
+$\phz$ & Occurrence Probability for hypothesis $\mathcal H_0$ & $0.2$ \\
+$\pfull$ & Transmit power at ST &$\SI{0}{dBm}$ \\
+$\Ks$ & Number of pilot symbols & 10 \\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                Sensing-throughput tradeoff for $\testpt = \testptsr =  \testpr = \SI{1}{ms}$ \\ 
+                \input{../figures/fig_thr_sen_time_tradeoff_AWGN.tex}
+		\centering
+		\begin{tikzpicture}[scale=1]
+		\node[anchor=south west,inner sep=0] (image) at (0,0)
+		{
+       			\includegraphics[width= \figscale]{../figures/fig_thr_sen_time_tradeoff_AWGN}
+		};
+		\begin{scope}[x={(image.south east)},y={(image.north west)}]
+
+		\draw[black,thick,<->] (0.105,0.13) --  node[above, font=\scriptsize] {$\testpt = \testptsr = \testpr$} (0.16,0.13);
+
+		\draw[black,->] (0.23,0.53) -- (0.18,0.65);
+		\node[draw=none,font=\scriptsize] at (0.32,0.48) {$\opdc \in \{0.05,0.10\}$};
+                %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+                %\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+                %\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+                \end{scope}
+                \end{tikzpicture}
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item As indicated by the margin between the IM and the EM, a certain performance degradation is witnessed due to the incorporation of channel estimation 
+                \item The sensing-throughput tradeoff yields a suitable sensing time $\ttsen$ that achieves the maximum performance in terms of SU throughput $\rs(\ttsen)$ 
+        \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                Achievable throughput vs channel gain for link ST-PR \\ 
+		\input{../figures/fig_opt_thr_vs_SNR_AWGN.tex}
+		\centering
+		\begin{tikzpicture}[scale=1]
+		\node[anchor=south west,inner sep=0] (image) at (0,0)
+		{
+    		    \includegraphics[width= \figscale]{../figures/fig_opt_thr_vs_SNR_AWGN}
+		};
+		\begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\draw[black,thick,<->] (0.82,0.18) --  node[below, font=\scriptsize] {Regime I} (0.955,0.18);
+		\draw[black,thick,<->] (0.39,0.18) --  node[below, font=\scriptsize] {Regime II} (0.815,0.18);
+		\draw[black,thick,<->] (0.11,0.18) --  node[below, font=\scriptsize] {Regime III} (0.385,0.18);
+		\draw[black,thick,<->] (0.28,0.235) --  node[above, rotate = 90, font=\scriptsize] {Performance Gain} (0.28,0.905);
+		\draw[black,thick,dashed,-] (0.27,0.232) -- (0.817,0.232);
+
+		%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+		%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+		%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+		\end{scope}
+		\end{tikzpicture}
+
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item In Regime I, no benefits are attained from the US (power control) while operating in this regime, hence, the HS operates as an IS. 
+                \item In Regime III, which illustrates favorable channel conditions for the US, since the ST is limited by the transmit power, $\preg = \pfull$, the HS procure no further performance gains. 
+        \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                Estimation-sensing-throughput tradeoff \\
+                \input{../figures/fig_opt_thr_vs_est_time_AWGN.tex}
+                \centering
+                \begin{tikzpicture}[scale=1]
+                \node[anchor=south west,inner sep=0] (image) at (0,0)
+                {
+                \includegraphics[width= \figscale]{../figures/fig_opt_thr_vs_est_time_AWGN}
+                };
+                \begin{scope}[x={(image.south east)},y={(image.north west)}]
+                \draw[black,->] (0.23,0.58) -- (0.18,0.68);
+                \node[draw=none,  ] at (0.34, 0.55) {$\opdc \in \{0.05,0.10\}$};
+
+                %\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+                %\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+                %\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+                \end{scope}
+                \end{tikzpicture}
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item The estimation-sensing-throughput tradeoff corresponding to the EM.
+                \item The performance degradation is sensitive to the outage constraint on the detection probability.
+        \end{itemize}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numerical Analysis}
+        \begin{overlayarea}{\textwidth}{6.0cm}
+        \begin{center}
+                \fs{8}{8}
+                Estimation-sensing-throughput tradeoff \\ 
+		\input{../figures/fig_opt_thr_vs_est_time_AWGN.tex}
+		\centering
+		\begin{tikzpicture}[scale=1]
+		\node[anchor=south west,inner sep=0] (image) at (0,0)
+		{
+		\includegraphics[width= \figscale]{../figures/fig_opt_thr_vs_est_time_AWGN}
+		};
+		\begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\draw[black,->] (0.23,0.58) -- (0.18,0.68);
+		\node[draw=none,  ] at (0.34, 0.55) {$\opdc \in \{0.05,0.10\}$};
+
+		%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+		%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+		%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+		\end{scope}
+		\end{tikzpicture}
+        \end{center}
+        \end{overlayarea}
+        \fs{8}{8}
+        \begin{itemize}
+                \item The estimation-sensing-throughput tradeoff corresponding to the EM. 
+                \item The performance degradation is sensitive to the outage constraint on the detection probability. 
+        \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\begin{frame}{Summary}
+\fs{8}{8}
+\begin{center}
+\begin{itemize}
+\item The performance of cognitive radio as hybrid systems is investigated from a deployment perspective.
+\item It is argued that channel knowledge is absolutely mandatory for the performance characterization.
+\item In view of this, an analytical framework that incorporates channel estimation and subsequently captures the effect of imperfect channel knowledge is established.
+\item More importantly, a fundamental tradeoff between the estimation, the sensing time and secondary throughput is determined.
+\item In future, it will be interesting to include the effect of channel fading on the performance of the hybrid systems.   
+\end{itemize}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Frame %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\begin{frame}{}
+\begin{center}
+Thank you for attention! 
+\end{center}
+\end{frame}
+
+%\printbibliography
+
+\end{document}

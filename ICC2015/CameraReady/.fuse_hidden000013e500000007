@@ -1,0 +1,104 @@
+\relax 
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\citation{Goldsmith09}
+\citation{Jiang13,Sharma14}
+\citation{Tan08}
+\citation{Liang08,Juarez11,Sharkasi12}
+\citation{Liang08}
+\citation{Liang08}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-A}}Motivation}{1}{subsection.1.1}}
+\citation{Kaushik14}
+\citation{Kaushik14}
+\citation{Liang08}
+\citation{Jing10}
+\citation{Tse05}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A scenario demonstrating the underlay paradigm.}}{2}{figure.1}}
+\newlabel{fig:scenario}{{1}{2}{A scenario demonstrating the underlay paradigm}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-B}}Contributions}{2}{subsection.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}System Model}{2}{section.2}}
+\newlabel{sec:sys_mod}{{II}{2}{System Model\relax }{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Underlay scenario}{2}{subsection.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Signal and channel model}{2}{subsection.2.2}}
+\newlabel{eq:sys_mod_st}{{1}{2}{Signal and channel model\relax }{equation.2.1}{}}
+\newlabel{eq:prcvd}{{2}{2}{Signal and channel model\relax }{equation.2.2}{}}
+\newlabel{eq:sys_mod_pr}{{3}{2}{Signal and channel model\relax }{equation.2.3}{}}
+\newlabel{eq:sys_mod_sr}{{4}{2}{Signal and channel model\relax }{equation.2.4}{}}
+\citation{Tse05}
+\citation{Xing07}
+\citation{Tian12,Sharma13}
+\citation{Urkowitz}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Estimation-throughput analysis}{3}{section.3}}
+\newlabel{sec:et_ana}{{III}{3}{Estimation-throughput analysis\relax }{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Conventional model}{3}{subsection.3.1}}
+\newlabel{eq:IT}{{5}{3}{Conventional model\relax }{equation.3.5}{}}
+\newlabel{eq:Thr_cm}{{6}{3}{Conventional model\relax }{equation.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Proposed Model}{3}{subsection.3.2}}
+\newlabel{eq:preg}{{7}{3}{Power control\relax }{equation.3.7}{}}
+\newlabel{eq:sca_gen}{{8}{3}{Power control\relax }{equation.3.8}{}}
+\newlabel{eq:pl}{{1}{3}{\relax }{Hfootnote.1}{}}
+\newlabel{eq:Thr_pm}{{9}{3}{Power control\relax }{equation.3.9}{}}
+\newlabel{eq:pcc}{{10}{3}{Power control\relax }{equation.3.10}{}}
+\newlabel{eq:sys}{{11}{3}{Power control\relax }{equation.3.11}{}}
+\newlabel{eq:pc}{{12}{3}{Power control\relax }{equation.3.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Path loss channel}{3}{subsection.3.3}}
+\newlabel{eq:dpreg_pl}{{13}{3}{Characterization of performance parameters\relax }{equation.3.13}{}}
+\citation{grad}
+\citation{grad}
+\citation{Tan08}
+\citation{grad}
+\newlabel{eq:dpp_pl}{{14}{4}{Characterization of performance parameters\relax }{equation.3.14}{}}
+\newlabel{eq:dfpp_pl}{{15}{4}{Characterization of performance parameters\relax }{equation.3.15}{}}
+\newlabel{eq:drs_pl}{{16}{4}{Characterization of performance parameters\relax }{equation.3.16}{}}
+\newlabel{eq:ers_pl}{{17}{4}{Characterization of performance parameters\relax }{equation.3.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Fading channel}{4}{subsection.3.4}}
+\newlabel{eq:drs_f}{{20}{4}{Characterization of performance parameters\relax }{equation.3.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Numerical Analysis}{4}{section.4}}
+\newlabel{sec:num_ana}{{IV}{4}{Numerical Analysis\relax }{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Path loss channel}{4}{subsection.4.1}}
+\newlabel{eq:dpreg_f}{{18}{5}{Characterization of performance parameters\relax }{equation.3.18}{}}
+\newlabel{eq:dpp_f}{{19}{5}{Characterization of performance parameters\relax }{equation.3.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An illustration of estimation-throughput tradeoff for the path loss channel with $\gamma = \SI {0}{dB}$. $\beta $ represents the least performance loss for $\gamma = \SI {0}{dB}$ where the constraint for $\text  {P}_{\text  {c}}= \bar {\text  {P}}_{\text  {c}}$ is sustained.}}{5}{figure.2}}
+\newlabel{fig:ET_pl}{{2}{5}{An illustration of estimation-throughput tradeoff for the path loss channel with $\gamma = \SI {0}{dB}$. $\beta $ represents the least performance loss for $\gamma = \SI {0}{dB}$ where the constraint for $\pc = \pcd $ is sustained}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces An illustration of the dependency of the received SNR at ST on the maximum throughput at the SR for different values of probability of confidence constraint $\bar {\text  {P}}_{\text  {c}}\in \{0.92, 0.95, 0.97\}$. The variation in $\alpha _{\text  {p}}\in [85,110]$ \SI {}{dB} translates to the variation in $\gamma $.}}{5}{figure.3}}
+\newlabel{fig:TvSNR_pl}{{3}{5}{An illustration of the dependency of the received SNR at ST on the maximum throughput at the SR for different values of probability of confidence constraint $\pcd \in \{0.92, 0.95, 0.97\}$. The variation in $\ap \in [85,110]$ \SI {}{dB} translates to the variation in $\gamma $}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A variation of the maximum throughput at the SR with estimation accuracy $\mu $ for different probability of confidence constraint $\bar {\text  {P}}_{\text  {c}}\in \{0.92, 0.95, 0.97\}$ with fixed $\gamma = \SI {0}{dB}$.}}{5}{figure.4}}
+\newlabel{fig:TvA_pl}{{4}{5}{A variation of the maximum throughput at the SR with estimation accuracy $\mu $ for different probability of confidence constraint $\pcd \in \{0.92, 0.95, 0.97\}$ with fixed $\gamma = \SI {0}{dB}$}{figure.4}{}}
+\bibstyle{IEEEtran}
+\bibdata{IEEEabrv,refs}
+\bibcite{Goldsmith09}{1}
+\bibcite{Jiang13}{2}
+\bibcite{Sharma14}{3}
+\bibcite{Tan08}{4}
+\bibcite{Liang08}{5}
+\bibcite{Juarez11}{6}
+\bibcite{Sharkasi12}{7}
+\bibcite{Kaushik14}{8}
+\bibcite{Jing10}{9}
+\bibcite{Tse05}{10}
+\bibcite{Xing07}{11}
+\bibcite{Tian12}{12}
+\bibcite{Sharma13}{13}
+\bibcite{Urkowitz}{14}
+\bibcite{grad}{15}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces An illustration of estimation-throughput tradeoff for the channel with fading for $\gamma = \SI {0}{dB}$. $\beta $ represents the performance loss, however for this case the constraint for $\text  {P}_{\text  {c}}$ is not satisfied.}}{6}{figure.5}}
+\newlabel{fig:ET_f}{{5}{6}{An illustration of estimation-throughput tradeoff for the channel with fading for $\gamma = \SI {0}{dB}$. $\beta $ represents the performance loss, however for this case the constraint for $\pc $ is not satisfied}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Fading channel}{6}{subsection.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{6}{section.5}}
+\newlabel{sec:conc}{{V}{6}{Conclusion\relax }{section.5}{}}
+\@writefile{toc}{\contentsline {section}{References}{6}{section*.5}}

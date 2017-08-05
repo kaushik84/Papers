@@ -1,0 +1,172 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5874,        163]
+NotebookOptionsPosition[      5096,        132]
+NotebookOutlinePosition[      5643,        153]
+CellTagsIndexPosition[      5600,        150]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{"\"\<Determine the density function from the distribution \
+function\>\"", "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"1", "-", " ", 
+     RowBox[{"GammaRegularized", "[", " ", 
+      RowBox[{
+       RowBox[{"test", "/", "2"}], " ", ",", 
+       RowBox[{"test", "  ", "tsen", "  ", 
+        RowBox[{"mu", " ", "/", 
+         RowBox[{"(", " ", 
+          RowBox[{"4", " ", "p", " ", 
+           RowBox[{"InverseGammaRegularized", "[", 
+            RowBox[{
+             RowBox[{"tsen", "/", "2"}], ",", " ", "x"}], "]"}]}], 
+          ")"}]}]}]}], "]"}]}], ",", " ", "x"}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6333429171248693`*^9, 3.63334292901787*^9}, {
+  3.6333433657100697`*^9, 3.63334338435207*^9}, {3.6518173711233473`*^9, 
+  3.6518173905433474`*^9}, {3.6518176376855474`*^9, 3.6518177773055477`*^9}, {
+  3.6518186207571473`*^9, 3.651818651411147*^9}, {3.651820592623131*^9, 
+  3.651820599784847*^9}, {3.6518206576166296`*^9, 3.6518206666575336`*^9}, {
+  3.651820707395607*^9, 3.651820759973864*^9}, {3.65182123476455*^9, 
+  3.6518212363869605`*^9}, {3.651821388909138*^9, 3.6518214005156126`*^9}, {
+  3.651827097360336*^9, 3.6518271124770265`*^9}, {3.651827359912632*^9, 
+  3.6518273856995974`*^9}, {3.6518276663297963`*^9, 3.6518276766414623`*^9}, {
+  3.6518277525827494`*^9, 3.6518278000694537`*^9}, {3.651840849843605*^9, 
+  3.6518408624988704`*^9}, {3.651841675070672*^9, 3.6518416894852567`*^9}}],
+
+Cell[BoxData["\<\"Determine the density function from the distribution \
+function\"\>"], "Output",
+ CellChangeTimes->{
+  3.6518207604529123`*^9, {3.6518212370109644`*^9, 3.651821249927847*^9}, 
+   3.6518214010928164`*^9, 3.651827098670761*^9, 3.6518271627255926`*^9, {
+   3.6518273617222433`*^9, 3.6518273876496096`*^9}, 3.651827677047065*^9, {
+   3.6518277662328367`*^9, 3.651827800865059*^9}, 3.651840873462967*^9, {
+   3.6518416778631077`*^9, 3.651841689859661*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"Gamma", "[", 
+    FractionBox["test", "2"], "]"}]], 
+  RowBox[{
+   SuperscriptBox["2", 
+    RowBox[{"-", "test"}]], " ", 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"mu", " ", "test", " ", "tsen"}], 
+       RowBox[{"4", " ", "p", " ", 
+        RowBox[{"InverseGammaRegularized", "[", 
+         RowBox[{
+          FractionBox["tsen", "2"], ",", "x"}], "]"}]}]]}], "+", 
+     RowBox[{"InverseGammaRegularized", "[", 
+      RowBox[{
+       FractionBox["tsen", "2"], ",", "x"}], "]"}]}]], " ", 
+   RowBox[{"Gamma", "[", 
+    FractionBox["tsen", "2"], "]"}], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"mu", " ", "test", " ", "tsen"}], 
+      RowBox[{"p", " ", 
+       RowBox[{"InverseGammaRegularized", "[", 
+        RowBox[{
+         FractionBox["tsen", "2"], ",", "x"}], "]"}]}]], ")"}], 
+    RowBox[{"test", "/", "2"}]], " ", 
+   SuperscriptBox[
+    RowBox[{"InverseGammaRegularized", "[", 
+     RowBox[{
+      FractionBox["tsen", "2"], ",", "x"}], "]"}], 
+    RowBox[{
+     RowBox[{"-", "tsen"}], "/", "2"}]]}]}]], "Output",
+ CellChangeTimes->{
+  3.6518207604529123`*^9, {3.6518212370109644`*^9, 3.651821249927847*^9}, 
+   3.6518214010928164`*^9, 3.651827098670761*^9, 3.6518271627255926`*^9, {
+   3.6518273617222433`*^9, 3.6518273876496096`*^9}, 3.651827677047065*^9, {
+   3.6518277662328367`*^9, 3.651827800865059*^9}, 3.651840873462967*^9, {
+   3.6518416778631077`*^9, 3.6518416899064617`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InverseGammaRegularized", "[", 
+  RowBox[{"4", ",", " ", "0.5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6518205652593946`*^9, 3.651820623438212*^9}}],
+
+Cell[BoxData["3.672060748850896`"], "Output",
+ CellChangeTimes->{{3.651820569382807*^9, 3.651820623838252*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GammaRegularized", "[", 
+  RowBox[{"2", ",", "4.0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6518275039795556`*^9, 3.6518275285809135`*^9}, {
+  3.6518278906748343`*^9, 3.651827893404852*^9}, {3.6518412782304163`*^9, 
+  3.6518414065600295`*^9}, {3.6518414993032184`*^9, 3.65184162734966*^9}, {
+  3.651997862365911*^9, 3.6519978625259113`*^9}}],
+
+Cell[BoxData["0.0915781944436709`"], "Output",
+ CellChangeTimes->{{3.651827512356809*^9, 3.6518275292829175`*^9}, 
+   3.6518278939508553`*^9, {3.651841281818531*^9, 3.651841407184037*^9}, {
+   3.6518415047632885`*^9, 3.6518416279112673`*^9}, 3.651997863005911*^9}]
+}, Open  ]]
+},
+WindowSize->{802, 912},
+WindowMargins->{{13, Automatic}, {0, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{594.9599999999999, 842.04}},
+Magnification->1.5000001192092896`,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1485, 27, 220, "Input"],
+Cell[2067, 51, 469, 7, 73, "Output"],
+Cell[2539, 60, 1546, 42, 266, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4122, 107, 174, 3, 45, "Input"],
+Cell[4299, 112, 111, 1, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4447, 118, 366, 6, 45, "Input"],
+Cell[4816, 126, 264, 3, 76, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

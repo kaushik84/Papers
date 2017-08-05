@@ -1,0 +1,166 @@
+
+\makeatletter
+\if@twocolumn
+	\newcommand{\figscalet}{0.72 \columnwidth}
+	\newcommand{\figscale}{0.775 \columnwidth}
+\else
+	\newcommand{\figscale}{0.5\columnwidth}
+\fi
+\makeatother
+
+\newcommand{\e}[2]{{\mathbb E}_{#1}\left[ #2 \right]}
+\newcommand{\s}[2]{{\frac{1}{{#1}}\sum_n^{#1}} {#2}}
+\newcommand{\q}[2]{{\mathcal Q}_{#1}\left( #2 \right)}
+\newcommand{\p}{\mathbb P}
+\newcommand{\sub}[1]{_{\text{#1}}}
+\newcommand{\pd}{\text{P}\sub{d}}
+\newcommand{\pfa}{\text{P}\sub{fa}}
+\newcommand{\phz}{\p(\mathcal{H}_0)}
+\newcommand{\pho}{\p(\mathcal{H}_1)}
+
+%% Discrete Signal
+
+\newcommand{\yrcvd}{y\sub{ST}}
+\newcommand{\xp}{x\sub{PT}}
+\newcommand{\xsfull}{x\sub{ST,full}}
+\newcommand{\xscont}{x\sub{ST,cont}}
+\newcommand{\ps}{P\sub{s}}
+\newcommand{\ys}{y\sub{SR}}
+\newcommand{\nap}{w\sub{p}}
+\newcommand{\nas}{w\sub{s}}
+\newcommand{\yp}{y\sub{PR}}
+
+
+
+% Signal to noise ratio
+\newcommand{\snrp}{\frac{\ptranpt}{\npo}}
+\newcommand{\snrs}{\frac{\ptranst}{\npo}}
+\newcommand{\snrsi}{\frac{\npo}{\ptranst}}
+\newcommand{\snrst}{\frac{\ps}{\sigma^2}}
+\newcommand{\snrrcvd}{{\gamma}\sub{p,1}}
+\newcommand{\snrso}{{\gamma}\sub{s}}
+\newcommand{\snrpt}{{\gamma}\sub{p,2}}
+\newcommand{\snrfull}{{\gamma}\sub{s, full}}
+\newcommand{\snrcont}{{\gamma}\sub{s, cont}}
+
+
+% distribution parameters 
+\newcommand{\ls}{\lambda\sub{s}}
+\newcommand{\Ks}{N\sub{s}}
+\newcommand{\lp}{\lambda\sub{p}}
+\newcommand{\Kp}{N\sub{p,2}}
+
+% channel gain and estimates
+\newcommand{\hpo}{h\sub{p,1}}
+\newcommand{\hptw}{h\sub{p,2}}
+\newcommand{\hpth}{h\sub{p,3}}
+\newcommand{\hs}{h\sub{s}}
+\newcommand{\ehs}{\hat{h}\sub{s}}
+
+% Signal and noise power
+
+\newcommand{\preg}{P\sub{Tx,ST,cont}}
+\newcommand{\pfull}{P\sub{Tx,ST,full}}
+\newcommand{\npp}{\sigma^2\sub{p}}
+\newcommand{\nps}{\sigma^2\sub{s}}
+\newcommand{\npu}{\Delta\sigma^2}
+\newcommand{\npo}{\sigma^2\sub{w}}
+\newcommand{\spo}{\sigma^2\sub{s}}
+\newcommand{\prcvdstpt}{P\sub{Rx,ST,$\hpo$}}
+\newcommand{\prcvdsr}{P\sub{Rx,SR,$\hptw$}}
+\newcommand{\prcvdstpr}{P\sub{Rx,ST,$\hpth$}}
+\newcommand{\eprcvdstpt}{\hat{P}\sub{Rx,ST,$\hpo$}}
+\newcommand{\eprcvdstpr}{\hat{P}\sub{Rx,ST,$\hpth$}}
+\newcommand{\eprcvdsr}{\hat{P}\sub{Rx,SR,$\hptw$}}
+\newcommand{\ptranst}{P\sub{Tx,ST}}
+\newcommand{\ptranpt}{\nps}
+\newcommand{\ptranpr}{P\sub{Tx,PR}}
+\newcommand{\prcvdpr}{P\sub{Rx,PR}}
+\newcommand{\eprcvdpr}{\hat{P}\sub{Rx,PR}}
+
+% Power gains of the corresponding channels
+\newcommand{\phpo}{|h\sub{p,1}|^2}
+\newcommand{\phptw}{|h\sub{p,2}|^2}
+\newcommand{\phpth}{|h\sub{p,3}|^2}
+\newcommand{\phs}{|h\sub{s}|^2}
+\newcommand{\ephs}{|\hat{h}\sub{s}|^2}
+
+\newcommand{\fsam}{f\sub{s}}
+\newcommand{\tsen}{\tau\sub{sen}}
+\newcommand{\testpt}{\tau\sub{est, $\hpo$}}
+\newcommand{\testptsr}{\tau\sub{est, $\hptw$}}
+\newcommand{\testpr}{\tau\sub{est, $\hpth$}}
+\newcommand{\ttestpt}{\tilde{\tau}\sub{est, $\hpo$}}
+\newcommand{\ttestptsr}{\tilde{\tau}\sub{est, $\hptw$}}
+\newcommand{\ttestpr}{\tilde{\tau}\sub{est, $\hpth$}}
+\newcommand{\ttest}{\tilde{\tau}\sub{est}}
+\newcommand{\ttsen}{\tilde{\tau}\sub{sen}}
+\newcommand{\rs}{R\sub{s}}
+\newcommand{\rsz}{R\sub{0}}
+\newcommand{\rso}{R\sub{1}}
+\newcommand{\rstw}{R\sub{2}}
+\newcommand{\rsth}{R\sub{3}}
+\newcommand{\ers}{\e{}{\rs}}
+
+\newcommand{\cz}{\text{C}_0}
+\newcommand{\co}{\text{C}_1}
+\newcommand{\ctw}{\text{C}_2}
+\newcommand{\cth}{\text{C}_3}
+
+% Constraints and Thresholds
+\newcommand{\ite}{\theta\sub{I}}
+\newcommand{\opc}{\rho\sub{cont}}
+\newcommand{\opdc}{\rho\sub{d}}
+\newcommand{\pdd}{\bar{\text{P}}\sub{d}}
+
+
+% distribution functions
+\newcommand{\feprcvdstpt}{F_{\eprcvdstpt}}
+\newcommand{\feprcvdstpr}{F_{\eprcvdstpr}}
+\newcommand{\feprcvdsr}{F_{\eprcvdsr}}
+\newcommand{\fprcvdpr}{F_{\prcvdpr}}
+\newcommand{\fephs}{F_{\ephs}}
+\newcommand{\fpd}{F_{\pd}}
+\newcommand{\fcz}{F_{\cz}}
+\newcommand{\fco}{F_{\co}}
+\newcommand{\fctw}{F_{\ctw}}
+\newcommand{\fcth}{F_{\cth}}
+
+% density functions
+\newcommand{\dprcvdstpt}{f_{\prcvdstpt}}
+\newcommand{\dhs}{f_{\hs}}
+\newcommand{\dcz}{f_{\cz}}
+\newcommand{\dco}{f_{\co}}
+\newcommand{\dctw}{f_{\ctw}}
+\newcommand{\dcth}{f_{\cth}}
+\newcommand{\dpd}{f_{\pd}}
+
+
+\newcommand{\imp}{\uline}
+\newcommand{\ur}{\uuline}
+\newcommand{\ns}{\uwave} 
+\newcommand{\ws}{\sout}
+\newcommand{\fl}{\dashuline}
+\newcommand{\un}{\dotuline}
+\DeclareMathOperator*{\Pro}{Pr}
+\DeclareMathOperator*{\maxi}{max}
+\DeclareMathOperator*{\expec}{\mathbb{E}}
+\DeclareMathOperator*{\gthan}{\ge}
+\DeclareMathOperator*{\eqto}{=}
+\DeclareMathOperator*{\cosi}{ci}
+\DeclareMathOperator*{\sini}{si}
+\DeclareMathOperator*{\cchi2}{\mathcal{X}^2}
+\DeclareMathOperator*{\ncchi2}{\mathcal{X}_1^2}
+\DeclareMathOperator*{\ts}{\text{T}(\textbf{y})}
+
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{case}{Case}
+\newtheorem{constraint}{Constraint}
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{coro}{Corollary}
+\newtheorem{defi}{Definition}
+\newtheorem{approxi}{Approximation}
